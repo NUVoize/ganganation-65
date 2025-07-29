@@ -119,15 +119,15 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
 
         <Separator />
 
-        {/* Age Range */}
+        {/* THC Range */}
         <div>
           <label className="text-sm font-medium text-foreground mb-3 block">
-            Age Range: {localFilters.ageRange?.[0] || 0} - {localFilters.ageRange?.[1] || 50} years
+            THC Range: {localFilters.thcRange?.[0] || 0}% - {localFilters.thcRange?.[1] || 30}%
           </label>
           <Slider
-            value={localFilters.ageRange || [0, 50]}
-            onValueChange={(value) => handleFilterChange('ageRange', value)}
-            max={50}
+            value={localFilters.thcRange || [0, 30]}
+            onValueChange={(value) => handleFilterChange('thcRange', value)}
+            max={30}
             min={0}
             step={1}
             className="w-full"

@@ -31,13 +31,13 @@ export const ShareModal = ({ whiskey, isOpen, onClose }: ShareModalProps) => {
       
       case 'instagram-story':
         return {
-          text: `🔥 ${whiskey.brand} ${whiskey.name}\n\n${whiskey.age ? `${whiskey.age} years aged` : whiskey.type}\n$${whiskey.price}/glass\n\n${bootleggerBranding}\n\n${hashtags}`,
+          text: `🔥 ${whiskey.brand} ${whiskey.name}\n\n${whiskey.thcContent ? `${whiskey.thcContent}% THC` : whiskey.type}\n$${whiskey.price}/gram\n\n${bootleggerBranding}\n\n${hashtags}`,
           url: whiskeyUrl
         };
       
       case 'facebook':
         return {
-          text: `Discover the exceptional ${whiskey.brand} - ${whiskey.name} at BOOTLEGGER Speakeasy!\n\nThis premium ${whiskey.type} from ${whiskey.origin} offers an unforgettable tasting experience. ${whiskey.description}\n\n🥃 ${whiskey.age ? `Aged ${whiskey.age} years` : 'Premium quality'}\n💰 $${whiskey.price} per glass\n🏆 ${whiskey.rarity} selection\n\n${callToAction}\n\n${hashtags}`,
+          text: `Discover the exceptional ${whiskey.brand} - ${whiskey.name} at GANJA NATION Dispensary!\n\nThis premium ${whiskey.type} from ${whiskey.origin} offers an unforgettable experience. ${whiskey.description}\n\n🌿 ${whiskey.thcContent ? `${whiskey.thcContent}% THC` : 'Premium quality'}\n💰 $${whiskey.price} per gram\n🏆 ${whiskey.rarity} selection\n\n${callToAction}\n\n${hashtags}`,
           url: whiskeyUrl
         };
       
@@ -49,7 +49,7 @@ export const ShareModal = ({ whiskey, isOpen, onClose }: ShareModalProps) => {
       
       default:
         return {
-          text: `${whiskey.brand} - ${whiskey.name}\n\nExperience this exceptional ${whiskey.type} from ${whiskey.origin} at BOOTLEGGER Speakeasy.\n\n${whiskey.description}\n\n• ${whiskey.age ? `Aged: ${whiskey.age} years` : `Type: ${whiskey.type}`}\n• ABV: ${whiskey.abv}%\n• Price: $${whiskey.price} per glass\n• Rarity: ${whiskey.rarity}\n\n${callToAction}\n\nVisit BOOTLEGGER Speakeasy for the complete premium whiskey experience.\n\n${hashtags}`,
+          text: `${whiskey.brand} - ${whiskey.name}\n\nExperience this exceptional ${whiskey.type} from ${whiskey.origin} at GANJA NATION Dispensary.\n\n${whiskey.description}\n\n• ${whiskey.thcContent ? `THC: ${whiskey.thcContent}%` : `Type: ${whiskey.type}`}\n• CBD: ${whiskey.cbdContent || 0}%\n• Price: $${whiskey.price} per gram\n• Rarity: ${whiskey.rarity}\n\n${callToAction}\n\nVisit GANJA NATION Dispensary for the complete premium cannabis experience.\n\n${hashtags}`,
           url: whiskeyUrl
         };
     }

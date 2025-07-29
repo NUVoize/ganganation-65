@@ -99,6 +99,7 @@ export const TastingNotesModal: React.FC<TastingNotesModalProps> = ({
 
       const newNote: TastingNote = {
         id: `note_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        cannabisId: whiskey.id,
         whiskeyId: whiskey.id,
         rating: data.rating,
         notes: sanitizedNotes,

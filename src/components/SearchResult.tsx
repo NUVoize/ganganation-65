@@ -46,15 +46,15 @@ export const SearchResult: React.FC<SearchResultProps> = ({
             <p className="text-sm text-muted-foreground">Origin</p>
             <p className="font-medium">{searchResult.origin}</p>
           </div>
-          {searchResult.age && (
+          {searchResult.thcContent && (
             <div className="text-center">
-              <p className="text-sm text-muted-foreground">Age</p>
-              <p className="font-medium">{searchResult.age} Years</p>
+              <p className="text-sm text-muted-foreground">THC</p>
+              <p className="font-medium">{searchResult.thcContent}%</p>
             </div>
           )}
           <div className="text-center">
-            <p className="text-sm text-muted-foreground">ABV</p>
-            <p className="font-medium">{searchResult.abv}%</p>
+            <p className="text-sm text-muted-foreground">CBD</p>
+            <p className="font-medium">{searchResult.cbdContent || 0}%</p>
           </div>
         </div>
 

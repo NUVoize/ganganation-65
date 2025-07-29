@@ -74,15 +74,15 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                   <span className="text-sm text-muted-foreground">Type:</span>
                   <p className="font-medium">{whiskey.type}</p>
                 </div>
-                {whiskey.age && (
+                {whiskey.thcContent && (
                   <div>
-                    <span className="text-sm text-muted-foreground">Age:</span>
-                    <p className="font-medium">{whiskey.age} Years</p>
+                    <span className="text-sm text-muted-foreground">THC:</span>
+                    <p className="font-medium">{whiskey.thcContent}%</p>
                   </div>
                 )}
                 <div>
-                  <span className="text-sm text-muted-foreground">ABV:</span>
-                  <p className="font-medium">{whiskey.abv}%</p>
+                  <span className="text-sm text-muted-foreground">CBD:</span>
+                  <p className="font-medium">{whiskey.cbdContent || 0}%</p>
                 </div>
                 <div>
                   <span className="text-sm text-muted-foreground">Origin:</span>
@@ -117,12 +117,12 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-medium text-foreground mb-2">Color</h4>
-                  <p className="text-sm text-muted-foreground">{whiskey.color}</p>
+                  <h4 className="font-medium text-foreground mb-2">Flavor Profile</h4>
+                  <p className="text-sm text-muted-foreground">{whiskey.flavor}</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-foreground mb-2">Serving Recommendation</h4>
-                  <p className="text-sm text-muted-foreground">{whiskey.servingRecommendation}</p>
+                  <h4 className="font-medium text-foreground mb-2">Pairing Suggestions</h4>
+                  <p className="text-sm text-muted-foreground">{whiskey.pairing}</p>
                 </div>
               </div>
             </TabsContent>
@@ -130,33 +130,33 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
             <TabsContent value="tasting" className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <h3 className="font-serif text-lg text-smokey mb-3">Nose</h3>
+                  <h3 className="font-serif text-lg text-natural mb-3">Primary Effects</h3>
                   <div className="space-y-1">
-                    {whiskey.tastingNotes.nose.map((note, index) => (
+                    {whiskey.effects.primary.map((effect, index) => (
                       <Badge key={index} variant="outline" className="mr-1 mb-1">
-                        {note}
+                        {effect}
                       </Badge>
                     ))}
                   </div>
                 </div>
                 
                 <div>
-                  <h3 className="font-serif text-lg text-smokey mb-3">Palate</h3>
+                  <h3 className="font-serif text-lg text-natural mb-3">Secondary Effects</h3>
                   <div className="space-y-1">
-                    {whiskey.tastingNotes.palate.map((note, index) => (
+                    {whiskey.effects.secondary.map((effect, index) => (
                       <Badge key={index} variant="outline" className="mr-1 mb-1">
-                        {note}
+                        {effect}
                       </Badge>
                     ))}
                   </div>
                 </div>
                 
                 <div>
-                  <h3 className="font-serif text-lg text-smokey mb-3">Finish</h3>
+                  <h3 className="font-serif text-lg text-natural mb-3">Duration</h3>
                   <div className="space-y-1">
-                    {whiskey.tastingNotes.finish.map((note, index) => (
+                    {whiskey.effects.duration.map((duration, index) => (
                       <Badge key={index} variant="outline" className="mr-1 mb-1">
-                        {note}
+                        {duration}
                       </Badge>
                     ))}
                   </div>
@@ -167,11 +167,11 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
             <TabsContent value="provenance" className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-serif text-lg text-smokey mb-3">Distillery Information</h3>
+                  <h3 className="font-serif text-lg text-natural mb-3">Grower Information</h3>
                   <div className="space-y-2">
                     <div>
-                      <span className="text-sm text-muted-foreground">Distillery:</span>
-                      <p className="font-medium">{whiskey.distillery}</p>
+                      <span className="text-sm text-muted-foreground">Grower:</span>
+                      <p className="font-medium">{whiskey.grower}</p>
                     </div>
                     <div>
                       <span className="text-sm text-muted-foreground">Region:</span>
@@ -191,15 +191,15 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                       <span className="text-sm text-muted-foreground">Category:</span>
                       <p className="font-medium">{whiskey.type}</p>
                     </div>
-                    {whiskey.age && (
+                    {whiskey.thcContent && (
                       <div>
-                        <span className="text-sm text-muted-foreground">Maturation:</span>
-                        <p className="font-medium">{whiskey.age} Years</p>
+                        <span className="text-sm text-muted-foreground">THC Content:</span>
+                        <p className="font-medium">{whiskey.thcContent}%</p>
                       </div>
                     )}
                     <div>
-                      <span className="text-sm text-muted-foreground">Alcohol by Volume:</span>
-                      <p className="font-medium">{whiskey.abv}%</p>
+                      <span className="text-sm text-muted-foreground">CBD Content:</span>
+                      <p className="font-medium">{whiskey.cbdContent || 0}%</p>
                     </div>
                   </div>
                 </div>
@@ -232,10 +232,10 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
               className="btn-premium flex-1 max-w-xs"
               disabled={!whiskey.inStock}
             >
-              {whiskey.inStock ? 'Request This Whiskey' : 'Currently Unavailable'}
+              {whiskey.inStock ? 'Request This Strain' : 'Currently Unavailable'}
             </Button>
             <Button variant="outline" className="flex-1 max-w-xs">
-              Ask Our Sommelier
+              Ask Our Budtender
             </Button>
           </div>
         </CardContent>

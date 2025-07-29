@@ -64,7 +64,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
         <CardTitle className="font-serif text-lg text-smokey">{whiskey.name}</CardTitle>
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>{whiskey.type}</span>
-          {whiskey.age && <span>{whiskey.age} Years</span>}
+          {whiskey.thcContent && <span>{whiskey.thcContent}% THC</span>}
         </div>
       </CardHeader>
       
@@ -74,7 +74,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
             <span className="text-2xl font-bold text-primary">${whiskey.price}</span>
             <span className="text-sm text-muted-foreground block">per glass</span>
           </div>
-          <span className="text-sm text-muted-foreground">{whiskey.abv}% ABV</span>
+          <span className="text-sm text-muted-foreground">{whiskey.cbdContent || 0}% CBD</span>
         </div>
         
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
