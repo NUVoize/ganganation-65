@@ -59,7 +59,9 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
               <div className="flex flex-wrap gap-2 mb-4">
                 <Badge className={getRarityColor(whiskey.rarity)}>{whiskey.rarity}</Badge>
                 {whiskey.featured && (
-                  <Badge className="bg-gradient-amber animate-glow-pulse">Featured</Badge>
+                  <Badge className="bg-gradient-featured text-accent-foreground font-semibold animate-glow-pulse border border-accent/30">
+                    Featured
+                  </Badge>
                 )}
                 <Badge variant={whiskey.inStock ? "default" : "destructive"}>
                   {whiskey.inStock ? "In Stock" : "Out of Stock"}
