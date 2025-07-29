@@ -46,13 +46,12 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <img 
-              src="/lovable-uploads/30d95a57-de6c-4e42-83bd-1515117475a3.png" 
-              alt="GANJA NATION" 
+              src="/lovable-uploads/ee1193b0-be52-4b7e-9b89-de3c5cf421da.png" 
+              alt="GANJA NATION Premium Quality" 
               className="h-8 w-auto sm:h-10"
             />
-            <span className="font-serif text-lg text-ganja hidden sm:inline">GANJA NATION</span>
           </Link>
 
           {/* Navigation Links */}
