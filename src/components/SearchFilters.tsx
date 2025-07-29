@@ -105,7 +105,7 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
         {/* Price Range */}
         <div>
           <label className="text-sm font-medium text-foreground mb-3 block">
-            Price per Glass: ${localFilters.priceRange?.[0] || 0} - ${localFilters.priceRange?.[1] || 30}
+            Price per Gram: ${localFilters.priceRange?.[0] || 0} - ${localFilters.priceRange?.[1] || 30}
           </label>
           <Slider
             value={localFilters.priceRange || [0, 30]}
