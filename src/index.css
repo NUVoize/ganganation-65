@@ -49,6 +49,7 @@
     /* Cannabis Gradients - matching the new background tones */
     --gradient-smokey: linear-gradient(135deg, hsl(180 30% 3%) 0%, hsl(180 20% 6%) 50%, hsl(180 30% 2%) 100%);
     --gradient-green: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-featured: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(45 100% 60%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(40 90% 65%) 100%);
     --gradient-nature: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(180 25% 5%) 100%);
     --gradient-forest: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);

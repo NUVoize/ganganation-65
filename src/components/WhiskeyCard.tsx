@@ -52,7 +52,9 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
         </div>
         {whiskey.featured && (
           <div className="absolute top-4 right-4">
-            <Badge className="bg-gradient-amber animate-glow-pulse">Featured</Badge>
+            <Badge className="bg-gradient-featured text-accent-foreground font-semibold animate-glow-pulse border border-accent/30">
+              Featured
+            </Badge>
           </div>
         )}
         <div className="absolute top-4 left-4">
