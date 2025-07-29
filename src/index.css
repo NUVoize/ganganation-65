@@ -129,7 +129,8 @@
   
   /* Premium Button Style */
   .btn-premium {
-    @apply bg-gradient-green text-primary-foreground border border-primary/20;
+    background: var(--gradient-green);
+    @apply text-primary-foreground border border-primary/20;
     transition: var(--transition-smooth);
   }
   
