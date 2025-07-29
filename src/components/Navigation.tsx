@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useUser } from '../contexts/UserContext';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { BookmarkPlus, Wine, Search, Home } from 'lucide-react';
+import { BookmarkPlus, Cigarette, Search, Home } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const location = useLocation();
@@ -28,7 +28,7 @@ export const Navigation: React.FC = () => {
     },
     {
       to: '/tastings',
-      icon: Wine,
+      icon: Cigarette,
       label: 'Tastings',
       active: location.pathname === '/tastings',
       count: tastingCount

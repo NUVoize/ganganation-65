@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { useUser } from '../contexts/UserContext';
-import { BookmarkPlus, Bookmark, Wine, Share } from 'lucide-react';
+import { BookmarkPlus, Bookmark, Cigarette, Share } from 'lucide-react';
 import { ShareModal } from './ShareModal';
 import { useState } from 'react';
 
@@ -149,7 +149,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
                 }}
                 className={`p-3 rounded-lg bg-muted/50 hover:bg-red-500/20 hover:border-red-500/50 border border-transparent transition-colors ${hasUserTasted(whiskey.id) ? 'text-primary' : 'text-muted-foreground'} hover:text-red-500`}
               >
-                <Wine className="h-8 w-8" />
+                <Cigarette className="h-8 w-8" />
               </Button>
             )}
             <Button
