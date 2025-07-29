@@ -15,7 +15,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="max-w-7xl mx-auto text-center">
         <div className="mb-6 animate-fade-in flex justify-center">
           <img 
-            src="/lovable-uploads/cc6a257d-f047-4000-b9fb-8b7ba17b40f9.png" 
+            src="/lovable-uploads/8dd50411-b22d-4d2b-8548-1d2edf6291a1.png" 
             alt="GANJA NATION" 
             className="h-32 md:h-48 w-auto"
           />
