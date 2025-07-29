@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="h-32 md:h-48 w-auto neon-glow animate-fade-in"
           />
         </div>
-        <h1 className="font-display text-4xl md:text-6xl text-deco mb-6 animate-fade-in tracking-wider">
+        <h1 className="font-impact text-4xl md:text-6xl text-deco mb-6 animate-fade-in tracking-wider">
           GANJA NATION Dispensary
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">

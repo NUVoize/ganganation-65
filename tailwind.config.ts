@@ -22,6 +22,8 @@ export default {
 				'serif': ['Playfair Display', 'serif'],
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
 				'display': ['Cinzel', 'serif'],
+				'impact': ['Anton', 'Bebas Neue', 'Impact', 'Arial Black', 'sans-serif'],
+				'condensed': ['Bebas Neue', 'Arial Narrow', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
