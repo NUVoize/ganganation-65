@@ -1,9 +1,9 @@
 import { CannabisProduct } from '../types/whiskey';
-import bottle1Img from '../assets/whiskey-bottle-1.jpg';
-import bottle2Img from '../assets/whiskey-bottle-2.jpg';
-import bottle3Img from '../assets/whiskey-bottle-3.jpg';
-import bottle4Img from '../assets/whiskey-bottle-4.jpg';
-import bottle5Img from '../assets/whiskey-bottle-5.jpg';
+import cannabisBud1 from '../assets/cannabis-bud-1.jpg';
+import cannabisBud2 from '../assets/cannabis-bud-2.jpg';
+import cannabisBud3 from '../assets/cannabis-bud-3.jpg';
+import cannabisBud4 from '../assets/cannabis-bud-4.jpg';
+import cannabisBud5 from '../assets/cannabis-bud-5.jpg';
 
 export const indicaStrains: CannabisProduct[] = [
   {
@@ -25,7 +25,7 @@ export const indicaStrains: CannabisProduct[] = [
     },
     flavor: 'Sweet and spicy with earthy undertones',
     pairing: 'Best with comfort food, movies, or meditation',
-    images: [bottle1Img],
+    images: [cannabisBud1],
     sku: 'NL-001',
     inStock: true,
     featured: true,
@@ -50,7 +50,7 @@ export const indicaStrains: CannabisProduct[] = [
     },
     flavor: 'Sweet grape and berry with hints of pine',
     pairing: 'Perfect with desserts, bath time, or bedtime routine',
-    images: [bottle2Img],
+    images: [cannabisBud2],
     sku: 'GDP-002',
     inStock: true,
     featured: false,
@@ -75,7 +75,7 @@ export const indicaStrains: CannabisProduct[] = [
     },
     flavor: 'Sweet and earthy with chocolate notes',
     pairing: 'Great with yoga, massage, or quiet evenings',
-    images: [bottle3Img],
+    images: [cannabisBud3],
     sku: 'BK-003',
     inStock: true,
     featured: false,
@@ -103,7 +103,7 @@ export const sativaStrains: CannabisProduct[] = [
     },
     flavor: 'Citrus and tropical fruit with earthy undertones',
     pairing: 'Perfect for outdoor activities, creative projects, or social gatherings',
-    images: [bottle4Img],
+    images: [cannabisBud4],
     sku: 'GC-004',
     inStock: true,
     featured: true,
@@ -128,7 +128,7 @@ export const sativaStrains: CannabisProduct[] = [
     },
     flavor: 'Pungent diesel with hints of lemon and herbs',
     pairing: 'Ideal for daytime activities, work, or exercise',
-    images: [bottle5Img],
+    images: [cannabisBud5],
     sku: 'SD-005',
     inStock: true,
     featured: false,
@@ -156,7 +156,7 @@ export const hybridStrains: CannabisProduct[] = [
     },
     flavor: 'Sweet berry with hints of vanilla and spice',
     pairing: 'Great for any time of day, social events, or creative pursuits',
-    images: [bottle1Img],
+    images: [cannabisBud1],
     sku: 'BD-006',
     inStock: true,
     featured: true,
@@ -181,7 +181,7 @@ export const hybridStrains: CannabisProduct[] = [
     },
     flavor: 'Sweet and earthy with mint and cherry notes',
     pairing: 'Perfect for evening socializing, gaming, or creative projects',
-    images: [bottle2Img],
+    images: [cannabisBud2],
     sku: 'GSC-007',
     inStock: true,
     featured: false,
@@ -209,7 +209,7 @@ export const cbdStrains: CannabisProduct[] = [
     },
     flavor: 'Earthy and woody with pine notes',
     pairing: 'Ideal for meditation, work, or daily wellness routine',
-    images: [bottle3Img],
+    images: [cannabisBud3],
     sku: 'CW-008',
     inStock: true,
     featured: true,
@@ -237,7 +237,7 @@ export const concentrates: CannabisProduct[] = [
     },
     flavor: 'Rich pine and earth with citrus highlights',
     pairing: 'Best with experienced users, evening relaxation',
-    images: [bottle4Img],
+    images: [cannabisBud4],
     sku: 'LR-OG-009',
     inStock: true,
     featured: false,
@@ -265,7 +265,7 @@ export const edibles: CannabisProduct[] = [
     },
     flavor: 'Sweet mixed berry flavors',
     pairing: 'Perfect for movie nights, social gatherings, or relaxation',
-    images: [bottle5Img],
+    images: [cannabisBud5],
     sku: 'GB-MB-010',
     inStock: true,
     featured: false,
@@ -293,7 +293,7 @@ export const preRolls: CannabisProduct[] = [
     },
     flavor: 'Earthy and woody with floral notes',
     pairing: 'Great for sharing with friends or solo sessions',
-    images: [bottle1Img],
+    images: [cannabisBud1],
     sku: 'PR-WW-011',
     inStock: true,
     featured: false,
