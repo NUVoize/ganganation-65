@@ -6,53 +6,53 @@
 
 @layer base {
   :root {
-    /* Base backgrounds - Deep black with green undertones */
-    --background: 0 0% 4%;
-    --foreground: 120 20% 85%;
+    /* Base backgrounds - Deep teal-black matching the image */
+    --background: 180 30% 3%;
+    --foreground: 160 25% 85%;
 
-    /* Card surfaces - Rich black with subtle green */
-    --card: 0 0% 6%;
-    --card-foreground: 120 15% 88%;
+    /* Card surfaces - Rich teal-black with subtle green */
+    --card: 180 25% 5%;
+    --card-foreground: 160 20% 88%;
 
     /* Popover elements */
-    --popover: 0 0% 8%;
-    --popover-foreground: 120 20% 85%;
+    --popover: 180 20% 7%;
+    --popover-foreground: 160 25% 85%;
 
-    /* Primary - Cannabis Green */
-    --primary: 120 60% 35%;
+    /* Primary - Teal-green matching the image */
+    --primary: 160 55% 40%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 120 70% 45%;
+    --primary-glow: 160 65% 50%;
 
-    /* Secondary - Deep forest green */
-    --secondary: 140 50% 25%;
-    --secondary-foreground: 120 20% 90%;
+    /* Secondary - Deep teal */
+    --secondary: 180 45% 25%;
+    --secondary-foreground: 160 25% 90%;
 
-    /* Muted - Sophisticated dark grays with green tint */
-    --muted: 120 10% 12%;
-    --muted-foreground: 120 15% 65%;
+    /* Muted - Sophisticated dark teal-grays */
+    --muted: 180 15% 10%;
+    --muted-foreground: 160 20% 65%;
 
-    /* Accent - Golden green */
-    --accent: 60 80% 50%;
+    /* Accent - Golden orange from the image highlights */
+    --accent: 35 85% 55%;
     --accent-foreground: 0 0% 8%;
 
     /* Destructive - Bright red */
     --destructive: 0 80% 50%;
-    --destructive-foreground: 120 20% 95%;
+    --destructive-foreground: 160 25% 95%;
 
-    /* Borders and inputs - Dark green tones */
-    --border: 120 20% 18%;
-    --input: 120 15% 14%;
-    --ring: 120 60% 45%;
+    /* Borders and inputs - Dark teal tones */
+    --border: 180 25% 15%;
+    --input: 180 20% 12%;
+    --ring: 160 55% 45%;
 
     --radius: 0.75rem;
 
-    /* Cannabis Gradients */
-    --gradient-smokey: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(120 15% 8%) 50%, hsl(0 0% 2%) 100%);
+    /* Cannabis Gradients - matching the new background tones */
+    --gradient-smokey: linear-gradient(135deg, hsl(180 30% 3%) 0%, hsl(180 20% 6%) 50%, hsl(180 30% 2%) 100%);
     --gradient-green: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(60 90% 60%) 100%);
-    --gradient-nature: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(0 0% 6%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(40 90% 65%) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(180 25% 5%) 100%);
     --gradient-forest: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
-    --gradient-earth: linear-gradient(135deg, hsl(40 40% 30%) 0%, hsl(120 40% 25%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(35 60% 35%) 0%, hsl(160 45% 30%) 100%);
     
     /* Premium Shadows */
     --shadow-elegant: 0 25px 80px -15px hsl(0 0% 0% / 0.9);
@@ -73,7 +73,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/d404a791-4218-4019-a4e6-52d41baf3e3a.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/63f604cb-781b-4f08-9606-8328130488ad.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
