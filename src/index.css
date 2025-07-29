@@ -20,7 +20,7 @@
 
     /* Primary - Bright green #33ff00 */
     --primary: 108 100% 50%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 10%;
     --primary-glow: 108 100% 60%;
 
     /* Secondary - Deep teal */
