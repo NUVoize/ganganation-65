@@ -41,7 +41,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   (e.target as HTMLInputElement).blur();
                 }
               }}
-              className="glass-card text-lg py-6 px-6 text-center bg-card/60 backdrop-blur-md transition-all duration-200 focus:scale-105"
+              className="glass-card search-input-glow text-lg py-6 px-6 text-center bg-card/60 backdrop-blur-md transition-all duration-200 focus:scale-105"
             />
           </div>
         </div>

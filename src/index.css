@@ -153,4 +153,19 @@
             drop-shadow(0 0 42px hsl(160 70% 50%));
     transform: scale(1.05);
   }
+  
+  /* Search Input Glow Effect */
+  .search-input-glow {
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 0 0 1px hsl(var(--border) / 0.3);
+    transition: var(--transition-smooth);
+  }
+  
+  .search-input-glow:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2),
+                0 0 20px hsl(var(--primary) / 0.3),
+                0 0 40px hsl(var(--primary) / 0.1);
+    outline: none;
+  }
 }
