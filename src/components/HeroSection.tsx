@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <img 
             src="/lovable-uploads/8dd50411-b22d-4d2b-8548-1d2edf6291a1.png" 
             alt="GANJA NATION" 
-            className="h-32 md:h-48 w-auto"
+            className="h-32 md:h-48 w-auto neon-glow animate-fade-in"
           />
         </div>
         <h1 className="font-display text-4xl md:text-6xl text-deco mb-6 animate-fade-in tracking-wider">
