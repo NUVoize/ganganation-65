@@ -32,7 +32,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
 
   return (
     <Card 
-      className="glass-card hover:amber-glow transition-all duration-500 cursor-pointer group animate-fade-in"
+      className="glass-card product-card-glow hover:amber-glow transition-all duration-500 cursor-pointer group animate-fade-in"
       onClick={() => onClick(whiskey)}
     >
       <div className="relative overflow-hidden rounded-t-lg">

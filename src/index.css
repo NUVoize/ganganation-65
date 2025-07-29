@@ -18,10 +18,10 @@
     --popover: 180 20% 7%;
     --popover-foreground: 160 25% 85%;
 
-    /* Primary - Teal-green matching the image */
-    --primary: 160 55% 40%;
+    /* Primary - Bright green #33ff00 */
+    --primary: 108 100% 50%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 160 65% 50%;
+    --primary-glow: 108 100% 60%;
 
     /* Secondary - Deep teal */
     --secondary: 180 45% 25%;
@@ -56,7 +56,7 @@
     
     /* Premium Shadows */
     --shadow-elegant: 0 25px 80px -15px hsl(0 0% 0% / 0.9);
-    --shadow-green: 0 0 50px hsl(var(--primary) / 0.4);
+    --shadow-green: 0 0 50px hsl(108 100% 50% / 0.4);
     --shadow-gold: 0 8px 40px hsl(var(--accent) / 0.5);
     
     /* Transitions */
@@ -113,7 +113,7 @@
   /* Ganja Nation Brand Text */
   .text-ganja {
     @apply font-serif text-primary;
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    text-shadow: 0 0 20px hsl(108 100% 50% / 0.5);
   }
   
   /* Natural Text Color */
@@ -141,16 +141,16 @@
   
   /* Neon Green Glow Effect */
   .neon-glow {
-    filter: drop-shadow(0 0 7px hsl(160 70% 50%)) 
-            drop-shadow(0 0 14px hsl(160 70% 50%)) 
-            drop-shadow(0 0 28px hsl(160 60% 50%));
+    filter: drop-shadow(0 0 7px hsl(108 100% 50%)) 
+            drop-shadow(0 0 14px hsl(108 100% 50%)) 
+            drop-shadow(0 0 28px hsl(108 80% 50%));
     transition: var(--transition-smooth);
   }
   
   .neon-glow:hover {
-    filter: drop-shadow(0 0 10px hsl(160 80% 50%)) 
-            drop-shadow(0 0 21px hsl(160 80% 50%)) 
-            drop-shadow(0 0 42px hsl(160 70% 50%));
+    filter: drop-shadow(0 0 10px hsl(108 100% 60%)) 
+            drop-shadow(0 0 21px hsl(108 100% 60%)) 
+            drop-shadow(0 0 42px hsl(108 90% 50%));
     transform: scale(1.05);
   }
   
@@ -167,5 +167,15 @@
                 0 0 20px hsl(var(--primary) / 0.3),
                 0 0 40px hsl(var(--primary) / 0.1);
     outline: none;
+  }
+  
+  /* Product Card Glow Effect */
+  .product-card-glow {
+    box-shadow: 0 4px 20px hsl(108 100% 50% / 0.2);
+    transition: var(--transition-smooth);
+  }
+  
+  .product-card-glow:hover {
+    box-shadow: 0 8px 30px hsl(108 100% 50% / 0.3);
   }
 }
