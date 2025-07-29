@@ -141,16 +141,16 @@
   
   /* Neon Green Glow Effect */
   .neon-glow {
-    filter: drop-shadow(0 0 10px hsl(160 100% 50%)) 
-            drop-shadow(0 0 20px hsl(160 100% 50%)) 
-            drop-shadow(0 0 40px hsl(160 80% 50%));
+    filter: drop-shadow(0 0 7px hsl(160 70% 50%)) 
+            drop-shadow(0 0 14px hsl(160 70% 50%)) 
+            drop-shadow(0 0 28px hsl(160 60% 50%));
     transition: var(--transition-smooth);
   }
   
   .neon-glow:hover {
-    filter: drop-shadow(0 0 15px hsl(160 100% 50%)) 
-            drop-shadow(0 0 30px hsl(160 100% 50%)) 
-            drop-shadow(0 0 60px hsl(160 80% 50%));
+    filter: drop-shadow(0 0 10px hsl(160 80% 50%)) 
+            drop-shadow(0 0 21px hsl(160 80% 50%)) 
+            drop-shadow(0 0 42px hsl(160 70% 50%));
     transform: scale(1.05);
   }
 }
