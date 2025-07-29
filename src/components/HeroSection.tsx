@@ -15,23 +15,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="max-w-7xl mx-auto text-center">
         <div className="mb-6 animate-fade-in flex justify-center">
           <img 
-            src="/lovable-uploads/4a8b1f8c-1f90-405b-ab2e-aa97667f73b6.png" 
-            alt="BOOTLEGGER" 
+            src="/lovable-uploads/cc6a257d-f047-4000-b9fb-8b7ba17b40f9.png" 
+            alt="GANJA NATION" 
             className="h-32 md:h-48 w-auto"
           />
         </div>
         <h1 className="font-display text-4xl md:text-6xl text-deco mb-6 animate-fade-in tracking-wider">
-          BOOTLEGGER Speakeasy
+          GANJA NATION Dispensary
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Welcome to our hidden speakeasy. Explore our carefully curated whiskey menu, 
-          featuring premium spirits served by the glass in true prohibition style.
+          Welcome to our premium cannabis dispensary. Explore our carefully curated menu, 
+          featuring premium strains and products in a sophisticated, legal environment.
         </p>
         
         <div className="max-w-md mx-auto">
           <div className="relative">
             <Input
-              placeholder="Search our whiskey menu..."
+              placeholder="Search our cannabis menu..."
               value={quickSearch}
               onChange={(e) => onQuickSearchChange(e.target.value)}
               onKeyDown={(e) => {

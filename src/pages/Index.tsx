@@ -75,9 +75,9 @@ const Index = () => {
         if (whiskey.price < min || whiskey.price > max) return false;
       }
 
-      if (filters.ageRange && whiskey.age) {
-        const [min, max] = filters.ageRange;
-        if (whiskey.age < min || whiskey.age > max) return false;
+      if (filters.thcRange && whiskey.thcContent) {
+        const [min, max] = filters.thcRange;
+        if (whiskey.thcContent < min || whiskey.thcContent > max) return false;
       }
 
       if (filters.inStock && !whiskey.inStock) {

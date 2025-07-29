@@ -28,6 +28,7 @@ const isValidTastingNote = (note: any): note is TastingNote => {
 
 const sanitizeUserData = (data: any): UserInteractions => {
   const defaultData: UserInteractions = {
+    savedCannabis: [],
     savedWhiskies: [],
     tastingNotes: []
   };
@@ -36,10 +37,14 @@ const sanitizeUserData = (data: any): UserInteractions => {
     return defaultData;
   }
 
-  // Validate and sanitize saved whiskies
+  // Validate and sanitize saved cannabis/whiskies
   const savedWhiskies = Array.isArray(data.savedWhiskies) 
     ? data.savedWhiskies.filter(isValidWhiskeyId)
     : [];
+  
+  const savedCannabis = Array.isArray(data.savedCannabis)
+    ? data.savedCannabis.filter(isValidWhiskeyId)
+    : [...savedWhiskies]; // Copy whiskey data to cannabis for compatibility
 
   // Validate and sanitize tasting notes
   const tastingNotes = Array.isArray(data.tastingNotes)
@@ -47,6 +52,7 @@ const sanitizeUserData = (data: any): UserInteractions => {
         .filter(isValidTastingNote)
         .map((note: any) => ({
           ...note,
+          cannabisId: note.cannabisId || note.whiskeyId, // Add cannabisId for compatibility
           dateCreated: note.dateCreated instanceof Date ? note.dateCreated : new Date(note.dateCreated),
           notes: note.notes.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '').trim(),
           tastingConditions: note.tastingConditions 
@@ -56,6 +62,7 @@ const sanitizeUserData = (data: any): UserInteractions => {
     : [];
 
   return {
+    savedCannabis,
     savedWhiskies,
     tastingNotes
   };
@@ -89,6 +96,7 @@ interface UserProviderProps {
 
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [userInteractions, setUserInteractions] = useState<UserInteractions>({
+    savedCannabis: [],
     savedWhiskies: [],
     tastingNotes: []
   });
@@ -120,25 +128,27 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   const addToSaved = (whiskeyId: string) => {
     if (!isValidWhiskeyId(whiskeyId)) {
-      console.error('Invalid whiskey ID provided to addToSaved:', whiskeyId);
+      console.error('Invalid cannabis ID provided to addToSaved:', whiskeyId);
       return;
     }
     
     setUserInteractions(prev => ({
       ...prev,
-      savedWhiskies: [...prev.savedWhiskies, whiskeyId]
+      savedCannabis: [...prev.savedCannabis, whiskeyId],
+      savedWhiskies: [...prev.savedWhiskies, whiskeyId] // Compatibility
     }));
   };
 
   const removeFromSaved = (whiskeyId: string) => {
     setUserInteractions(prev => ({
       ...prev,
-      savedWhiskies: prev.savedWhiskies.filter(id => id !== whiskeyId)
+      savedCannabis: prev.savedCannabis.filter(id => id !== whiskeyId),
+      savedWhiskies: prev.savedWhiskies.filter(id => id !== whiskeyId) // Compatibility
     }));
   };
 
   const isWhiskeySaved = (whiskeyId: string) => {
-    return userInteractions.savedWhiskies.includes(whiskeyId);
+    return userInteractions.savedCannabis.includes(whiskeyId);
   };
 
   const addTastingNote = (note: TastingNote) => {

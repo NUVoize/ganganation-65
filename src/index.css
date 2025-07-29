@@ -2,62 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* BOOTLEGGER Design System - Art Deco Speakeasy Theme */
+/* GANJA NATION Design System - Cannabis Dispensary Theme */
 
 @layer base {
   :root {
-    /* Base backgrounds - Deep charcoal and blacks */
-    --background: 0 0% 6%;
-    --foreground: 43 50% 85%;
+    /* Base backgrounds - Deep black with green undertones */
+    --background: 0 0% 4%;
+    --foreground: 120 20% 85%;
 
-    /* Card surfaces - Rich black with gold undertones */
-    --card: 0 0% 8%;
-    --card-foreground: 43 45% 88%;
+    /* Card surfaces - Rich black with subtle green */
+    --card: 0 0% 6%;
+    --card-foreground: 120 15% 88%;
 
     /* Popover elements */
-    --popover: 0 0% 10%;
-    --popover-foreground: 43 50% 85%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 120 20% 85%;
 
-    /* Primary - Rich Whiskey Amber */
-    --primary: 25 85% 45%;
-    --primary-foreground: 0 0% 8%;
-    --primary-glow: 25 90% 55%;
+    /* Primary - Cannabis Green */
+    --primary: 120 60% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 120 70% 45%;
 
-    /* Secondary - Deep crimson from logo */
-    --secondary: 0 70% 35%;
-    --secondary-foreground: 43 50% 90%;
+    /* Secondary - Deep forest green */
+    --secondary: 140 50% 25%;
+    --secondary-foreground: 120 20% 90%;
 
-    /* Muted - Sophisticated warm grays */
-    --muted: 0 0% 15%;
-    --muted-foreground: 43 25% 65%;
+    /* Muted - Sophisticated dark grays with green tint */
+    --muted: 120 10% 12%;
+    --muted-foreground: 120 15% 65%;
 
-    /* Accent - Rich crimson red */
-    --accent: 0 75% 45%;
-    --accent-foreground: 43 50% 95%;
+    /* Accent - Golden green */
+    --accent: 60 80% 50%;
+    --accent-foreground: 0 0% 8%;
 
     /* Destructive - Bright red */
     --destructive: 0 80% 50%;
-    --destructive-foreground: 43 50% 95%;
+    --destructive-foreground: 120 20% 95%;
 
-    /* Borders and inputs - Warm dark tones */
-    --border: 43 15% 20%;
-    --input: 43 15% 16%;
-    --ring: 43 75% 60%;
+    /* Borders and inputs - Dark green tones */
+    --border: 120 20% 18%;
+    --input: 120 15% 14%;
+    --ring: 120 60% 45%;
 
     --radius: 0.75rem;
 
-    /* Art Deco Gradients */
-    --gradient-smokey: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(43 15% 10%) 50%, hsl(0 0% 4%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
-    --gradient-crimson: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(0 80% 55%) 100%);
-    --gradient-deco: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(0 0% 8%) 100%);
-    --gradient-amber: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
-    --gradient-copper: linear-gradient(135deg, hsl(25 60% 40%) 0%, hsl(25 70% 50%) 100%);
+    /* Cannabis Gradients */
+    --gradient-smokey: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(120 15% 8%) 50%, hsl(0 0% 2%) 100%);
+    --gradient-green: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(60 90% 60%) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(0 0% 6%) 100%);
+    --gradient-forest: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(40 40% 30%) 0%, hsl(120 40% 25%) 100%);
     
     /* Premium Shadows */
-    --shadow-elegant: 0 25px 80px -15px hsl(0 0% 0% / 0.8);
-    --shadow-gold: 0 0 50px hsl(var(--primary) / 0.4);
-    --shadow-crimson: 0 8px 40px hsl(var(--accent) / 0.5);
+    --shadow-elegant: 0 25px 80px -15px hsl(0 0% 0% / 0.9);
+    --shadow-green: 0 0 50px hsl(var(--primary) / 0.4);
+    --shadow-gold: 0 8px 40px hsl(var(--accent) / 0.5);
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,7 +73,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/whiskey-glass-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/lovable-uploads/d404a791-4218-4019-a4e6-52d41baf3e3a.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,52 +89,52 @@
     box-shadow: var(--shadow-elegant);
   }
   
-  /* Gold Glow Effect */
-  .gold-glow {
-    box-shadow: var(--shadow-gold);
+  /* Green Glow Effect */
+  .green-glow {
+    box-shadow: var(--shadow-green);
   }
   
-  /* Art Deco Button Variants */
-  .btn-bootlegger {
+  /* Cannabis Button Variants */
+  .btn-ganja {
     @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground;
     transition: var(--transition-smooth);
   }
   
-  .btn-bootlegger:hover {
+  .btn-ganja:hover {
     @apply scale-105;
-    box-shadow: var(--shadow-gold);
+    box-shadow: var(--shadow-green);
   }
   
-  /* Art Deco Text Effect */
+  /* Cannabis Brand Text Effect */
   .text-deco {
     @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
   }
   
-  /* Bootlegger Brand Text */
-  .text-bootlegger {
+  /* Ganja Nation Brand Text */
+  .text-ganja {
     @apply font-serif text-primary;
     text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
   }
   
-  /* Smokey Text Color */
-  .text-smokey {
+  /* Natural Text Color */
+  .text-natural {
     @apply text-foreground;
   }
   
-  /* Amber Glow Effect */
-  .amber-glow {
-    box-shadow: var(--shadow-gold);
+  /* Green Glow Effect */
+  .nature-glow {
+    box-shadow: var(--shadow-green);
     transition: var(--transition-smooth);
   }
   
   /* Premium Button Style */
   .btn-premium {
-    @apply bg-gradient-gold text-primary-foreground border border-primary/20;
+    @apply bg-gradient-green text-primary-foreground border border-primary/20;
     transition: var(--transition-smooth);
   }
   
   .btn-premium:hover {
     @apply scale-105;
-    box-shadow: var(--shadow-gold);
+    box-shadow: var(--shadow-green);
   }
 }

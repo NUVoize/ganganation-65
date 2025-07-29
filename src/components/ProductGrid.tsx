@@ -21,10 +21,10 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   return (
     <div className="flex-1">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-serif text-2xl text-smokey">
+        <h2 className="font-serif text-2xl text-natural">
           Our Collection
           <span className="text-sm text-muted-foreground ml-2">
-            ({filteredWhiskies.length} whiskeys)
+            ({filteredWhiskies.length} strains)
           </span>
         </h2>
         

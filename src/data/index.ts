@@ -1,15 +1,18 @@
-import { WhiskeyProduct } from '../types/whiskey';
-import { scotchWhiskies } from './scotch';
-import { bourbonWhiskies } from './bourbon';
-import { irishWhiskies } from './irish';
-import { canadianWhiskies } from './canadian';
+import { CannabisProduct } from '../types/whiskey';
+import { indicaStrains, sativaStrains, hybridStrains, cbdStrains, concentrates, edibles, preRolls } from './cannabis';
 
-export const whiskeyCollection: WhiskeyProduct[] = [
-  ...scotchWhiskies,
-  ...bourbonWhiskies,
-  ...irishWhiskies,
-  ...canadianWhiskies
+export const cannabisCollection: CannabisProduct[] = [
+  ...indicaStrains,
+  ...sativaStrains,
+  ...hybridStrains,
+  ...cbdStrains,
+  ...concentrates,
+  ...edibles,
+  ...preRolls
 ];
 
+// Compatibility export
+export const whiskeyCollection = cannabisCollection;
+
 // Export individual collections for specific use cases
-export { scotchWhiskies, bourbonWhiskies, irishWhiskies, canadianWhiskies };
+export { indicaStrains, sativaStrains, hybridStrains, cbdStrains, concentrates, edibles, preRolls };

@@ -20,7 +20,7 @@ export const FeaturedCollection: React.FC<FeaturedCollectionProps> = ({
   return (
     <div className="px-4 mb-12">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-serif text-3xl text-smokey mb-8 text-center">Bartender's Choice</h2>
+        <h2 className="font-serif text-3xl text-natural mb-8 text-center">Budtender's Choice</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredWhiskies.map(whiskey => (
             <WhiskeyCard

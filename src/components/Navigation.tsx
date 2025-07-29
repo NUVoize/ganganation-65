@@ -9,7 +9,7 @@ export const Navigation: React.FC = () => {
   const location = useLocation();
   const { userInteractions } = useUser();
   
-  const savedCount = userInteractions.savedWhiskies.length;
+  const savedCount = userInteractions.savedCannabis.length;
   const tastingCount = userInteractions.tastingNotes.length;
 
   const navItems = [
@@ -48,11 +48,11 @@ export const Navigation: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
             <img 
-              src="/lovable-uploads/4a8b1f8c-1f90-405b-ab2e-aa97667f73b6.png" 
-              alt="BOOTLEGGER" 
+              src="/lovable-uploads/30d95a57-de6c-4e42-83bd-1515117475a3.png" 
+              alt="GANJA NATION" 
               className="h-8 w-auto sm:h-10"
             />
-            <span className="font-serif text-lg text-bootlegger hidden sm:inline">BOOTLEGGER</span>
+            <span className="font-serif text-lg text-ganja hidden sm:inline">GANJA NATION</span>
           </Link>
 
           {/* Navigation Links */}

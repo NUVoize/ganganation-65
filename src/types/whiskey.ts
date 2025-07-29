@@ -1,22 +1,22 @@
-export interface WhiskeyProduct {
+export interface CannabisProduct {
   id: string;
   name: string;
   brand: string;
-  type: 'Single Malt' | 'Blended' | 'Bourbon' | 'Rye' | 'Irish' | 'Japanese' | 'Canadian';
-  age?: number;
+  type: 'Indica' | 'Sativa' | 'Hybrid' | 'CBD' | 'Concentrate' | 'Edible' | 'Pre-Roll';
+  thcContent?: number;
+  cbdContent?: number;
   price: number;
-  abv: number;
   origin: string;
   region?: string;
-  distillery: string;
+  grower: string;
   description: string;
-  tastingNotes: {
-    nose: string[];
-    palate: string[];
-    finish: string[];
+  effects: {
+    primary: string[];
+    secondary: string[];
+    duration: string[];
   };
-  color: string;
-  servingRecommendation: string;
+  flavor: string;
+  pairing: string;
   images: string[];
   videoUrl?: string;
   awards?: string[];
@@ -26,12 +26,15 @@ export interface WhiskeyProduct {
   rarity: 'Common' | 'Limited' | 'Rare' | 'Ultra Rare';
 }
 
+// Compatibility export for existing components
+export type WhiskeyProduct = CannabisProduct;
+
 export interface SearchFilters {
   type?: string[];
   origin?: string[];
   priceRange?: [number, number];
-  ageRange?: [number, number];
-  abvRange?: [number, number];
+  thcRange?: [number, number];
+  cbdRange?: [number, number];
   inStock?: boolean;
   rarity?: string[];
   searchTerm?: string;
@@ -39,18 +42,23 @@ export interface SearchFilters {
 
 export interface TastingNote {
   id: string;
-  whiskeyId: string;
+  cannabisId: string;
+  whiskeyId: string; // Compatibility field
   rating: number; // 1-5 stars
   notes: string;
   dateCreated: Date;
-  tastingConditions?: string;
+  sessionConditions?: string;
+  tastingConditions?: string; // Compatibility field
   aromaRating?: number;
-  tasteRating?: number;
-  finishRating?: number;
+  effectRating?: number;
+  tasteRating?: number; // Compatibility field
+  flavorRating?: number;
+  finishRating?: number; // Compatibility field
 }
 
 export interface UserInteractions {
-  savedWhiskies: string[]; // whiskey IDs
+  savedCannabis: string[]; // cannabis IDs
+  savedWhiskies: string[]; // Compatibility field
   tastingNotes: TastingNote[];
 }
 
