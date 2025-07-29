@@ -15,8 +15,8 @@ interface SearchFiltersProps {
 export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) => {
   const [localFilters, setLocalFilters] = useState<SearchFiltersType>(filters);
 
-  const whiskeyTypes = ['Single Malt', 'Blended', 'Bourbon', 'Rye', 'Irish', 'Japanese', 'Canadian'];
-  const origins = ['Scotland', 'Ireland', 'United States', 'Japan', 'Canada'];
+  const cannabisTypes = ['Indica', 'Sativa', 'Hybrid', 'CBD', 'Concentrate', 'Edible', 'Pre-Roll'];
+  const origins = ['British Columbia', 'Ontario', 'Quebec', 'Alberta', 'Nova Scotia', 'Manitoba', 'California', 'Colorado', 'Jamaica'];
   const rarities = ['Common', 'Limited', 'Rare', 'Ultra Rare'];
 
   const handleFilterChange = (key: keyof SearchFiltersType, value: any) => {
@@ -43,7 +43,7 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
     <Card className="glass-card">
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle className="font-serif text-smokey">Refine Your Selection</CardTitle>
+          <CardTitle className="font-serif text-natural">Refine Your Selection</CardTitle>
           <Button variant="outline" size="sm" onClick={clearAllFilters}>
             Clear All
           </Button>
@@ -55,7 +55,7 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
         <div>
           <label className="text-sm font-medium text-foreground mb-2 block">Search</label>
           <Input
-            placeholder="Search whiskey names, brands, distilleries..."
+            placeholder="Search strain names, brands, growers..."
             value={localFilters.searchTerm || ''}
             onChange={(e) => handleFilterChange('searchTerm', e.target.value)}
             className="bg-muted/20"
@@ -64,11 +64,11 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
 
         <Separator />
 
-        {/* Whiskey Type */}
+        {/* Cannabis Type */}
         <div>
           <label className="text-sm font-medium text-foreground mb-3 block">Type</label>
           <div className="flex flex-wrap gap-2">
-            {whiskeyTypes.map(type => (
+            {cannabisTypes.map(type => (
               <Badge
                 key={type}
                 variant={localFilters.type?.includes(type) ? "default" : "outline"}
