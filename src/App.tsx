@@ -7,7 +7,7 @@ import { UserProvider } from "./contexts/UserContext";
 import Index from "./pages/Index";
 import SavedPage from "./pages/SavedPage";
 import TastingPage from "./pages/TastingPage";
-import ScannerPage from "./pages/ScannerPage";
+import CategoryPage from "./pages/CategoryPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,7 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/saved" element={<SavedPage />} />
             <Route path="/tastings" element={<TastingPage />} />
-            <Route path="/scanner" element={<ScannerPage />} />
+            <Route path="/products/:category" element={<CategoryPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

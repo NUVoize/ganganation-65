@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input } from './ui/input';
+import { CategoryIcons } from './CategoryIcons';
 
 interface HeroSectionProps {
   quickSearch: string;
@@ -28,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           featuring premium strains and products in a sophisticated, legal environment.
         </p>
         
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto mb-8">
           <div className="relative">
             <Input
               placeholder="Search our cannabis menu..."
@@ -46,6 +47,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
       </div>
+      
+      <CategoryIcons />
     </div>
   );
 };
