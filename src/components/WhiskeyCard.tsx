@@ -6,6 +6,7 @@ import { useUser } from '../contexts/UserContext';
 import { BookmarkPlus, Bookmark, Cigarette, Share } from 'lucide-react';
 import { ShareModal } from './ShareModal';
 import { useState } from 'react';
+import { OptimizedImage } from './OptimizedImage';
 
 interface WhiskeyCardProps {
   whiskey: WhiskeyProduct;
@@ -38,10 +39,12 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
       <div className="relative overflow-hidden rounded-t-lg">
         <div className="h-48 bg-gradient-smokey flex items-center justify-center p-4">
           {whiskey.images && whiskey.images.length > 0 ? (
-            <img 
+            <OptimizedImage
               src={whiskey.images[0]} 
-              alt={`${whiskey.name} bottle`}
-              className="h-full w-auto object-contain"
+              alt={`${whiskey.name} - ${whiskey.type} cannabis product`}
+              className="h-full w-auto mx-auto"
+              objectFit="contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           ) : (
             <div className="text-center">

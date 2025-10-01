@@ -2,6 +2,7 @@ import React from 'react';
 import { WhiskeyProduct } from '../types/whiskey';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
+import { OptimizedImage } from './OptimizedImage';
 
 interface FeaturedProductCardProps {
   product: WhiskeyProduct;
@@ -19,10 +20,13 @@ export const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({
     >
       <div className="relative aspect-square">
         {product.images && product.images.length > 0 ? (
-          <img 
+          <OptimizedImage
             src={product.images[0]} 
-            alt={product.name}
-            className="w-full h-full object-cover"
+            alt={`${product.name} - Featured cannabis product`}
+            className="w-full h-full"
+            objectFit="cover"
+            priority={true}
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
           />
         ) : (
           <div className="w-full h-full bg-card flex items-center justify-center">

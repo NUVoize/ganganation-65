@@ -4,6 +4,7 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { OptimizedImage } from './OptimizedImage';
 
 interface WhiskeyDetailProps {
   whiskey: WhiskeyProduct;
@@ -38,10 +39,13 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
             <div className="md:w-1/3">
               <div className="h-64 bg-gradient-smokey rounded-lg overflow-hidden">
                 {whiskey.images && whiskey.images.length > 0 ? (
-                  <img 
+                  <OptimizedImage
                     src={whiskey.images[0]} 
-                    alt={`${whiskey.brand} ${whiskey.name}`}
-                    className="w-full h-full object-cover"
+                    alt={`${whiskey.brand} ${whiskey.name} - Detailed view`}
+                    className="w-full h-full"
+                    objectFit="cover"
+                    priority={true}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 ) : (
                   <div className="h-full flex items-center justify-center">
