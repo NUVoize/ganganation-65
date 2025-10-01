@@ -1,0 +1,526 @@
+[
+  {
+    "product": "Amnesia Haze (Amnesia A's)",
+    "type": "Sativa",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Lemon, citrus, earthy",
+    "effects": "Energetic, uplifted, euphoric, creative",
+    "provenance": "South Asian & Jamaican landrace influences; popularized in Amsterdam",
+    "grower": "Soma Seeds",
+    "sources": [
+      "https://www.leafly.com/strains/amnesia-haze"
+    ],
+    "image_number": 1824
+  },
+  {
+    "product": "Baccarat",
+    "type": "Hybrid (sativa-leaning)",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet berry, citrus haze, pine",
+    "effects": "Uplifting, creative, balanced",
+    "provenance": "Pai Gow × Mimosa V6 (Symbiotic Genetics)",
+    "grower": "Symbiotic Genetics",
+    "sources": [
+      "https://www.leafly.com/strains/baccarat",
+      "https://en.seedfinder.eu/strain-info/Baccarat/Symbiotic_Genetics/"
+    ],
+    "image_number": 2005
+  },
+  {
+    "product": "Blue Dream",
+    "type": "Sativa-dominant Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Blueberry, sweet, citrus",
+    "effects": "Euphoric, creative, relaxed body",
+    "provenance": "Blueberry × Haze; California origin",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/blue-dream"
+    ],
+    "image_number": 1824
+  },
+  {
+    "product": "Bruce Banner",
+    "type": "Hybrid (sativa-leaning)",
+    "thc_percent": 24.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Diesel, earthy, sweet",
+    "effects": "Euphoric, creative, relaxing body",
+    "provenance": "OG Kush × Strawberry Diesel (commonly reported)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/bruce-banner"
+    ],
+    "image_number": 1855
+  },
+  {
+    "product": "Bubba Kush",
+    "type": "Indica",
+    "thc_percent": 17.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Coffee, chocolate, earthy",
+    "effects": "Relaxed, sleepy, hungry",
+    "provenance": "1990s U.S. indica; Florida/West Coast scene",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/bubba-kush"
+    ],
+    "image_number": 1797
+  },
+  {
+    "product": "Candyland",
+    "type": "Sativa-dominant Hybrid",
+    "thc_percent": 19.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, candy-like, fruity",
+    "effects": "Uplifting, sociable, creative",
+    "provenance": "Granddaddy Purple × Bay Platinum Cookies",
+    "grower": "Ken Estes / Grand Daddy Purp",
+    "sources": [
+      "https://www.leafly.com/strains/candyland"
+    ],
+    "image_number": 1864
+  },
+  {
+    "product": "Cherry Run / Runt",
+    "type": "Hybrid",
+    "thc_percent": 19.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Berry, floral, sweet",
+    "effects": "Euphoric, tingly, relaxed",
+    "provenance": "Often listed as Runtz × Cherry Pie (Cherry Runtz)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/cherry-runtz"
+    ],
+    "image_number": 1806
+  },
+  {
+    "product": "Creamsicle",
+    "type": "Hybrid",
+    "thc_percent": 18.0,
+    "cbd_percent": 1.0,
+    "tasting_notes": "Orange citrus, vanilla, sweet",
+    "effects": "Happy, uplifted, energetic",
+    "provenance": "Orange Crush × Juicy Fruit (Orange Creamsicle)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/creamsicle"
+    ],
+    "image_number": 1922
+  },
+  {
+    "product": "Durban Poison",
+    "type": "Sativa (landrace)",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, spicy, anise",
+    "effects": "Energetic, focused, uplifting",
+    "provenance": "South African landrace from Durban",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/durban-poison"
+    ],
+    "image_number": 1850
+  },
+  {
+    "product": "Forbidden Muffin",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Berry, blueberry, citrus, sweet",
+    "effects": "Tingly, hungry, euphoric",
+    "provenance": "Forbidden Fruit × Blueberry Muffin",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/forbidden-muffin"
+    ],
+    "image_number": 1942
+  },
+  {
+    "product": "Ghost Bubba",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Earthy, herbal, diesel",
+    "effects": "Relaxing, euphoric, calming",
+    "provenance": "Linked to Bubba Kush × Ghost OG lines",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/ghost-bubba"
+    ],
+    "image_number": [
+      1907,
+      1913
+    ]
+  },
+  {
+    "product": "God's Gift",
+    "type": "Indica",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Grape, citrus, earthy",
+    "effects": "Sleepy, relaxed, euphoric",
+    "provenance": "Granddaddy Purple × OG Kush",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/gods-gift"
+    ],
+    "image_number": 1933
+  },
+  {
+    "product": "Godzilla",
+    "type": "Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Earthy, pine, diesel",
+    "effects": "Relaxed, euphoric, happy",
+    "provenance": "Name used for different cuts; often linked to Godzilla Glue or Godzilla OG variants",
+    "grower": null,
+    "sources": [
+      "https://www.allbud.com/marijuana-strains/hybrid/godzilla"
+    ],
+    "image_number": [
+      1739,
+      1743
+    ]
+  },
+  {
+    "product": "Gorilla Glue",
+    "type": "Hybrid (balanced)",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Diesel, earthy, pine",
+    "effects": "Heavy, relaxed, euphoric",
+    "provenance": "Chem’s Sister × Sour Dubb × Chocolate Diesel (GG4 lineage)",
+    "grower": "GG Strains (GG4)",
+    "sources": [
+      "https://www.leafly.com/strains/original-glue"
+    ],
+    "image_number": 2018
+  },
+  {
+    "product": "Granddaddy OG",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Grape, berry, earthy",
+    "effects": "Relaxed, sleepy, euphoric",
+    "provenance": "Often marketed link to Granddaddy Purple × OG Kush lines",
+    "grower": null,
+    "sources": [
+      "https://www.allbud.com/marijuana-strains/indica-dominant-hybrid/granddaddy-og"
+    ],
+    "image_number": 1966
+  },
+  {
+    "product": "Green Goblin",
+    "type": "Sativa-dominant Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Skunky, diesel, citrus",
+    "effects": "Energetic, uplifted, creative",
+    "provenance": "Often reported as phenotype/descendant related to Green Crack or Skunk lines",
+    "grower": null,
+    "sources": [
+      "https://www.wikileaf.com/strain/green-goblin/"
+    ],
+    "image_number": 1891
+  },
+  {
+    "product": "Island Pink",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, floral, vanilla, gas",
+    "effects": "Relaxed, sleepy, euphoric",
+    "provenance": "Often marketed as Pink Kush variant (Canada)",
+    "grower": null,
+    "sources": [
+      "https://herb.co/strains/island-pink-kush/"
+    ],
+    "image_number": 1762
+  },
+  {
+    "product": "Joker",
+    "type": "Sativa-dominant Hybrid",
+    "thc_percent": 18.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Citrus, diesel, skunk",
+    "effects": "Happy, uplifted, creative",
+    "provenance": "Reported as phenotype of Jack Herer × something diesel/skunk (varies by breeder)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/joker"
+    ],
+    "image_number": 1839
+  },
+  {
+    "product": "Lilac Diesel",
+    "type": "Hybrid (sativa-leaning)",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Floral, citrus, diesel",
+    "effects": "Euphoric, focused, creative",
+    "provenance": "Silver Lemon Haze × Forbidden Fruit × Cherry Pie × Citral Glue (varies by breeder lists)",
+    "grower": "Ethos Genetics",
+    "sources": [
+      "https://www.leafly.com/strains/lilac-diesel"
+    ],
+    "image_number": [
+      1977,
+      1985
+    ]
+  },
+  {
+    "product": "Lindsay OG",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Pungent gas, earthy, pine",
+    "effects": "Sedating, heavy, couch-lock",
+    "provenance": "Canadian cut associated with OG Kush lineage (Lindsay, Ontario)",
+    "grower": null,
+    "sources": [
+      "https://www.allbud.com/marijuana-strains/indica-dominant-hybrid/lindsay-og"
+    ],
+    "image_number": [
+      1797,
+      1803
+    ]
+  },
+  {
+    "product": "Louis XIII OG",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Pine, lemon, diesel",
+    "effects": "Relaxed, sleepy, euphoric",
+    "provenance": "OG Kush family cut",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/louis-xiii"
+    ],
+    "image_number": 1922
+  },
+  {
+    "product": "Maui Wowie",
+    "type": "Sativa",
+    "thc_percent": 18.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Pineapple, tropical, citrus",
+    "effects": "Uplifting, energetic, creative",
+    "provenance": "Classic Hawaiian sativa from the 1970s",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/maui-wowie"
+    ],
+    "image_number": 1891
+  },
+  {
+    "product": "Mimosa",
+    "type": "Sativa-leaning Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Citrus, orange, tropical",
+    "effects": "Uplifted, focused, happy",
+    "provenance": "Clementine × Purple Punch (Symbiotic Genetics)",
+    "grower": "Symbiotic Genetics",
+    "sources": [
+      "https://www.leafly.com/strains/mimosa"
+    ],
+    "image_number": 1869
+  },
+  {
+    "product": "Pineapple Express",
+    "type": "Hybrid (sativa-leaning)",
+    "thc_percent": 19.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Pineapple, tropical, cedar",
+    "effects": "Uplifted, energetic, creative",
+    "provenance": "Trainwreck × Hawaiian (popularized by film)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/pineapple-express"
+    ],
+    "image_number": 1845
+  },
+  {
+    "product": "Pink Hill Trough",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, floral, gas",
+    "effects": "Relaxed, heavy, sleepy",
+    "provenance": "Market name; likely local Pink Kush cross (details vary)",
+    "grower": null,
+    "sources": [],
+    "image_number": 1811
+  },
+  {
+    "product": "Pink Panties",
+    "type": "Indica-leaning Hybrid",
+    "thc_percent": 18.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Floral, sweet, berry",
+    "effects": "Relaxed, calm, aroused",
+    "provenance": "Reported as Burmese Kush descendant (Sherbinski lineage into Gelato family)",
+    "grower": "Sherbinski",
+    "sources": [
+      "https://www.leafly.com/strains/pink-panties"
+    ],
+    "image_number": 1713
+  },
+  {
+    "product": "Pink Phoenix",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, gas, floral",
+    "effects": "Relaxed, euphoric, sleepy",
+    "provenance": "Marketed pink/kush family cross (varies by grower)",
+    "grower": null,
+    "sources": [],
+    "image_number": 1749
+  },
+  {
+    "product": "Pink Venom",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Gas, pine, sweet",
+    "effects": "Relaxed, heavy, euphoric",
+    "provenance": "Often listed as Venom OG × Pink Kush",
+    "grower": null,
+    "sources": [
+      "https://www.kindselections.ca/product/pink-venom"
+    ],
+    "image_number": 1749
+  },
+  {
+    "product": "Pintar / Pine Tar",
+    "type": "Indica",
+    "thc_percent": 19.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Pine, earthy, woody",
+    "effects": "Relaxed, sleepy, calm",
+    "provenance": "Pine Tar Kush (heirloom Pakistani lineage)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/pine-tar-kush"
+    ],
+    "image_number": 1766
+  },
+  {
+    "product": "Purple Dream",
+    "type": "Hybrid",
+    "thc_percent": 17.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Grape, berry, sweet",
+    "effects": "Relaxed, happy, calm",
+    "provenance": "Blue Dream × Granddaddy Purple (commonly reported)",
+    "grower": null,
+    "sources": [
+      "https://www.leafly.com/strains/purple-dream"
+    ],
+    "image_number": 1907
+  },
+  {
+    "product": "Purple Power Plate",
+    "type": "Hybrid (indica-leaning)",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Grape, sweet, earthy",
+    "effects": "Relaxed, calm, sleepy",
+    "provenance": "Market name; likely purple/kush lineage",
+    "grower": null,
+    "sources": [],
+    "image_number": [
+      1999,
+      2005
+    ]
+  },
+  {
+    "product": "Slurricane",
+    "type": "Indica-dominant Hybrid",
+    "thc_percent": 21.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Berry, sweet, creamy",
+    "effects": "Relaxed, sleepy, euphoric",
+    "provenance": "Do-Si-Dos × Purple Punch (In House Genetics)",
+    "grower": "In House Genetics",
+    "sources": [
+      "https://www.leafly.com/strains/slurricane"
+    ],
+    "image_number": 1719
+  },
+  {
+    "product": "Tom Ford Pink",
+    "type": "Indica (TFPK)",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, floral, gas",
+    "effects": "Sedating, relaxed, heavy",
+    "provenance": "Tom Ford Pink Kush (Canadian indica-cut of Pink Kush family)",
+    "grower": null,
+    "sources": [
+      "https://herb.co/strains/tom-ford-pink-kush/"
+    ],
+    "image_number": 1722
+  },
+  {
+    "product": "Violator Kush",
+    "type": "Indica",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Earthy, spicy, hash",
+    "effects": "Relaxed, sleepy, heavy",
+    "provenance": "Malana × Hindu Kush (Barney’s Farm)",
+    "grower": "Barney’s Farm",
+    "sources": [
+      "https://www.leafly.com/strains/violator-kush"
+    ],
+    "image_number": 1785
+  },
+  {
+    "product": "White Slushy",
+    "type": "Hybrid",
+    "thc_percent": 20.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, creamy, gas",
+    "effects": "Relaxed, happy, balanced",
+    "provenance": "Market name; sometimes seen as White Slushee variants",
+    "grower": null,
+    "sources": [],
+    "image_number": 1985
+  },
+  {
+    "product": "Zope",
+    "type": "Hybrid",
+    "thc_percent": 22.0,
+    "cbd_percent": 0.0,
+    "tasting_notes": "Sweet, soapy, floral (candy-like)",
+    "effects": "Euphoric, relaxing, creative",
+    "provenance": "Likely Zoap (Rainbow Sherb #16 × Pink Guava; Deep East/Doja Pak)",
+    "grower": "Deep East (Zoap)",
+    "sources": [
+      "https://www.leafly.com/strains/zoap"
+    ],
+    "image_number": 1949
+  },
+  {
+    "product": null,
+    "type": null,
+    "thc_percent": null,
+    "cbd_percent": null,
+    "tasting_notes": null,
+    "effects": null,
+    "provenance": null,
+    "grower": null,
+    "sources": [],
+    "image_number": 1719
+  }
+]
