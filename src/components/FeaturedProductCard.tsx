@@ -2,7 +2,7 @@ import React from 'react';
 import { WhiskeyProduct } from '../types/whiskey';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
-import { OptimizedImage } from './OptimizedImage';
+import { ImageZoom } from './ImageZoom';
 
 interface FeaturedProductCardProps {
   product: WhiskeyProduct;
@@ -20,7 +20,7 @@ export const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({
     >
       <div className="relative aspect-square">
         {product.images && product.images.length > 0 ? (
-          <OptimizedImage
+          <ImageZoom
             src={product.images[0]} 
             alt={`${product.name} - Featured cannabis product`}
             className="w-full h-full"

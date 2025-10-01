@@ -4,7 +4,7 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { OptimizedImage } from './OptimizedImage';
+import { ImageZoom } from './ImageZoom';
 
 interface WhiskeyDetailProps {
   whiskey: WhiskeyProduct;
@@ -39,7 +39,7 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
             <div className="md:w-1/3">
               <div className="h-64 bg-gradient-smokey rounded-lg overflow-hidden">
                 {whiskey.images && whiskey.images.length > 0 ? (
-                  <OptimizedImage
+                  <ImageZoom
                     src={whiskey.images[0]} 
                     alt={`${whiskey.brand} ${whiskey.name} - Detailed view`}
                     className="w-full h-full"

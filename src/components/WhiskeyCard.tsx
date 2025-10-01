@@ -6,7 +6,7 @@ import { useUser } from '../contexts/UserContext';
 import { BookmarkPlus, Bookmark, Cigarette, Share } from 'lucide-react';
 import { ShareModal } from './ShareModal';
 import { useState } from 'react';
-import { OptimizedImage } from './OptimizedImage';
+import { ImageZoom } from './ImageZoom';
 
 interface WhiskeyCardProps {
   whiskey: WhiskeyProduct;
@@ -39,7 +39,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
       <div className="relative overflow-hidden rounded-t-lg">
         <div className="h-48 bg-gradient-smokey flex items-center justify-center p-4">
           {whiskey.images && whiskey.images.length > 0 ? (
-            <OptimizedImage
+            <ImageZoom
               src={whiskey.images[0]} 
               alt={`${whiskey.name} - ${whiskey.type} cannabis product`}
               className="h-full w-auto mx-auto"
