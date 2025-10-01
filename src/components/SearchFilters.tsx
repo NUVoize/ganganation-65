@@ -16,7 +16,7 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
   const [localFilters, setLocalFilters] = useState<SearchFiltersType>(filters);
 
   const cannabisTypes = ['Indica', 'Sativa', 'Hybrid', 'CBD', 'Concentrate', 'Edible', 'Pre-Roll'];
-  const origins = ['British Columbia', 'Ontario', 'Quebec', 'Alberta', 'Nova Scotia', 'Manitoba', 'California', 'Colorado', 'Jamaica'];
+  const origins = ['Canada', 'United States', 'Netherlands', 'South Africa', 'India/Afghanistan', 'Pakistan'];
   const rarities = ['Common', 'Limited', 'Rare', 'Ultra Rare'];
 
   const handleFilterChange = (key: keyof SearchFiltersType, value: any) => {
@@ -105,12 +105,12 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
         {/* Price Range */}
         <div>
           <label className="text-sm font-medium text-foreground mb-3 block">
-            Price per Gram: ${localFilters.priceRange?.[0] || 0} - ${localFilters.priceRange?.[1] || 30}
+            Price Range: ${localFilters.priceRange?.[0] || 0} - ${localFilters.priceRange?.[1] || 70}
           </label>
           <Slider
-            value={localFilters.priceRange || [0, 30]}
+            value={localFilters.priceRange || [0, 70]}
             onValueChange={(value) => handleFilterChange('priceRange', value)}
-            max={30}
+            max={70}
             min={0}
             step={1}
             className="w-full"

@@ -26,10 +26,11 @@ const Index = () => {
     keys: [
       { name: 'name', weight: 0.3 },
       { name: 'brand', weight: 0.2 },
-      { name: 'origin', weight: 0.2 },
-      { name: 'distillery', weight: 0.15 },
+      { name: 'origin', weight: 0.15 },
+      { name: 'grower', weight: 0.15 },
       { name: 'type', weight: 0.1 },
-      { name: 'age', weight: 0.05 }
+      { name: 'flavor', weight: 0.05 },
+      { name: 'description', weight: 0.05 }
     ],
     threshold: 0.4, // Allow for misspellings
     distance: 100,
