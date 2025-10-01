@@ -292,9 +292,9 @@ export const indicaStrains: CannabisProduct[] = [
     effects: parseEffects('Relaxed, calm, aroused, happy, euphoric'),
     flavor: 'Floral, sweet, berry',
     pairing: 'Evening relaxation strain',
-    images: getImagePath(1713),
+    images: getImagePath(1719),
     sku: generateSKU('Pink Panties', 13),
-    inStock: false,
+    inStock: true,
     featured: false,
     rarity: 'Limited'
   }
