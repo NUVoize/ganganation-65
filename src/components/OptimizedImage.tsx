@@ -21,8 +21,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
+  // Check if we should try advanced image formats
+  const hasAdvancedFormats = (url: string) => {
+    // Only use advanced formats for imported assets, not public folder images
+    return !url.startsWith('/');
+  };
+
   // Generate WebP version URL (if backend supports it, otherwise fallback)
   const getWebPUrl = (url: string) => {
+    if (!hasAdvancedFormats(url)) return url;
     if (url.includes('.jpg') || url.includes('.jpeg')) {
       return url.replace(/\.(jpg|jpeg)$/i, '.webp');
     }
@@ -31,6 +38,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Generate srcset for responsive images
   const generateSrcSet = (url: string) => {
+    if (!hasAdvancedFormats(url)) return url;
     const base = url.split('.').slice(0, -1).join('.');
     const ext = url.split('.').pop();
     return `${base}.${ext} 1x, ${base}@2x.${ext} 2x`;
@@ -55,12 +63,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       )}
       
       <picture>
-        {/* WebP format for modern browsers */}
-        <source
-          type="image/webp"
-          srcSet={generateSrcSet(getWebPUrl(src))}
-          sizes={sizes}
-        />
+        {/* WebP format for modern browsers - only for imported assets */}
+        {hasAdvancedFormats(src) && (
+          <source
+            type="image/webp"
+            srcSet={generateSrcSet(getWebPUrl(src))}
+            sizes={sizes}
+          />
+        )}
         
         {/* Fallback to original format */}
         <img
