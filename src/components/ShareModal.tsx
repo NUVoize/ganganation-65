@@ -87,6 +87,30 @@ export const ShareModal = ({ whiskey, isOpen, onClose }: ShareModalProps) => {
       }
     } else {
       await copyToClipboard(content);
+      
+      // Open respective social media platform
+      const encodedText = encodeURIComponent(content.text);
+      const encodedUrl = encodeURIComponent(content.url);
+      
+      let shareUrl = '';
+      
+      switch (platform) {
+        case 'instagram-post':
+        case 'instagram-story':
+          // Instagram doesn't support web posting, try to open app or redirect to Instagram
+          shareUrl = 'https://www.instagram.com/';
+          break;
+        case 'facebook':
+          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`;
+          break;
+        case 'twitter':
+          shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
+          break;
+      }
+      
+      if (shareUrl) {
+        window.open(shareUrl, '_blank', 'noopener,noreferrer');
+      }
     }
     onClose();
   };
