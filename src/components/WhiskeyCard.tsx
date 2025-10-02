@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { useUser } from '../contexts/UserContext';
-import { BookmarkPlus, Bookmark, Cigarette, Share } from 'lucide-react';
+import { Heart, Cigarette, ExternalLink } from 'lucide-react';
 import { ShareModal } from './ShareModal';
 import { useState } from 'react';
 import { ImageZoom } from './ImageZoom';
@@ -142,7 +142,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
               }}
               className={`p-3 rounded-lg bg-muted/50 hover:bg-red-500/20 hover:border-red-500/50 border border-transparent transition-colors ${isWhiskeySaved(whiskey.id) ? 'text-primary' : 'text-muted-foreground'} hover:text-red-500`}
             >
-              {isWhiskeySaved(whiskey.id) ? <Bookmark className="h-8 w-8" /> : <BookmarkPlus className="h-8 w-8" />}
+              <Heart className={`h-8 w-8 ${isWhiskeySaved(whiskey.id) ? 'fill-current' : ''}`} />
             </Button>
             {onTastingClick && (
               <Button
@@ -163,7 +163,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
               onClick={handleShareClick}
               className="p-3 rounded-lg bg-muted/50 hover:bg-red-500/20 hover:border-red-500/50 border border-transparent transition-colors text-muted-foreground hover:text-red-500"
             >
-              <Share className="h-8 w-8" />
+              <ExternalLink className="h-8 w-8" />
             </Button>
           </div>
         </div>
