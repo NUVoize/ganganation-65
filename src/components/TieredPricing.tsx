@@ -18,14 +18,14 @@ export const TieredPricing = ({ perGramPrice, className }: TieredPricingProps) =
     <Card className={className}>
       <CardContent className="p-4">
         <h3 className="text-sm font-semibold mb-3 text-muted-foreground">Available Quantities</h3>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {Object.entries(prices).map(([weight, price]) => (
             <div
               key={weight}
-              className="flex justify-between items-center p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+              className="flex justify-between items-center p-2 sm:p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors min-w-0"
             >
-              <span className="font-medium">{weight}</span>
-              <span className="text-lg font-bold text-primary">${price}</span>
+              <span className="font-medium text-sm sm:text-base">{weight}</span>
+              <span className="text-sm sm:text-lg font-bold text-primary truncate ml-1">${price}</span>
             </div>
           ))}
         </div>

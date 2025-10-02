@@ -108,11 +108,11 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
         
         <CardContent>
           <Tabs defaultValue="details" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-1">
-              <TabsTrigger value="details" className="text-xs sm:text-sm">Details</TabsTrigger>
-              <TabsTrigger value="tasting" className="text-xs sm:text-sm">Tasting Notes</TabsTrigger>
-              <TabsTrigger value="provenance" className="text-xs sm:text-sm">Provenance</TabsTrigger>
-              <TabsTrigger value="awards" className="text-xs sm:text-sm">Recognition</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-1 h-auto">
+              <TabsTrigger value="details" className="text-xs sm:text-sm py-2">Details</TabsTrigger>
+              <TabsTrigger value="tasting" className="text-xs sm:text-sm py-2">Tasting Notes</TabsTrigger>
+              <TabsTrigger value="provenance" className="text-xs sm:text-sm py-2">Provenance</TabsTrigger>
+              <TabsTrigger value="awards" className="text-xs sm:text-sm py-2">Recognition</TabsTrigger>
             </TabsList>
             
             <TabsContent value="details" className="space-y-4">

@@ -32,7 +32,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 17,
     cbdContent: 0,
-    price: 45,
+    price: 12.86, // $45 per 3.5g = $12.86/g
     origin: 'United States',
     region: 'Florida/West Coast',
     grower: '1990s U.S. growers',
@@ -53,7 +53,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 20,
     cbdContent: 0,
-    price: 52,
+    price: 14.86, // $52 per 3.5g = $14.86/g
     origin: 'United States',
     region: 'California',
     grower: 'Craft Cannabis',
@@ -74,7 +74,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 65,
+    price: 18.57, // $65 per 3.5g = $18.57/g
     origin: 'Canada',
     region: 'British Columbia',
     grower: 'Canadian growers',
@@ -95,7 +95,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 20,
     cbdContent: 0,
-    price: 48,
+    price: 13.71, // $48 per 3.5g = $13.71/g
     origin: 'India/Afghanistan',
     region: 'Malana Valley',
     grower: "Barney's Farm",
@@ -116,7 +116,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 19,
     cbdContent: 0,
-    price: 42,
+    price: 12.00, // $42 per 3.5g = $12.00/g
     origin: 'Pakistan',
     region: 'Landrace',
     grower: 'Heritage Genetics',
@@ -137,7 +137,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 58,
+    price: 16.57, // $58 per 3.5g = $16.57/g
     origin: 'Canada',
     region: 'British Columbia',
     grower: 'Canadian craft growers',
@@ -158,7 +158,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 60,
+    price: 17.14, // $60 per 3.5g = $17.14/g
     origin: 'Canada',
     region: 'Ontario',
     grower: 'Lindsay growers',
@@ -179,7 +179,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 62,
+    price: 17.71, // $62 per 3.5g = $17.71/g
     origin: 'United States',
     region: 'California',
     grower: 'OG Kush family',
@@ -200,7 +200,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 54,
+    price: 15.43, // $54 per 3.5g = $15.43/g
     origin: 'Canada',
     region: 'Local',
     grower: 'Craft growers',
@@ -221,7 +221,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 56,
+    price: 16.00, // $56 per 3.5g = $16.00/g
     origin: 'Canada',
     region: 'British Columbia',
     grower: 'BC growers',
@@ -242,7 +242,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 22,
     cbdContent: 0,
-    price: 58,
+    price: 16.57, // $58 per 3.5g = $16.57/g
     origin: 'Canada',
     region: 'British Columbia',
     grower: 'Canadian craft',
@@ -263,7 +263,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 21,
     cbdContent: 0,
-    price: 60,
+    price: 17.14, // $60 per 3.5g = $17.14/g
     origin: 'United States',
     region: 'Colorado',
     grower: 'In House Genetics',
@@ -284,7 +284,7 @@ export const indicaStrains: CannabisProduct[] = [
     type: 'Indica',
     thcContent: 18,
     cbdContent: 0,
-    price: 52,
+    price: 14.86, // $52 per 3.5g = $14.86/g
     origin: 'United States',
     region: 'California',
     grower: 'Sherbinski',
@@ -308,7 +308,7 @@ export const sativaStrains: CannabisProduct[] = [
     type: 'Sativa',
     thcContent: 20,
     cbdContent: 0,
-    price: 55,
+    price: 15.71, // $55 per 3.5g = $15.71/g
     origin: 'Netherlands',
     region: 'Amsterdam',
     grower: 'Soma Seeds',
@@ -329,7 +329,7 @@ export const sativaStrains: CannabisProduct[] = [
     type: 'Sativa',
     thcContent: 20,
     cbdContent: 0,
-    price: 50,
+    price: 14.29, // $50 per 3.5g = $14.29/g
     origin: 'South Africa',
     region: 'Durban',
     grower: 'Landrace cultivators',
@@ -350,7 +350,7 @@ export const sativaStrains: CannabisProduct[] = [
     type: 'Sativa',
     thcContent: 18,
     cbdContent: 0,
-    price: 45,
+    price: 12.86, // $45 per 3.5g = $12.86/g
     origin: 'United States',
     region: 'Hawaii',
     grower: 'Hawaiian growers',
@@ -371,7 +371,7 @@ export const sativaStrains: CannabisProduct[] = [
     type: 'Sativa',
     thcContent: 20,
     cbdContent: 0,
-    price: 46,
+    price: 13.14, // $46 per 3.5g = $13.14/g
     origin: 'United States',
     region: 'West Coast',
     grower: 'Craft growers',
@@ -392,7 +392,7 @@ export const sativaStrains: CannabisProduct[] = [
     type: 'Sativa',
     thcContent: 18,
     cbdContent: 0,
-    price: 44,
+    price: 12.57, // $44 per 3.5g = $12.57/g
     origin: 'United States',
     region: 'West Coast',
     grower: 'Craft Cannabis',
@@ -416,7 +416,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 48,
+    price: 13.71, // $48 per 3.5g = $13.71/g
     origin: 'United States',
     region: 'California',
     grower: 'California growers',
@@ -437,7 +437,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 24,
     cbdContent: 0,
-    price: 58,
+    price: 16.57, // $58 per 3.5g = $16.57/g
     origin: 'United States',
     region: 'Colorado',
     grower: 'Dark Horse Genetics',
@@ -458,7 +458,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 22,
     cbdContent: 0,
-    price: 62,
+    price: 17.71, // $62 per 3.5g = $17.71/g
     origin: 'United States',
     region: 'California',
     grower: 'Symbiotic Genetics',
@@ -479,7 +479,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 19,
     cbdContent: 0,
-    price: 46,
+    price: 13.14, // $46 per 3.5g = $13.14/g
     origin: 'United States',
     region: 'California',
     grower: 'Ken Estes / Grand Daddy Purp',
@@ -500,7 +500,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 19,
     cbdContent: 0,
-    price: 52,
+    price: 14.86, // $52 per 3.5g = $14.86/g
     origin: 'United States',
     region: 'California',
     grower: 'Runtz collective',
@@ -521,7 +521,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 18,
     cbdContent: 1,
-    price: 44,
+    price: 12.57, // $44 per 3.5g = $12.57/g
     origin: 'United States',
     region: 'California',
     grower: 'Craft Cannabis',
@@ -542,7 +542,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 22,
     cbdContent: 0,
-    price: 56,
+    price: 16.00, // $56 per 3.5g = $16.00/g
     origin: 'United States',
     region: 'West Coast',
     grower: 'West Coast growers',
@@ -563,7 +563,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 50,
+    price: 14.29, // $50 per 3.5g = $14.29/g
     origin: 'United States',
     region: 'California',
     grower: 'OG Genetics',
@@ -584,7 +584,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 48,
+    price: 13.71, // $48 per 3.5g = $13.71/g
     origin: 'United States',
     region: 'West Coast',
     grower: 'West Coast growers',
@@ -605,7 +605,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 22,
     cbdContent: 0,
-    price: 58,
+    price: 16.57, // $58 per 3.5g = $16.57/g
     origin: 'United States',
     region: 'Nevada',
     grower: 'GG Strains',
@@ -626,7 +626,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 52,
+    price: 14.86, // $52 per 3.5g = $14.86/g
     origin: 'United States',
     region: 'California',
     grower: 'OG family',
@@ -647,7 +647,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 54,
+    price: 15.43, // $54 per 3.5g = $15.43/g
     origin: 'United States',
     region: 'Colorado',
     grower: 'Ethos Genetics',
@@ -668,7 +668,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 52,
+    price: 14.86, // $52 per 3.5g = $14.86/g
     origin: 'United States',
     region: 'California',
     grower: 'Symbiotic Genetics',
@@ -689,7 +689,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 19,
     cbdContent: 0,
-    price: 46,
+    price: 13.14, // $46 per 3.5g = $13.14/g
     origin: 'United States',
     region: 'California',
     grower: 'West Coast growers',
@@ -710,7 +710,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 17,
     cbdContent: 0,
-    price: 44,
+    price: 12.57, // $44 per 3.5g = $12.57/g
     origin: 'United States',
     region: 'California',
     grower: 'California growers',
@@ -731,7 +731,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 50,
+    price: 14.29, // $50 per 3.5g = $14.29/g
     origin: 'Canada',
     region: 'Local',
     grower: 'Craft growers',
@@ -752,7 +752,7 @@ export const hybridStrains: CannabisProduct[] = [
     type: 'Hybrid',
     thcContent: 20,
     cbdContent: 0,
-    price: 48,
+    price: 13.71, // $48 per 3.5g = $13.71/g
     origin: 'United States',
     region: 'West Coast',
     grower: 'West Coast growers',
