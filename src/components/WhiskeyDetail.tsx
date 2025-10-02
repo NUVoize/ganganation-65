@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { WhiskeyProduct } from '../types/whiskey';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -5,6 +6,8 @@ import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ImageZoom } from './ImageZoom';
+import { TieredPricing } from './TieredPricing';
+import { LayAwayModal } from './LayAwayModal';
 
 interface WhiskeyDetailProps {
   whiskey: WhiskeyProduct;
@@ -12,6 +15,8 @@ interface WhiskeyDetailProps {
 }
 
 export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
+  const [isLayAwayModalOpen, setIsLayAwayModalOpen] = useState(false);
+  
   const getRarityColor = (rarity: string) => {
     switch (rarity) {
       case 'Ultra Rare': return 'bg-gradient-amber text-primary-foreground';
@@ -96,10 +101,7 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                 </div>
               </div>
               
-              <div className="flex items-center justify-between">
-                <span className="text-3xl font-bold text-primary">${whiskey.price.toLocaleString()}</span>
-                <span className="text-sm text-muted-foreground font-mono">SKU: {whiskey.sku}</span>
-              </div>
+              <TieredPricing perGramPrice={whiskey.price} className="mt-4" />
             </div>
           </div>
         </CardHeader>
@@ -237,6 +239,7 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
             <Button 
               className="btn-premium flex-1 max-w-xs"
               disabled={!whiskey.inStock}
+              onClick={() => setIsLayAwayModalOpen(true)}
             >
               {whiskey.inStock ? 'Request This Strain' : 'Currently Unavailable'}
             </Button>
@@ -246,6 +249,12 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
           </div>
         </CardContent>
       </Card>
+
+      <LayAwayModal
+        isOpen={isLayAwayModalOpen}
+        onClose={() => setIsLayAwayModalOpen(false)}
+        product={whiskey}
+      />
     </div>
   );
 };
