@@ -7,6 +7,7 @@ import { Heart, Cigarette, ExternalLink } from 'lucide-react';
 import { ShareModal } from './ShareModal';
 import { useState } from 'react';
 import { ImageZoom } from './ImageZoom';
+import { CountryFlag } from './CountryFlag';
 
 interface WhiskeyCardProps {
   whiskey: WhiskeyProduct;
@@ -88,30 +89,8 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
         
         <div className="flex items-center justify-between mb-3 gap-2">
           <div className="text-xs text-muted-foreground flex items-center space-x-2 flex-1 min-w-0">
-            <div className="flex items-center space-x-1">
-              <div className="w-6 h-6 rounded-full border-2 border-white shadow-sm flex-shrink-0">
-                {whiskey.origin === 'Scotland' && (
-                  <div className="w-full h-full bg-blue-600 rounded-full"></div>
-                )}
-                {whiskey.origin === 'Ireland' && (
-                  <div className="w-full h-full bg-green-600 rounded-full"></div>
-                )}
-                {whiskey.origin === 'USA' && (
-                  <div className="w-full h-full bg-blue-800 rounded-full"></div>
-                )}
-                {whiskey.origin === 'Canada' && (
-                  <div className="w-full h-full bg-red-600 rounded-full"></div>
-                )}
-                {whiskey.origin === 'Japan' && (
-                  <div className="w-full h-full bg-red-600 rounded-full"></div>
-                )}
-                {!['Scotland', 'Ireland', 'USA', 'Canada', 'Japan'].includes(whiskey.origin) && (
-                  <div className="w-full h-full bg-gray-500 rounded-full"></div>
-                )}
-              </div>
-              <span className="truncate">{whiskey.origin}</span>
-            </div>
-            {whiskey.region && <span className="truncate"> • {whiskey.region}</span>}
+            <CountryFlag country={whiskey.origin} size={24} />
+            {whiskey.region && <span className="truncate ml-1"> • {whiskey.region}</span>}
           </div>
           <Button 
             variant="outline" 

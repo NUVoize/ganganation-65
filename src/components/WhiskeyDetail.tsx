@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ImageZoom } from './ImageZoom';
 import { TieredPricing } from './TieredPricing';
 import { LayAwayModal } from './LayAwayModal';
+import { CountryFlag } from './CountryFlag';
 
 interface WhiskeyDetailProps {
   whiskey: WhiskeyProduct;
@@ -97,7 +98,7 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                 </div>
                 <div>
                   <span className="text-sm text-muted-foreground">Origin:</span>
-                  <p className="font-medium">{whiskey.origin}</p>
+                  <CountryFlag country={whiskey.origin} size={20} className="mt-1" />
                 </div>
               </div>
               
@@ -187,7 +188,7 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                     </div>
                     <div>
                       <span className="text-sm text-muted-foreground">Country:</span>
-                      <p className="font-medium">{whiskey.origin}</p>
+                      <CountryFlag country={whiskey.origin} size={20} className="mt-1" />
                     </div>
                   </div>
                 </div>

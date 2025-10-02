@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Separator } from './ui/separator';
 import { Slider } from './ui/slider';
+import { CountryFlag } from './CountryFlag';
 
 interface SearchFiltersProps {
   filters: SearchFiltersType;
@@ -91,9 +92,10 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
               <Badge
                 key={origin}
                 variant={localFilters.origin?.includes(origin) ? "default" : "outline"}
-                className="cursor-pointer hover:bg-primary/20 transition-colors"
+                className="cursor-pointer hover:bg-primary/20 transition-colors flex items-center gap-1.5 py-1.5 px-3"
                 onClick={() => toggleArrayFilter('origin', origin)}
               >
+                <CountryFlag country={origin} size={16} showLabel={false} />
                 {origin}
               </Badge>
             ))}

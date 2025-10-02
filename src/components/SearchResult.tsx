@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { WhiskeyProduct } from '../types/whiskey';
+import { CountryFlag } from './CountryFlag';
 
 interface SearchResultProps {
   searchResult: WhiskeyProduct | null;
@@ -44,7 +45,7 @@ export const SearchResult: React.FC<SearchResultProps> = ({
           </div>
           <div className="text-center">
             <p className="text-sm text-muted-foreground">Origin</p>
-            <p className="font-medium">{searchResult.origin}</p>
+            <CountryFlag country={searchResult.origin} size={20} className="mt-1" />
           </div>
           {searchResult.thcContent && (
             <div className="text-center">
