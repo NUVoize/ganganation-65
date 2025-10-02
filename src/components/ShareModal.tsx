@@ -173,7 +173,7 @@ export const ShareModal = ({ whiskey, isOpen, onClose }: ShareModalProps) => {
         
         <div className="text-center pt-4 border-t border-border/30">
           <p className="text-xs text-muted-foreground">
-            🥃 Promoting BOOTLEGGER Speakeasy - Premium Whiskey Experience
+            Ganja nation, premium Buds experience
           </p>
         </div>
       </DialogContent>
