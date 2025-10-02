@@ -22,9 +22,9 @@ export const ImageZoom: React.FC<ImageZoomProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Convert 300x300 image path to 600x600
+  // Convert 300x300 image path to 800x800
   const getHighResImage = (imagePath: string) => {
-    return imagePath.replace('/weed_images_300/', '/weed_images_600/').replace('X300.jpg', 'X600.jpg');
+    return imagePath.replace('/weed_images_300/', '/weed_images_800/').replace('X300.jpg', 'X800.jpg');
   };
 
   const handleImageClick = (e: React.MouseEvent) => {
