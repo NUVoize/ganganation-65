@@ -16,41 +16,54 @@ export const ShareModal = ({ whiskey, isOpen, onClose }: ShareModalProps) => {
 
   const generateShareContent = (platform: string) => {
     const baseUrl = window.location.origin;
-    const whiskeyUrl = `${baseUrl}?whiskey=${whiskey.id}`;
+    const productUrl = `${baseUrl}?whiskey=${whiskey.id}`;
     
-    const bootleggerBranding = "🥃 Available at BOOTLEGGER Speakeasy";
-    const callToAction = "Visit us to taste this premium whiskey!";
-    const hashtags = "#BOOTLEGGER #Speakeasy #PremiumWhiskey #WhiskeyLovers";
+    // Business Information with clickable links
+    const businessInfo = {
+      name: "Ganja Nation",
+      website: "https://ganjanation.com",
+      websiteWithTracking: (source: string) => `https://ganjanation.com?utm_source=${source}&utm_medium=social&utm_campaign=product_share&utm_content=${whiskey.sku}`,
+      instagram: "@ganjanation",
+      instagramUrl: "https://instagram.com/ganjanation",
+      facebook: "facebook.com/ganjanation",
+      facebookUrl: "https://facebook.com/ganjanation",
+      address: "123 Green Street, Cannabis City, CC 12345",
+      mapsUrl: "https://maps.google.com/?q=Ganja+Nation+Dispensary",
+      phone: "+1-555-GANJA-1",
+      phoneUrl: "tel:+15557426521"
+    };
+    
+    const hashtags = "#GanjaNation #PremiumCannabis #CannabisLovers #CannabisCommunity";
     
     switch (platform) {
       case 'instagram-post':
         return {
-          text: `🥃 ${whiskey.brand} - ${whiskey.name}\n\n✨ ${whiskey.description}\n\n${bootleggerBranding}\n${callToAction}\n\n${hashtags} #${whiskey.type.replace(/\s+/g, '')} #${whiskey.origin.replace(/\s+/g, '')}`,
-          url: whiskeyUrl
+          text: `🌿 ${whiskey.brand} - ${whiskey.name}\n\n✨ ${whiskey.description}\n\n${whiskey.thcContent ? `💚 ${whiskey.thcContent}% THC` : `💚 ${whiskey.type}`}\n💰 $${whiskey.price}/gram\n🏆 ${whiskey.rarity}\n\n📍 Available at ${businessInfo.name}\n🔗 Link in bio → ${businessInfo.website}\n📲 Follow ${businessInfo.instagram} for more\n🗺️ Visit us: ${businessInfo.address}\n\n${hashtags} #${whiskey.type.replace(/\s+/g, '')} #${whiskey.origin.replace(/\s+/g, '')}`,
+          url: businessInfo.websiteWithTracking('instagram')
         };
       
       case 'instagram-story':
         return {
-          text: `🔥 ${whiskey.brand} ${whiskey.name}\n\n${whiskey.thcContent ? `${whiskey.thcContent}% THC` : whiskey.type}\n$${whiskey.price}/gram\n\n${bootleggerBranding}\n\n${hashtags}`,
-          url: whiskeyUrl
+          text: `🔥 ${whiskey.brand} ${whiskey.name}\n\n${whiskey.thcContent ? `${whiskey.thcContent}% THC` : whiskey.type}\n$${whiskey.price}/gram\n\n📍 ${businessInfo.name}\n🔗 Swipe up or visit\n${businessInfo.website}\n\n📲 ${businessInfo.instagram}\n\n${hashtags}`,
+          url: businessInfo.websiteWithTracking('instagram-story')
         };
       
       case 'facebook':
         return {
-          text: `Discover the exceptional ${whiskey.brand} - ${whiskey.name} at GANJA NATION Dispensary!\n\nThis premium ${whiskey.type} from ${whiskey.origin} offers an unforgettable experience. ${whiskey.description}\n\n🌿 ${whiskey.thcContent ? `${whiskey.thcContent}% THC` : 'Premium quality'}\n💰 $${whiskey.price} per gram\n🏆 ${whiskey.rarity} selection\n\n${callToAction}\n\n${hashtags}`,
-          url: whiskeyUrl
+          text: `🌿 Discover ${whiskey.brand} - ${whiskey.name} at ${businessInfo.name}!\n\nThis premium ${whiskey.type} from ${whiskey.origin} offers an unforgettable experience. ${whiskey.description}\n\n${whiskey.thcContent ? `💚 THC: ${whiskey.thcContent}%` : `💚 Premium quality`}\n💰 $${whiskey.price} per gram\n🏆 ${whiskey.rarity} selection\n\n━━━━━━━━━━━━━━━━━━━\n🌐 Shop online: ${businessInfo.websiteWithTracking('facebook')}\n📍 Visit us: ${businessInfo.mapsUrl}\n📱 Follow us: ${businessInfo.facebookUrl}\n☎️ Call: ${businessInfo.phoneUrl}\n━━━━━━━━━━━━━━━━━━━\n\nVisit ${businessInfo.name} for the complete premium cannabis experience!\n\n${hashtags} #${whiskey.type.replace(/\s+/g, '')} #${whiskey.origin.replace(/\s+/g, '')}`,
+          url: businessInfo.websiteWithTracking('facebook')
         };
       
       case 'twitter':
         return {
-          text: `🥃 ${whiskey.brand} - ${whiskey.name} at @BOOTLEGGER_Bar\n\n${whiskey.type} | ${whiskey.origin} | $${whiskey.price}/glass\n\n${callToAction}\n\n${hashtags}`,
-          url: whiskeyUrl
+          text: `🌿 ${whiskey.brand} - ${whiskey.name} at ${businessInfo.name}\n\n${whiskey.type} | ${whiskey.origin} | $${whiskey.price}/gram\n${whiskey.thcContent ? `${whiskey.thcContent}% THC` : 'Premium quality'}\n\n🌐 ${businessInfo.websiteWithTracking('twitter')}\n📍 ${businessInfo.mapsUrl}\n\n${hashtags}`,
+          url: businessInfo.websiteWithTracking('twitter')
         };
       
       default:
         return {
-          text: `${whiskey.brand} - ${whiskey.name}\n\nExperience this exceptional ${whiskey.type} from ${whiskey.origin} at GANJA NATION Dispensary.\n\n${whiskey.description}\n\n• ${whiskey.thcContent ? `THC: ${whiskey.thcContent}%` : `Type: ${whiskey.type}`}\n• CBD: ${whiskey.cbdContent || 0}%\n• Price: $${whiskey.price} per gram\n• Rarity: ${whiskey.rarity}\n\n${callToAction}\n\nVisit GANJA NATION Dispensary for the complete premium cannabis experience.\n\n${hashtags}`,
-          url: whiskeyUrl
+          text: `🌿 ${whiskey.brand} - ${whiskey.name}\n\nExperience this exceptional ${whiskey.type} from ${whiskey.origin} at ${businessInfo.name}.\n\n${whiskey.description}\n\n• ${whiskey.thcContent ? `THC: ${whiskey.thcContent}%` : `Type: ${whiskey.type}`}\n• CBD: ${whiskey.cbdContent || 0}%\n• Price: $${whiskey.price} per gram\n• Rarity: ${whiskey.rarity}\n\n━━━━━━━━━━━━━━━━━━━\n🌐 Website: ${businessInfo.websiteWithTracking('copy')}\n📍 Location: ${businessInfo.mapsUrl}\n📱 Instagram: ${businessInfo.instagramUrl}\n📘 Facebook: ${businessInfo.facebookUrl}\n☎️ Phone: ${businessInfo.phoneUrl}\n━━━━━━━━━━━━━━━━━━━\n\nVisit ${businessInfo.name} for the complete premium cannabis experience.\n\n${hashtags} #${whiskey.type.replace(/\s+/g, '')} #${whiskey.origin.replace(/\s+/g, '')}`,
+          url: businessInfo.websiteWithTracking('copy')
         };
     }
   };
@@ -197,7 +210,10 @@ export const ShareModal = ({ whiskey, isOpen, onClose }: ShareModalProps) => {
         
         <div className="text-center pt-4 border-t border-border/30">
           <p className="text-xs text-muted-foreground">
-            Ganja nation, premium Buds experience
+            Ganja Nation - Premium Cannabis Experience
+          </p>
+          <p className="text-xs text-muted-foreground mt-1">
+            All links include tracking to measure social media traffic
           </p>
         </div>
       </DialogContent>
