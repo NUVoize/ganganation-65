@@ -6,8 +6,16 @@ interface TieredPricingProps {
 }
 
 export const TieredPricing = ({ perGramPrice, className }: TieredPricingProps) => {
+  // Check if this is a mushroom product (price is exactly $5/g)
+  const isMushroom = perGramPrice === 5.00;
+  
   // Calculate tiered pricing with volume discounts
-  const prices = {
+  const prices = isMushroom ? {
+    "3.5G": "17.50",
+    "7G": "30.00",
+    "14G": "50.00",
+    "1 OZ": "100.00",
+  } : {
     "3.5G": (perGramPrice * 3.5).toFixed(2),
     "7G": (perGramPrice * 7 * 0.95).toFixed(2), // 5% discount
     "14G": (perGramPrice * 14 * 0.90).toFixed(2), // 10% discount

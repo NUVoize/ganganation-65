@@ -1,5 +1,5 @@
 import { CannabisProduct } from '../types/whiskey';
-import { indicaStrains, sativaStrains, hybridStrains, cbdStrains, concentrates, edibles, preRolls } from './cannabis';
+import { indicaStrains, sativaStrains, hybridStrains, cbdStrains, concentrates, edibles, preRolls, mushroomProducts } from './cannabis';
 
 export const cannabisCollection: CannabisProduct[] = [
   ...indicaStrains,
@@ -8,11 +8,12 @@ export const cannabisCollection: CannabisProduct[] = [
   ...cbdStrains,
   ...concentrates,
   ...edibles,
-  ...preRolls
+  ...preRolls,
+  ...mushroomProducts
 ];
 
 // Compatibility export
 export const whiskeyCollection = cannabisCollection;
 
 // Export individual collections for specific use cases
-export { indicaStrains, sativaStrains, hybridStrains, cbdStrains, concentrates, edibles, preRolls };
+export { indicaStrains, sativaStrains, hybridStrains, cbdStrains, concentrates, edibles, preRolls, mushroomProducts };

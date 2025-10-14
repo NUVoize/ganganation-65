@@ -1,11 +1,12 @@
 import { CannabisProduct } from '../types/whiskey';
 
 // Helper function to convert image number to path
-const getImagePath = (imageNumber: number | number[]): string[] => {
+const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' = 'weed'): string[] => {
+  const folder = type === 'mushroom' ? 'mushroom_images_300' : 'weed_images_300';
   if (Array.isArray(imageNumber)) {
-    return imageNumber.map(num => `/weed_images_300/DSCF${num}X300.jpg`);
+    return imageNumber.map(num => `/${folder}/DSCF${num}X300.jpg`);
   }
-  return [`/weed_images_300/DSCF${imageNumber}X300.jpg`];
+  return [`/${folder}/DSCF${imageNumber}X300.jpg`];
 };
 
 // Helper function to parse effects string into structured format
@@ -772,3 +773,512 @@ export const cbdStrains: CannabisProduct[] = [];
 export const concentrates: CannabisProduct[] = [];
 export const edibles: CannabisProduct[] = [];
 export const preRolls: CannabisProduct[] = [];
+
+export const mushroomProducts: CannabisProduct[] = [
+  {
+    id: 'golden-member',
+    name: 'Golden Member',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Golden Member is a robust psilocybe cubensis strain known for its reliable potency and beautiful golden-brown caps. This strain offers a well-rounded psychedelic experience, perfect for both newcomers and experienced users. Users report enhanced visual perception, warm euphoria, and gentle introspection. The Golden Member provides a comfortable introduction to the world of psilocybin mushrooms with predictable effects and moderate intensity.',
+    effects: {
+      primary: ['Visual Enhancement', 'Euphoria', 'Introspective'],
+      secondary: ['Creative Thinking', 'Body Warmth', 'Spiritual Connection'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Earthy, nutty with subtle umami notes',
+    pairing: 'Ideal for social experiences, creative exploration, and gentle spiritual journeys',
+    images: getImagePath(2037, 'mushroom'),
+    sku: 'SHROOM-GM-2037',
+    inStock: true,
+    featured: true,
+    rarity: 'Common'
+  },
+  {
+    id: 'white-rabbit',
+    name: 'White Rabbit',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'The White Rabbit strain is a distinctive albino-leucistic variety that produces pale, almost white fruiting bodies with a touch of golden accent. This unique strain is known for its potent effects and clean, smooth experience. Users often report profound visual hallucinations, deep philosophical insights, and a sense of wonderland-like exploration. The White Rabbit takes you down a beautiful journey of self-discovery.',
+    effects: {
+      primary: ['Intense Visuals', 'Euphoria', 'Deep Introspection'],
+      secondary: ['Philosophical Thinking', 'Emotional Openness', 'Wonderment'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Mild, earthy with delicate mushroom essence',
+    pairing: 'Perfect for deep meditation, artistic creation, and transformative experiences',
+    images: getImagePath(2041, 'mushroom'),
+    sku: 'SHROOM-WR-2041',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'golden-envy',
+    name: 'Golden Envy',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Golden Envy is a visually stunning strain that combines the best traits of golden cap varieties with enhanced potency. This strain produces medium to large fruiting bodies with rich golden caps and thick stems. Users report a balanced experience with both visual and cognitive effects, making it excellent for both recreational and introspective use. The Golden Envy strain is celebrated for its reliable potency and smooth come-up.',
+    effects: {
+      primary: ['Visual Enhancement', 'Euphoria', 'Mental Clarity'],
+      secondary: ['Creative Flow', 'Emotional Balance', 'Spiritual Awareness'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Earthy, nutty with pleasant mushroom undertones',
+    pairing: 'Great for nature walks, creative projects, and social gatherings',
+    images: getImagePath(2050, 'mushroom'),
+    sku: 'SHROOM-GE-2050',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'blue-meanie',
+    name: 'Blue Meanie',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Blue Meanie is a highly sought-after strain known for its intense blue bruising and exceptional potency. This strain produces medium-sized fruiting bodies that develop distinctive blue coloration when handled. Users report powerful visual effects, deep emotional insights, and a profound sense of interconnectedness. The Blue Meanie is recommended for experienced users seeking a transformative psychedelic journey.',
+    effects: {
+      primary: ['Intense Visuals', 'Deep Euphoria', 'Profound Introspection'],
+      secondary: ['Emotional Catharsis', 'Spiritual Connection', 'Enhanced Empathy'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Earthy, robust with rich mushroom character',
+    pairing: 'Best for experienced users, deep meditation, and spiritual ceremonies',
+    images: getImagePath(2057, 'mushroom'),
+    sku: 'SHROOM-BM-2057',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'blue-polaski',
+    name: 'Blue Polaski',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Blue Polaski is a rare cultivar that exhibits striking blue tones throughout its development. This strain is known for its consistent potency and reliable effects. Users report clear-headed visuals, enhanced color perception, and a gentle yet profound cognitive shift. The Blue Polaski offers a smooth experience with minimal body load, making it excellent for daytime exploration and creative endeavors.',
+    effects: {
+      primary: ['Visual Clarity', 'Euphoria', 'Mental Exploration'],
+      secondary: ['Creative Enhancement', 'Emotional Insight', 'Sensory Amplification'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Clean, earthy with subtle nutty notes',
+    pairing: 'Perfect for artistic creation, nature exploration, and philosophical discussions',
+    images: getImagePath(2067, 'mushroom'),
+    sku: 'SHROOM-BP-2067',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'jack-frost',
+    name: 'Jack Frost',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Jack Frost is a stunning albino strain that produces ghostly white fruiting bodies with a frosty appearance. This rare cultivar is known for its exceptional potency and clean, uplifting effects. Users report sparkling visuals, profound euphoria, and a sense of crystalline mental clarity. The Jack Frost strain offers a magical experience reminiscent of a winter wonderland, with intense yet manageable effects.',
+    effects: {
+      primary: ['Intense Visuals', 'Pure Euphoria', 'Mental Clarity'],
+      secondary: ['Spiritual Awakening', 'Emotional Healing', 'Sensory Enhancement'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Mild, clean with delicate earthy notes',
+    pairing: 'Excellent for transformative experiences, meditation, and spiritual work',
+    images: getImagePath(2069, 'mushroom'),
+    sku: 'SHROOM-JF-2069',
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'true-albino-teacher',
+    name: 'True Albino Teacher',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Master Cultivators',
+    description: 'The True Albino Teacher (TAT) is an ultra-rare albino variant of the legendary Golden Teacher strain. This strain produces stunning pure white fruiting bodies with no pigmentation whatsoever. Known for its exceptional teaching qualities and profound insights, TAT offers a deeply spiritual experience with crystal-clear mental effects. This strain is highly sought after by collectors and experienced psychonauts for its unique appearance and powerful wisdom-imparting properties.',
+    effects: {
+      primary: ['Profound Wisdom', 'Intense Euphoria', 'Spiritual Insights'],
+      secondary: ['Life Revelations', 'Emotional Healing', 'Universal Connection'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Pure, clean with subtle earthy undertones',
+    pairing: 'Reserved for serious spiritual work, life-changing insights, and deep self-exploration',
+    images: getImagePath(2075, 'mushroom'),
+    sku: 'SHROOM-TAT-2075',
+    inStock: true,
+    featured: true,
+    rarity: 'Ultra Rare'
+  },
+  {
+    id: 'blue-ape-revert',
+    name: 'Blue Ape Revert',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Blue Ape Revert is a fascinating strain that reverts to its original genetic traits while maintaining enhanced blue coloration. This cultivar produces robust fruiting bodies with intense blue bruising and reliable potency. Users report powerful body sensations, vivid closed-eye visuals, and deep introspective states. The Blue Ape Revert is perfect for those seeking a full-bodied psychedelic experience.',
+    effects: {
+      primary: ['Body Sensations', 'Vivid Visuals', 'Deep Introspection'],
+      secondary: ['Emotional Release', 'Physical Euphoria', 'Meditative States'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Earthy, robust with strong mushroom character',
+    pairing: 'Ideal for body-focused experiences, emotional work, and deep relaxation',
+    images: getImagePath(2079, 'mushroom'),
+    sku: 'SHROOM-BAR-2079',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'premium-cubensis',
+    name: 'Premium Cubensis',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Premium Cubensis represents a carefully selected psilocybe cubensis variety grown to exacting standards. This strain offers consistent potency and a reliable, well-rounded psychedelic experience. Users report balanced visual and cognitive effects with a smooth come-up and gentle landing. Perfect for those seeking a classic mushroom experience with predictable, manageable effects.',
+    effects: {
+      primary: ['Visual Enhancement', 'Euphoria', 'Gentle Introspection'],
+      secondary: ['Relaxation', 'Creativity', 'Emotional Openness'],
+      duration: ['4-5 hours']
+    },
+    flavor: 'Classic earthy mushroom with nutty notes',
+    pairing: 'Great for beginners, social settings, and recreational experiences',
+    images: getImagePath(2089, 'mushroom'),
+    sku: 'SHROOM-PC-2089',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'classic-cubensis',
+    name: 'Classic Cubensis',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Classic Cubensis is a traditional psilocybe cubensis variety that delivers time-tested psychedelic effects. This strain is known for its reliability, moderate potency, and forgiving nature. Users report pleasant visuals, gentle euphoria, and a comfortable psychedelic journey. Classic Cubensis is an excellent choice for first-time users and those seeking a traditional mushroom experience.',
+    effects: {
+      primary: ['Mild Visuals', 'Happiness', 'Light Introspection'],
+      secondary: ['Giggles', 'Social Enhancement', 'Gentle Body Buzz'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Traditional earthy mushroom flavor',
+    pairing: 'Perfect for beginners, nature walks, and friendly gatherings',
+    images: getImagePath(2096, 'mushroom'),
+    sku: 'SHROOM-CC-2096',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'golden-teacher',
+    name: 'Golden Teacher',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'The Golden Teacher is one of the most beloved psilocybe cubensis strains worldwide, known for its golden-capped appearance and profound teaching qualities. This classic strain offers a balanced experience perfect for both beginners and experienced psychonauts. Users report enhanced visual perception, deep introspection, and a sense of universal connection. The Golden Teacher is renowned for providing philosophical insights and spiritual growth while maintaining a manageable, friendly experience.',
+    effects: {
+      primary: ['Visual Enhancement', 'Euphoria', 'Introspective Wisdom'],
+      secondary: ['Spiritual Connection', 'Creative Thinking', 'Emotional Openness'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Earthy, nutty with subtle umami notes',
+    pairing: 'Perfect for meditation, nature walks, creative exploration, and spiritual journeys',
+    images: getImagePath(2099, 'mushroom'),
+    sku: 'SHROOM-GT-2099',
+    inStock: true,
+    featured: true,
+    rarity: 'Common'
+  },
+  {
+    id: 'melmac',
+    name: 'Melmac',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Melmac is a unique strain derived from the legendary Penis Envy lineage, known for its distinctive wavy caps and potent effects. This cultivar produces unusual-looking fruiting bodies with contorted caps that set it apart from typical cubensis varieties. Users report intense visual experiences, profound introspection, and a powerful body high. Melmac is celebrated for its exceptional potency and otherworldly appearance.',
+    effects: {
+      primary: ['Intense Visuals', 'Deep Euphoria', 'Profound Thoughts'],
+      secondary: ['Body Sensations', 'Spiritual Insights', 'Emotional Depth'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Strong earthy notes with robust mushroom character',
+    pairing: 'Best for experienced users seeking intense psychedelic exploration',
+    images: getImagePath(2111, 'mushroom'),
+    sku: 'SHROOM-MM-2111',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'trans-nv-freeze-dried',
+    name: 'Trans-NV (Freeze Dried)',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Trans-NV Freeze Dried represents the pinnacle of preservation technology applied to premium psilocybin mushrooms. This strain maintains full potency while offering extended shelf life and precise dosing capabilities. The freeze-drying process preserves the fruiting body structure and active compounds without degradation. Users report clean, consistent effects with the convenience of long-term storage and easy portioning.',
+    effects: {
+      primary: ['Visual Enhancement', 'Clear Euphoria', 'Mental Exploration'],
+      secondary: ['Creative Flow', 'Emotional Balance', 'Sensory Clarity'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Concentrated earthy notes, crisp texture',
+    pairing: 'Perfect for precise microdosing and long-term storage',
+    images: getImagePath(2116, 'mushroom'),
+    sku: 'SHROOM-TNFD-2116',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'golden-teacher-freeze-dried',
+    name: 'Golden Teacher (Freeze Dried)',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Golden Teacher Freeze Dried combines the legendary teaching qualities of the Golden Teacher strain with advanced preservation technology. This freeze-dried format maintains the full spectrum of active compounds while offering superior shelf stability and precise dosing. The classic Golden Teacher experience is preserved perfectly, providing the same profound insights and spiritual connection in a more convenient, long-lasting form.',
+    effects: {
+      primary: ['Visual Enhancement', 'Wisdom', 'Euphoria'],
+      secondary: ['Spiritual Insights', 'Creative Flow', 'Emotional Healing'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Classic earthy notes, concentrated and crisp',
+    pairing: 'Excellent for meditation, spiritual practice, and convenient dosing',
+    images: getImagePath(2123, 'mushroom'),
+    sku: 'SHROOM-GTFD-2123',
+    inStock: true,
+    featured: true,
+    rarity: 'Common'
+  },
+  {
+    id: 'white-rabbit-freeze-dried',
+    name: 'White Rabbit (Freeze Dried)',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'White Rabbit Freeze Dried preserves the unique albino-leucistic characteristics and potent effects of the White Rabbit strain through advanced freeze-drying technology. This format ensures maximum potency retention while providing extended shelf life and precise dosing capabilities. The wonderland journey remains intact with crystal-clear mental effects and profound visual experiences, now available in a more stable, convenient form.',
+    effects: {
+      primary: ['Intense Visuals', 'Pure Euphoria', 'Deep Introspection'],
+      secondary: ['Philosophical Insights', 'Emotional Openness', 'Spiritual Wonder'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Delicate earthy notes, light and crisp',
+    pairing: 'Perfect for transformative experiences with convenient storage',
+    images: getImagePath(2125, 'mushroom'),
+    sku: 'SHROOM-WRFD-2125',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'golden-emperor-freeze-dried',
+    name: 'Golden Emperor (Freeze Dried)',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Master Cultivators',
+    description: 'Golden Emperor Freeze Dried represents a premium cultivar preserved through state-of-the-art freeze-drying technology. This rare strain offers exceptional potency with regal, commanding effects that have earned it the "Emperor" designation. The freeze-dried format ensures maximum preservation of active compounds while providing convenient long-term storage. Users report majestic visual experiences, profound wisdom, and a sense of elevated consciousness.',
+    effects: {
+      primary: ['Majestic Visuals', 'Commanding Presence', 'Elevated Consciousness'],
+      secondary: ['Deep Wisdom', 'Spiritual Royalty', 'Emotional Mastery'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Rich, concentrated earthy notes with regal complexity',
+    pairing: 'Reserved for serious psychonauts and transformative ceremonial use',
+    images: getImagePath(2137, 'mushroom'),
+    sku: 'SHROOM-GEFD-2137',
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'blue-meanie-freeze-dried',
+    name: 'Blue Meanie (Freeze Dried)',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Blue Meanie Freeze Dried captures the intense potency and distinctive blue coloration of the Blue Meanie strain in a perfectly preserved format. Advanced freeze-drying technology maintains the full spectrum of active compounds while providing superior shelf stability. This format is ideal for experienced users who want consistent, powerful effects with the convenience of long-term storage and precise dosing.',
+    effects: {
+      primary: ['Intense Visuals', 'Powerful Euphoria', 'Deep Introspection'],
+      secondary: ['Emotional Catharsis', 'Spiritual Connection', 'Enhanced Perception'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Robust, concentrated mushroom essence',
+    pairing: 'Best for experienced users and deep spiritual work',
+    images: getImagePath(2148, 'mushroom'),
+    sku: 'SHROOM-BMFD-2148',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'blue-ape-revert-freeze-dried',
+    name: 'Blue Ape Revert (Freeze Dried)',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Blue Ape Revert Freeze Dried combines the unique genetics of the Blue Ape Revert strain with cutting-edge preservation technology. This format maintains the powerful body-focused effects and intense blue characteristics while offering convenient long-term storage. The freeze-drying process preserves the full potency and unique properties of this fascinating cultivar, making it perfect for those seeking a reliable, body-centered psychedelic experience.',
+    effects: {
+      primary: ['Body Waves', 'Vivid Visuals', 'Deep Relaxation'],
+      secondary: ['Emotional Release', 'Physical Euphoria', 'Introspective Peace'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Strong, concentrated earthy mushroom notes',
+    pairing: 'Excellent for body-work, emotional healing, and meditative practices',
+    images: getImagePath(2164, 'mushroom'),
+    sku: 'SHROOM-BARFD-2164',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'premium-cubensis-freeze-dried',
+    name: 'Premium Cubensis (Freeze Dried)',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'North America',
+    region: 'Indoor Cultivation',
+    grower: 'Craft Mycologists',
+    description: 'Premium Cubensis Freeze Dried offers the reliability and balanced effects of premium cubensis cultivation with the added benefits of freeze-drying technology. This format ensures consistent potency, extended shelf life, and precise dosing capabilities. Perfect for those who want a dependable, well-rounded psychedelic experience with the convenience of long-term storage and easy portioning.',
+    effects: {
+      primary: ['Balanced Visuals', 'Steady Euphoria', 'Comfortable Introspection'],
+      secondary: ['Creative Flow', 'Emotional Balance', 'Social Enhancement'],
+      duration: ['4-5 hours']
+    },
+    flavor: 'Clean, concentrated earthy notes',
+    pairing: 'Great for versatile use, precise dosing, and long-term storage',
+    images: getImagePath(2170, 'mushroom'),
+    sku: 'SHROOM-PCFD-2170',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'albino-cubensis-freeze-dried',
+    name: 'Albino Cubensis (Freeze Dried)',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Albino Cubensis Freeze Dried showcases a beautiful albino variety preserved through advanced freeze-drying technology. This strain produces striking pale white fruiting bodies with enhanced potency and clean effects. The freeze-dried format maintains the full spectrum of active compounds while providing superior stability and precise dosing. Users report clear-headed visuals, pure euphoria, and a gentle yet profound psychedelic experience.',
+    effects: {
+      primary: ['Clear Visuals', 'Pure Euphoria', 'Mental Clarity'],
+      secondary: ['Spiritual Awareness', 'Emotional Purity', 'Sensory Enhancement'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Delicate, clean earthy notes with crisp texture',
+    pairing: 'Perfect for clarity-focused experiences and spiritual practice',
+    images: getImagePath(2176, 'mushroom'),
+    sku: 'SHROOM-ACFD-2176',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'melmac-freeze-dried',
+    name: 'Melmac (Freeze Dried)',
+    brand: 'Craft Mycology',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Expert Cultivators',
+    description: 'Melmac Freeze Dried preserves the unique wavy-cap genetics and exceptional potency of the Melmac strain through advanced preservation technology. This format maintains the intense visual effects and profound introspective qualities while offering convenient long-term storage and precise dosing. The freeze-drying process ensures that the otherworldly Melmac experience is available whenever needed, with no loss of potency or quality.',
+    effects: {
+      primary: ['Intense Visuals', 'Deep Euphoria', 'Profound Introspection'],
+      secondary: ['Body Sensations', 'Spiritual Depth', 'Emotional Insight'],
+      duration: ['5-7 hours']
+    },
+    flavor: 'Strong, concentrated mushroom essence with earthy complexity',
+    pairing: 'Best for experienced psychonauts seeking powerful, convenient experiences',
+    images: getImagePath(2179, 'mushroom'),
+    sku: 'SHROOM-MMFD-2179',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'trans-nv-premium-freeze-dried',
+    name: 'Trans-NV Premium (Freeze Dried)',
+    brand: 'Premium Psilocybin',
+    type: 'Shrooms' as any,
+    price: 5.00,
+    origin: 'Cultivated',
+    region: 'Indoor Cultivation',
+    grower: 'Master Cultivators',
+    description: 'Trans-NV Premium Freeze Dried represents an elite batch of the Trans-NV strain preserved with meticulous care. This premium presentation combines exceptional genetics with state-of-the-art freeze-drying technology, resulting in a product that offers maximum potency, extended shelf life, and elegant presentation. Users report clean, powerful effects with excellent visual clarity and emotional balance. Perfect for connoisseurs who demand the very best.',
+    effects: {
+      primary: ['Crystal-Clear Visuals', 'Premium Euphoria', 'Refined Introspection'],
+      secondary: ['Artistic Inspiration', 'Emotional Sophistication', 'Spiritual Elegance'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Refined earthy notes with crisp, premium character',
+    pairing: 'Reserved for special occasions and discerning psychonauts',
+    images: getImagePath(2188, 'mushroom'),
+    sku: 'SHROOM-TNPFD-2188',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  }
+];
