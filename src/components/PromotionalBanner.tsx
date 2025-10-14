@@ -118,7 +118,7 @@ const BannerSlide: React.FC<BannerSlideProps> = ({ banner, isLoaded, onLoad }) =
 
   return (
     <div className="relative w-full overflow-hidden rounded-lg">
-      <div className="aspect-[16/5] md:aspect-[16/6] sm:aspect-[16/8]">
+      <div className="aspect-[4/3] sm:aspect-[16/6] md:aspect-[16/5]">
         {!isLoaded && (
           <Skeleton className="absolute inset-0 w-full h-full" />
         )}
