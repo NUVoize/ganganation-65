@@ -1,0 +1,89 @@
+[
+  {
+    "product_name": "Ashish Marroquin ZZZ",
+    "category": "Hash/Concentrate",
+    "aka": [
+      "Hashish Moroccan (sp?)"
+    ],
+    "origin": "Likely Moroccan-style pressed hash (traditional dry-sift kief pressed with heat).",
+    "appearance": "Dark brown exterior, pliable; may show layered interior when broken.",
+    "aroma_flavor": "Spicy, earthy, woody notes typical of Moroccan kief hash.",
+    "texture_type": "Pressed hash (dry-sift).",
+    "effects": "Relaxing body melt, mellow head high; smooth and sedative at higher doses.",
+    "notes": "Name from shoot log sounded like 'Ashish Marroquin'; verify final spelling/branding.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2192
+  },
+  {
+    "product_name": "Top Gun",
+    "category": "Hash/Concentrate",
+    "origin": "Artisan pressed hash; regional origin not specified.",
+    "appearance": "Uniform dark slab with glossy surface when warm.",
+    "aroma_flavor": "Earthy-sweet with faint spice; classic hash nose.",
+    "texture_type": "Pressed hash",
+    "effects": "Balanced, calm euphoria; body relaxation without heavy couch‑lock.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2202
+  },
+  {
+    "product_name": "00",
+    "category": "Hash/Concentrate",
+    "aka": [
+      "Zero-Zero"
+    ],
+    "origin": "'00' typically refers to fine‑sieve grade Moroccan dry sift.",
+    "appearance": "Soft, light to medium brown; bends when warm.",
+    "aroma_flavor": "Smooth, nutty, with sweet spice undertones.",
+    "texture_type": "Pressed hash (dry-sift)",
+    "effects": "Clean, mellow high; functional relaxation.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2211
+  },
+  {
+    "product_name": "Toscana, Moroccan (3 types)",
+    "category": "Hash/Concentrate",
+    "origin": "Mixed provenance; likely Moroccan-style with an Italian/Tuscan branding.",
+    "appearance": "Several blocks/grades; medium to dark brown.",
+    "aroma_flavor": "Classic hash spice with woody sweetness.",
+    "texture_type": "Pressed hash",
+    "effects": "Warm, soothing body effect, moderate euphoria.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2225
+  },
+  {
+    "product_name": "Temple Ball",
+    "category": "Hash/Concentrate",
+    "aka": [
+      "Nepalese Temple Ball"
+    ],
+    "origin": "Traditional hand‑rubbed charas technique from Nepal/India; cured and rolled into balls.",
+    "appearance": "Very dark exterior; shiny and tacky when warm; can be sticky/elastic.",
+    "aroma_flavor": "Incense, spice, resinous sweetness.",
+    "texture_type": "Hand‑rubbed charas",
+    "effects": "Lush, euphoric, long‑lasting body warmth; meditative headspace.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2233
+  },
+  {
+    "product_name": "Finger",
+    "category": "Hash/Concentrate",
+    "origin": "Likely hand‑rubbed charas pressed into finger shapes (India/Nepal style).",
+    "appearance": "Finger‑like sticks; dark, glossy exterior when warm.",
+    "aroma_flavor": "Deep resin, spice, incense notes.",
+    "texture_type": "Hand‑rubbed charas",
+    "effects": "Heavy, relaxing, sedative; classic charas warmth.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2247
+  },
+  {
+    "product_name": "Bulldog",
+    "category": "Hash/Concentrate",
+    "origin": "Branded pressed hash; often associated with Dutch coffee shop culture.",
+    "appearance": "Compact bricks; medium to dark brown.",
+    "aroma_flavor": "Earthy-sweet; rounded hash profile.",
+    "texture_type": "Pressed hash",
+    "effects": "Comforting body effects; calm mood elevation.",
+    "lab_potency": "Unknown",
+    "photo_start_no": 2275
+  }
+]

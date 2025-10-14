@@ -1,8 +1,8 @@
 import { CannabisProduct } from '../types/whiskey';
 
 // Helper function to convert image number to path
-const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' = 'weed'): string[] => {
-  const folder = type === 'mushroom' ? 'mushroom_images_300' : 'weed_images_300';
+const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' = 'weed'): string[] => {
+  const folder = type === 'mushroom' ? 'mushroom_images_300' : type === 'hash' ? 'hash_images_300' : 'weed_images_300';
   if (Array.isArray(imageNumber)) {
     return imageNumber.map(num => `/${folder}/DSCF${num}X300.jpg`);
   }
@@ -1280,5 +1280,176 @@ export const mushroomProducts: CannabisProduct[] = [
     inStock: true,
     featured: false,
     rarity: 'Limited'
+  }
+];
+
+export const hashProducts: CannabisProduct[] = [
+  {
+    id: 'ashish-marroquin',
+    name: 'Ashish Marroquin',
+    brand: 'Traditional Hash Co.',
+    type: 'Concentrate' as any,
+    thcContent: 45,
+    price: 15.00,
+    origin: 'Morocco',
+    region: 'Atlas Mountains',
+    grower: 'Traditional Moroccan Artisans',
+    description: 'Ashish Marroquin is a premium Moroccan-style pressed hash crafted using traditional dry-sift kief methods combined with heat and pressure. This classic hash features a dark brown exterior with a pliable texture that reveals beautiful layered interior when broken. The production follows centuries-old techniques from the Atlas Mountains, where expert artisans carefully process the finest cannabis resin. The result is a smooth, potent concentrate with authentic Moroccan character.',
+    effects: {
+      primary: ['Deep Relaxation', 'Body Melt', 'Mellow Euphoria'],
+      secondary: ['Sedative', 'Calm Headspace', 'Stress Relief'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Spicy, earthy, woody notes typical of Moroccan kief hash',
+    pairing: 'Perfect for evening relaxation, meditation, and unwinding after long days',
+    images: getImagePath(2195, 'hash'),
+    sku: 'HASH-ASH-2195',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'top-gun',
+    name: 'Top Gun',
+    brand: 'Artisan Hash Collective',
+    type: 'Concentrate' as any,
+    thcContent: 50,
+    price: 18.00,
+    origin: 'Artisan Production',
+    region: 'Craft Facility',
+    grower: 'Master Hash Makers',
+    description: 'Top Gun is an artisan pressed hash that exemplifies the craft of modern hash making. This premium concentrate features a uniform dark slab with a glossy surface when warmed, indicating exceptional quality and purity. Produced by master hash makers who blend traditional techniques with contemporary quality control, Top Gun delivers consistent potency and smoothness. The hash maintains perfect texture and breaks cleanly for easy consumption.',
+    effects: {
+      primary: ['Balanced Euphoria', 'Calm Focus', 'Body Relaxation'],
+      secondary: ['Mental Clarity', 'Comfortable High', 'Peaceful Contentment'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Earthy-sweet with faint spice; classic hash nose',
+    pairing: 'Ideal for social sessions, creative activities, and balanced relaxation',
+    images: getImagePath(2204, 'hash'),
+    sku: 'HASH-TG-2204',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'zero-zero',
+    name: '00 (Zero-Zero)',
+    brand: 'Premium Moroccan',
+    type: 'Concentrate' as any,
+    thcContent: 55,
+    price: 20.00,
+    origin: 'Morocco',
+    region: 'Rif Mountains',
+    grower: 'Elite Moroccan Producers',
+    description: 'The legendary 00 (Zero-Zero) represents the finest grade of Moroccan dry sift hash available. Named after the finest sieve grade used in production, this premium hash is made from the purest trichome heads with minimal plant material. The result is a soft, light to medium brown hash that bends easily when warm, indicating superior quality. 00 is revered among connoisseurs for its exceptional smoothness, clean flavor profile, and potent yet functional effects.',
+    effects: {
+      primary: ['Clean High', 'Mellow Relaxation', 'Mental Ease'],
+      secondary: ['Functional', 'Smooth Experience', 'Gentle Euphoria'],
+      duration: ['3-4 hours']
+    },
+    flavor: 'Smooth, nutty, with sweet spice undertones',
+    pairing: 'Perfect for daytime use, social gatherings, and maintaining productivity',
+    images: getImagePath(2218, 'hash'),
+    sku: 'HASH-00-2218',
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'toscana-moroccan',
+    name: 'Toscana Moroccan',
+    brand: 'Toscana Imports',
+    type: 'Concentrate' as any,
+    thcContent: 48,
+    price: 16.00,
+    origin: 'Morocco',
+    region: 'Traditional Regions',
+    grower: 'Moroccan Collective',
+    description: 'Toscana Moroccan represents a unique blend of Italian branding with traditional Moroccan hash-making expertise. This offering includes several blocks showcasing different grades, ranging from medium to dark brown, each with distinct characteristics. The Tuscan influence brings quality assurance and careful curation to authentic Moroccan production methods. Each block offers the classic spicy hash profile with woody sweetness that has made Moroccan hash world-renowned.',
+    effects: {
+      primary: ['Warm Body Effect', 'Soothing Relaxation', 'Moderate Euphoria'],
+      secondary: ['Stress Relief', 'Gentle Sedation', 'Comfort'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Classic hash spice with woody sweetness',
+    pairing: 'Excellent for evening relaxation, socializing, and unwinding',
+    images: getImagePath(2231, 'hash'),
+    sku: 'HASH-TOS-2231',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'temple-ball',
+    name: 'Temple Ball',
+    brand: 'Himalayan Heritage',
+    type: 'Concentrate' as any,
+    thcContent: 60,
+    price: 25.00,
+    origin: 'Nepal',
+    region: 'Himalayan Valleys',
+    grower: 'Traditional Charas Masters',
+    description: 'Temple Ball represents the pinnacle of traditional hand-rubbed charas production from Nepal and India. This sacred concentrate is crafted using ancient techniques where fresh resin is carefully hand-rubbed from living plants, then aged and rolled into signature balls. The very dark exterior becomes shiny and tacky when warm, while the interior reveals sticky, elastic perfection. Temple Ball embodies centuries of spiritual tradition and artisanal expertise, offering a truly transcendent experience.',
+    effects: {
+      primary: ['Lush Euphoria', 'Long-Lasting Effects', 'Body Warmth'],
+      secondary: ['Meditative Headspace', 'Spiritual Connection', 'Deep Relaxation'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Incense, spice, resinous sweetness',
+    pairing: 'Reserved for meditation, spiritual journeys, and ceremonial use',
+    images: getImagePath(2239, 'hash'),
+    sku: 'HASH-TB-2239',
+    inStock: true,
+    featured: true,
+    rarity: 'Ultra Rare'
+  },
+  {
+    id: 'finger-hash',
+    name: 'Finger Hash',
+    brand: 'Hand-Rubbed Traditions',
+    type: 'Concentrate' as any,
+    thcContent: 58,
+    price: 22.00,
+    origin: 'India',
+    region: 'Parvati Valley',
+    grower: 'Charas Craftsmen',
+    description: 'Finger Hash is authentic hand-rubbed charas shaped into distinctive finger-like sticks, a traditional presentation from India and Nepal. This premium concentrate is made by carefully rubbing fresh cannabis flowers by hand, collecting the pure resin that builds up on the palms. The resulting hash features a dark, glossy exterior that becomes wonderfully tacky when warm. Each finger represents hours of skilled hand-rubbing, capturing the essence of traditional Himalayan hash culture.',
+    effects: {
+      primary: ['Heavy Relaxation', 'Sedative', 'Classic Warmth'],
+      secondary: ['Body-Focused', 'Deep Calm', 'Comfortable Heaviness'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Deep resin, spice, incense notes',
+    pairing: 'Best for evening use, deep relaxation, and sleep preparation',
+    images: getImagePath(2251, 'hash'),
+    sku: 'HASH-FNG-2251',
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'bulldog-hash',
+    name: 'Bulldog Hash',
+    brand: 'Bulldog',
+    type: 'Concentrate' as any,
+    thcContent: 52,
+    price: 17.00,
+    origin: 'Netherlands',
+    region: 'Amsterdam',
+    grower: 'Bulldog Coffeeshop',
+    description: 'Bulldog Hash carries the prestigious name of one of Amsterdam\'s most iconic coffeeshops, representing the heart of Dutch cannabis culture. This branded pressed hash comes in compact bricks with medium to dark brown coloring, offering reliable quality and consistent effects. The Bulldog brand has been synonymous with quality hash since the 1970s, and this product continues that legacy with an earthy-sweet profile and comforting body effects that made Amsterdam famous.',
+    effects: {
+      primary: ['Comforting Body Effects', 'Calm Mood Elevation', 'Relaxed Focus'],
+      secondary: ['Social Enhancement', 'Gentle Euphoria', 'Mellow Contentment'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Earthy-sweet; rounded hash profile',
+    pairing: 'Perfect for coffeeshop-style sessions, socializing, and Amsterdam vibes',
+    images: getImagePath(2276, 'hash'),
+    sku: 'HASH-BDG-2276',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
   }
 ];
