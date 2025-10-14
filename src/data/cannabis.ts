@@ -1,8 +1,11 @@
 import { CannabisProduct } from '../types/whiskey';
 
 // Helper function to convert image number to path
-const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' = 'weed'): string[] => {
-  const folder = type === 'mushroom' ? 'mushroom_images_300' : type === 'hash' ? 'hash_images_300' : 'weed_images_300';
+const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' | 'edible' = 'weed'): string[] => {
+  const folder = type === 'mushroom' ? 'mushroom_images_300' : 
+                 type === 'hash' ? 'hash_images_300' : 
+                 type === 'edible' ? 'edible_images_300' : 
+                 'weed_images_300';
   if (Array.isArray(imageNumber)) {
     return imageNumber.map(num => `/${folder}/DSCF${num}X300.jpg`);
   }
@@ -1451,5 +1454,215 @@ export const hashProducts: CannabisProduct[] = [
     inStock: true,
     featured: false,
     rarity: 'Common'
+  }
+];
+
+export const edibleProducts: CannabisProduct[] = [
+  {
+    id: 'gummy-leaf-green',
+    name: 'Cannabis Leaf Gummy - Green',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 8.00,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Premium cannabis-infused gummy crafted in the shape of a classic cannabis leaf. This beautiful green gummy features a sugar-coated exterior and delivers consistent, reliable effects. Perfect for those seeking a discreet and delicious way to consume cannabis.',
+    effects: {
+      primary: ['Relaxation', 'Euphoria', 'Body Comfort'],
+      secondary: ['Stress Relief', 'Calm', 'Happy'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Sweet, fruity with herbal notes',
+    pairing: 'Ideal for controlled dosing and extended effects',
+    images: getImagePath(2338, 'edible'),
+    sku: 'EDIBLE-LEAF-GRN-2338',
+    inStock: true,
+    featured: true,
+    rarity: 'Common'
+  },
+  {
+    id: 'gummy-cubes-mix',
+    name: 'Multi-Flavor Gummy Cubes',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 7.00,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Assorted cannabis-infused gummy cubes in vibrant colors - yellow, blue, and red. Each color represents a different flavor while delivering consistent effects. The sugar-coated exterior adds a delightful texture to these premium edibles.',
+    effects: {
+      primary: ['Balanced Effects', 'Mood Enhancement', 'Relaxation'],
+      secondary: ['Creative', 'Social', 'Comfortable'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Assorted fruit flavors',
+    pairing: 'Perfect for sharing or sampling different flavors',
+    images: getImagePath(2344, 'edible'),
+    sku: 'EDIBLE-CUBE-MIX-2344',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'gummy-fruit-shapes',
+    name: 'Fruit-Shaped Gummies',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 7.50,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Colorful cannabis-infused gummies in playful fruit shapes. These sugar-dusted treats combine visual appeal with precise dosing. The vibrant red, yellow, and multi-colored pieces offer a fun and effective way to enjoy cannabis.',
+    effects: {
+      primary: ['Uplifting', 'Euphoric', 'Relaxed'],
+      secondary: ['Happy', 'Giggly', 'Social'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Mixed fruit medley',
+    pairing: 'Great for social occasions and recreational use',
+    images: getImagePath(2352, 'edible'),
+    sku: 'EDIBLE-FRUIT-MIX-2352',
+    inStock: true,
+    featured: true,
+    rarity: 'Common'
+  },
+  {
+    id: 'gummy-pumpkin-green',
+    name: 'Pumpkin Gummy - Green',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 8.00,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Distinctive pumpkin-shaped cannabis gummy in vibrant green. This premium edible features detailed molding and a generous sugar coating. The unique shape makes it a standout choice for those seeking something different.',
+    effects: {
+      primary: ['Calming', 'Balanced', 'Mellow'],
+      secondary: ['Focused', 'Relaxed', 'Content'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Green apple with subtle herbal notes',
+    pairing: 'Perfect for evening relaxation',
+    images: getImagePath(2360, 'edible'),
+    sku: 'EDIBLE-PMPKN-GRN-2360',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'gummy-gem-red',
+    name: 'Gem Gummy - Red',
+    brand: 'Premium Edibles',
+    type: 'Edible' as any,
+    price: 9.00,
+    origin: 'Canada',
+    region: 'Premium Production',
+    grower: 'Premium Edible Crafters',
+    description: 'Stunning gem-cut cannabis gummy in deep red. This premium edible showcases meticulous craftsmanship with its faceted design and brilliant sugar coating. Each piece is as beautiful as it is effective.',
+    effects: {
+      primary: ['Euphoric', 'Energizing', 'Uplifted'],
+      secondary: ['Creative', 'Social', 'Happy'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Cherry with sophisticated undertones',
+    pairing: 'Ideal for special occasions',
+    images: getImagePath(2378, 'edible'),
+    sku: 'EDIBLE-GEM-RED-2378',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'gummy-flower-trio',
+    name: 'Flower Gummy Trio',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 10.00,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Three beautifully crafted flower-shaped gummies in red, yellow, and green. Each color offers the same premium cannabis infusion with delightful presentation. Perfect for those who appreciate edibles as an art form.',
+    effects: {
+      primary: ['Balanced High', 'Relaxed', 'Happy'],
+      secondary: ['Social', 'Creative', 'Comfortable'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Tropical fruit blend',
+    pairing: 'Excellent for sharing and special occasions',
+    images: getImagePath(2384, 'edible'),
+    sku: 'EDIBLE-FLR-TRIO-2384',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'gummy-leaf-red',
+    name: 'Cannabis Leaf Gummy - Red',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 8.00,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Classic cannabis leaf gummy in vibrant red. This beautiful edible combines iconic shape with premium infusion and a generous sugar coating. A sophisticated choice for discerning consumers.',
+    effects: {
+      primary: ['Relaxing', 'Calming', 'Euphoric'],
+      secondary: ['Sleepy', 'Pain Relief', 'Peaceful'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Strawberry with herbal complexity',
+    pairing: 'Perfect for evening wind-down',
+    images: getImagePath(2302, 'edible'),
+    sku: 'EDIBLE-LEAF-RED-2302',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'gummy-leaf-yellow',
+    name: 'Cannabis Leaf Gummy - Yellow',
+    brand: 'Artisan Edibles',
+    type: 'Edible' as any,
+    price: 8.00,
+    origin: 'Canada',
+    region: 'Craft Production',
+    grower: 'Artisan Edible Makers',
+    description: 'Bright yellow cannabis leaf gummy with premium infusion. The sugar-coated exterior and detailed leaf molding make this an attractive and effective edible choice.',
+    effects: {
+      primary: ['Uplifting', 'Energizing', 'Creative'],
+      secondary: ['Focused', 'Happy', 'Social'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Lemon citrus with subtle herbs',
+    pairing: 'Great for daytime creativity',
+    images: getImagePath(2319, 'edible'),
+    sku: 'EDIBLE-LEAF-YLW-2319',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'gummy-leaf-blue',
+    name: 'Cannabis Leaf Gummy - Blue',
+    brand: 'Premium Edibles',
+    type: 'Edible' as any,
+    price: 9.00,
+    origin: 'Canada',
+    region: 'Premium Production',
+    grower: 'Premium Edible Crafters',
+    description: 'Unique blue cannabis leaf gummy featuring premium infusion and expert craftsmanship. The distinctive color and sugar coating create a visually stunning edible experience.',
+    effects: {
+      primary: ['Relaxed', 'Balanced', 'Mellow'],
+      secondary: ['Calm', 'Comfortable', 'Content'],
+      duration: ['4-8 hours']
+    },
+    flavor: 'Blue raspberry with herbal notes',
+    pairing: 'Ideal for balanced effects any time',
+    images: getImagePath(2330, 'edible'),
+    sku: 'EDIBLE-LEAF-BLU-2330',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
   }
 ];
