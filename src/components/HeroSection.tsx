@@ -13,11 +13,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onQuickSearchChange
 }) => {
   return (
-    <div className="relative px-4">
+    <div className="relative">
       <PromotionalBanner />
       
-      <div className="py-12">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="px-4 py-12">
+        <div className="max-w-7xl mx-auto text-center">
         <div className="mb-6 animate-fade-in flex justify-center">
           <img 
             src="/lovable-uploads/8dd50411-b22d-4d2b-8548-1d2edf6291a1.png" 
@@ -50,9 +50,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             />
           </div>
         </div>
+        
+        <CategoryIcons />
       </div>
-      
-      <CategoryIcons />
       </div>
     </div>
   );
