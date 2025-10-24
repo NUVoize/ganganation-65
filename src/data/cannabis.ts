@@ -1,10 +1,11 @@
 import { CannabisProduct } from '../types/whiskey';
 
 // Helper function to convert image number to path
-const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' | 'edible' = 'weed'): string[] => {
+const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' | 'edible' | 'wax' = 'weed'): string[] => {
   const folder = type === 'mushroom' ? 'mushroom_images_300' : 
                  type === 'hash' ? 'hash_images_300' : 
                  type === 'edible' ? 'edible_images_300' : 
+                 type === 'wax' ? 'wax_images_300' :
                  'weed_images_300';
   if (Array.isArray(imageNumber)) {
     return imageNumber.map(num => `/${folder}/DSCF${num}X300.jpg`);
@@ -776,6 +777,461 @@ export const cbdStrains: CannabisProduct[] = [];
 export const concentrates: CannabisProduct[] = [];
 export const edibles: CannabisProduct[] = [];
 export const preRolls: CannabisProduct[] = [];
+
+// IBHIGH Extracts - Wax Products (Live Resin, Caviar, and combinations)
+export const waxProducts: CannabisProduct[] = [
+  {
+    id: 'face-punch-wax',
+    name: 'Face Punch',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 75,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Premium live resin concentrate in round aluminum tin. Potent extract with intense effects and rich terpene profile.',
+    effects: {
+      primary: ['Euphoric', 'Energetic', 'Creative'],
+      secondary: ['Focused', 'Uplifted'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Fruity punch, citrus, tropical',
+    pairing: 'Perfect for dabbing or vaporizing',
+    images: getImagePath([2882, 2878, 2902, 2903], 'wax'),
+    sku: generateSKU('Face Punch', 901),
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'cake-crasher-wax',
+    name: 'Cake Crasher',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 78,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'High-quality caviar concentrate featuring Wedding Cake genetics. Smooth, flavorful extract with powerful effects.',
+    effects: {
+      primary: ['Relaxed', 'Happy', 'Calm'],
+      secondary: ['Sleepy', 'Content'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Sweet cake, vanilla, earthy',
+    pairing: 'Ideal for evening relaxation',
+    images: getImagePath([2887, 2891], 'wax'),
+    sku: generateSKU('Cake Crasher', 902),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'mellow-wax',
+    name: 'Mellow',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 72,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Smooth live resin concentrate with balanced effects. Perfect for those seeking a mellow, relaxing experience.',
+    effects: {
+      primary: ['Relaxed', 'Calm', 'Peaceful'],
+      secondary: ['Happy', 'Content'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Smooth, herbal, subtle sweetness',
+    pairing: 'Great for unwinding after a long day',
+    images: getImagePath([2895, 2896, 2898], 'wax'),
+    sku: generateSKU('Mellow', 903),
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'joker-wax',
+    name: 'Joker',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 76,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Playful yet potent concentrate with unpredictable terpene profile. A wild ride for experienced users.',
+    effects: {
+      primary: ['Euphoric', 'Giggly', 'Creative'],
+      secondary: ['Energetic', 'Social'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Complex, fruity, spicy',
+    pairing: 'Perfect for social gatherings',
+    images: getImagePath([2721, 2722], 'wax'),
+    sku: generateSKU('Joker', 904),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'berry-bond-wax',
+    name: 'Berry Bond',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 74,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Berry-forward concentrate with strong bonding effects. Sweet and powerful extraction.',
+    effects: {
+      primary: ['Relaxed', 'Happy', 'Euphoric'],
+      secondary: ['Calm', 'Content'],
+      duration: ['3-4 hours']
+    },
+    flavor: 'Mixed berries, sweet, floral',
+    pairing: 'Excellent for relaxation and mood enhancement',
+    images: getImagePath([2727, 2729], 'wax'),
+    sku: generateSKU('Berry Bond', 905),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'super-soaker-wax',
+    name: 'Super Soaker',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 79,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Heavily saturated concentrate with intense terpene preservation. Super potent extraction.',
+    effects: {
+      primary: ['Intense', 'Euphoric', 'Energetic'],
+      secondary: ['Creative', 'Focused'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Pungent, diesel, citrus',
+    pairing: 'For experienced concentrate users',
+    images: getImagePath([2730, 2733, 2735], 'wax'),
+    sku: generateSKU('Super Soaker', 906),
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'sticky-mind-wax',
+    name: 'Sticky Mind',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 77,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Mind-bending concentrate with sticky consistency. Cerebral effects with full-body relaxation.',
+    effects: {
+      primary: ['Focused', 'Creative', 'Cerebral'],
+      secondary: ['Relaxed', 'Uplifted'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Earthy, pine, herbal',
+    pairing: 'Great for creative activities',
+    images: getImagePath([2737, 2743, 2746], 'wax'),
+    sku: generateSKU('Sticky Mind', 907),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'purple-michigan-wax',
+    name: 'Purple Michigan',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 73,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Purple-hued concentrate with Michigan genetics. Rich in anthocyanins and terpenes.',
+    effects: {
+      primary: ['Relaxed', 'Sleepy', 'Happy'],
+      secondary: ['Calm', 'Content'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Grape, berry, sweet',
+    pairing: 'Perfect for evening use',
+    images: getImagePath([2751, 2756], 'wax'),
+    sku: generateSKU('Purple Michigan', 908),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'manta-wax',
+    name: 'Manta',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 75,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Smooth-gliding concentrate with wave-like effects. Balanced and elegant extraction.',
+    effects: {
+      primary: ['Balanced', 'Relaxed', 'Happy'],
+      secondary: ['Calm', 'Focused'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Smooth, clean, subtle fruit',
+    pairing: 'Versatile for any time of day',
+    images: getImagePath([2758, 2762], 'wax'),
+    sku: generateSKU('Manta', 909),
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'block-berry-wax',
+    name: 'Block Berry',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 76,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Solid berry-flavored concentrate block. Consistent quality with powerful berry terps.',
+    effects: {
+      primary: ['Happy', 'Relaxed', 'Euphoric'],
+      secondary: ['Creative', 'Social'],
+      duration: ['3-4 hours']
+    },
+    flavor: 'Blueberry, strawberry, sweet',
+    pairing: 'Great for social settings',
+    images: getImagePath([2771, 2772], 'wax'),
+    sku: generateSKU('Block Berry', 910),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'cake-bomb-wax',
+    name: 'Cake Bomb',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 80,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Explosive cake-flavored concentrate. One of our most potent extractions with intense flavor.',
+    effects: {
+      primary: ['Intense', 'Euphoric', 'Relaxed'],
+      secondary: ['Sleepy', 'Happy'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Sweet cake, vanilla, cream',
+    pairing: 'For experienced users seeking maximum potency',
+    images: getImagePath([2775, 2778, 2784], 'wax'),
+    sku: generateSKU('Cake Bomb', 911),
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'fruit-riot-wax',
+    name: 'Fruit Riot',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 74,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Chaotic blend of fruit terpenes. Wild and vibrant concentrate with complex flavor profile.',
+    effects: {
+      primary: ['Energetic', 'Creative', 'Happy'],
+      secondary: ['Focused', 'Uplifted'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Mixed fruit, citrus, tropical',
+    pairing: 'Perfect for daytime creativity',
+    images: getImagePath([2785, 2792], 'wax'),
+    sku: generateSKU('Fruit Riot', 912),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'candy-flush-wax',
+    name: 'Candy Flush',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 75,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Sweet candy-flavored concentrate with flushed trichomes. Smooth and flavorful extraction.',
+    effects: {
+      primary: ['Happy', 'Euphoric', 'Relaxed'],
+      secondary: ['Creative', 'Social'],
+      duration: ['2-4 hours']
+    },
+    flavor: 'Sweet candy, sugar, fruit',
+    pairing: 'Great for mood enhancement',
+    images: getImagePath([2797, 2798], 'wax'),
+    sku: generateSKU('Candy Flush', 913),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'legend-apricot-wax',
+    name: 'Legend Apricot',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 77,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Legendary apricot-flavored concentrate. Rare terpene profile with smooth, fruity character.',
+    effects: {
+      primary: ['Relaxed', 'Happy', 'Calm'],
+      secondary: ['Content', 'Peaceful'],
+      duration: ['3-4 hours']
+    },
+    flavor: 'Apricot, peach, sweet stone fruit',
+    pairing: 'Excellent for relaxation',
+    images: getImagePath([2861, 2863], 'wax'),
+    sku: generateSKU('Legend Apricot', 914),
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'rockstar-wax',
+    name: 'Rockstar',
+    brand: 'IBHIGH Extracts',
+    type: 'Concentrate',
+    thcContent: 78,
+    cbdContent: 0,
+    price: 30,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Star-quality concentrate from the legendary Rockstar strain. Premium extraction with powerful effects.',
+    effects: {
+      primary: ['Relaxed', 'Euphoric', 'Sleepy'],
+      secondary: ['Happy', 'Calm'],
+      duration: ['3-5 hours']
+    },
+    flavor: 'Earthy, spicy, skunky',
+    pairing: 'Perfect for evening and nighttime use',
+    images: getImagePath([2871], 'wax'),
+    sku: generateSKU('Rockstar', 915),
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  // Cannabis Syrups
+  {
+    id: 'cannabis-syrup-red',
+    name: 'Cannabis Syrup - Red',
+    brand: 'IBHIGH Extracts',
+    type: 'Edible',
+    thcContent: 0,
+    cbdContent: 0,
+    price: 25,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Cannabis-infused syrup in slim bottle. Red variant with sweet, fruity flavor. Mix with beverages for a unique experience.',
+    effects: {
+      primary: ['Relaxed', 'Happy', 'Calm'],
+      secondary: ['Content', 'Peaceful'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Sweet cherry, berry, fruit punch',
+    pairing: 'Mix with drinks or use as topping',
+    images: getImagePath([2803, 2805, 2809], 'wax'),
+    sku: generateSKU('Syrup Red', 916),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'cannabis-syrup-teal',
+    name: 'Cannabis Syrup - Teal',
+    brand: 'IBHIGH Extracts',
+    type: 'Edible',
+    thcContent: 0,
+    cbdContent: 0,
+    price: 25,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Cannabis-infused syrup in slim bottle. Teal variant with refreshing flavor profile. Versatile consumption method.',
+    effects: {
+      primary: ['Uplifted', 'Happy', 'Energetic'],
+      secondary: ['Focused', 'Creative'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Blue raspberry, mint, tropical',
+    pairing: 'Perfect for mixing with cocktails',
+    images: getImagePath([2815, 2817, 2819], 'wax'),
+    sku: generateSKU('Syrup Teal', 917),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'cannabis-syrup-orange',
+    name: 'Cannabis Syrup - Orange',
+    brand: 'IBHIGH Extracts',
+    type: 'Edible',
+    thcContent: 0,
+    cbdContent: 0,
+    price: 25,
+    origin: 'Canada',
+    region: 'Artisan Production',
+    grower: 'IBHIGH Extracts',
+    description: 'Cannabis-infused syrup in slim bottle. Orange variant with citrus-forward taste. Delicious and effective edible option.',
+    effects: {
+      primary: ['Energetic', 'Happy', 'Uplifted'],
+      secondary: ['Creative', 'Social'],
+      duration: ['4-6 hours']
+    },
+    flavor: 'Orange citrus, tangerine, sweet',
+    pairing: 'Great with sodas or as a dessert topping',
+    images: getImagePath([2824, 2826, 2828], 'wax'),
+    sku: generateSKU('Syrup Orange', 918),
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  }
+];
 
 export const mushroomProducts: CannabisProduct[] = [
   {
