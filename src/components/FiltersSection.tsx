@@ -16,15 +16,9 @@ export const FiltersSection: React.FC<FiltersSectionProps> = ({
   onToggleFilters
 }) => {
   return (
-    <div className="lg:w-80">
-      <div className="sticky top-4">
-        <div className="mb-4">
-          <h2 className="font-serif text-2xl text-smokey">Filters</h2>
-        </div>
-        
-        <div className={`${showFilters ? 'block' : 'hidden'} lg:block`}>
-          <SearchFiltersComponent filters={filters} onFiltersChange={onFiltersChange} />
-        </div>
+    <div className="w-full">
+      <div className={`${showFilters ? 'block' : 'hidden'} lg:block`}>
+        <SearchFiltersComponent filters={filters} onFiltersChange={onFiltersChange} />
       </div>
     </div>
   );
