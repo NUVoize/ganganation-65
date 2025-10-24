@@ -1,69 +1,107 @@
 import { CannabisProduct } from '../types/whiskey';
 import papersData from './rolling_papers_list_details.json';
 
-interface RawPaperProduct {
-  name: string;
+interface RawPaperBrand {
   brand: string;
-  origin: string;
-  description: string;
-  price: number;
+  default_price?: string;
+  products: RawPaperProduct[];
+}
+
+interface RawPaperProduct {
+  product_name: string;
+  type: string;
   pack_count: string;
+  flavor?: string;
   material: string;
-  size: string;
-  sku: string;
+  size?: string;
+  short_desc: string;
+  details_desc: string;
   images: string[];
 }
 
-const transformPaperProduct = (raw: RawPaperProduct, index: number): CannabisProduct => {
-  const isGrinder = raw.brand.toLowerCase().includes('blaze');
-  const isLeafWrap = raw.material.toLowerCase().includes('tobacco');
-  const isHempWrap = raw.material.toLowerCase().includes('hemp') && raw.brand.toLowerCase().includes('juicy hemp');
+interface PapersCatalog {
+  catalog: RawPaperBrand[];
+  pricing: any;
+}
+
+const getPriceBySize = (brand: string, size?: string, packCount?: string): number => {
+  if (brand === 'Backwoods') return 15;
+  if (brand === 'Juicy Hemp Wraps') return 4;
+  if (brand === 'Juicy Jay\'s') return size?.includes('King') ? 3.50 : 2.50;
+  if (brand === 'OCB') return size?.includes('Slim') || size?.includes('King') ? 3.50 : 2.50;
+  if (brand === 'Bambú') return 2.50;
+  if (brand === 'Blaze') return 10;
+  return 3.00;
+};
+
+const generateSKU = (brand: string, productName: string, packCount: string): string => {
+  const brandCode = brand.split(' ').map(w => w[0]).join('').toUpperCase();
+  const productCode = productName.split(' ').slice(0, 2).join('-').toUpperCase();
+  const packCode = packCount.replace(/\s+/g, '').toUpperCase();
+  return `${brandCode}-${productCode}-${packCode}`;
+};
+
+const getProductType = (type: string, brand: string): CannabisProduct['type'] => {
+  if (brand.toLowerCase().includes('blaze')) return 'Accessories';
+  if (type === 'Authentic Cigars') return 'Pre-Roll';
+  if (type === 'Hemp Wraps') return 'Pre-Roll';
+  if (type === 'Rolling Papers') return 'Pre-Roll';
+  if (type === 'Accessory') return 'Accessories';
+  return 'Pre-Roll';
+};
+
+const transformPaperProduct = (
+  raw: RawPaperProduct,
+  brand: RawPaperBrand,
+  globalIndex: number
+): CannabisProduct => {
+  const price = getPriceBySize(brand.brand, raw.size, raw.pack_count);
+  const sku = generateSKU(brand.brand, raw.product_name, raw.pack_count);
+  const productType = getProductType(raw.type, brand.brand);
   
   return {
-    id: `paper-${index + 1}`,
-    name: raw.name,
-    brand: raw.brand,
-    type: isGrinder ? 'Pre-Roll' : isLeafWrap || isHempWrap ? 'Pre-Roll' : 'Pre-Roll',
+    id: `paper-${globalIndex + 1}`,
+    name: raw.product_name,
+    brand: brand.brand,
+    type: productType,
     thcContent: undefined,
     cbdContent: undefined,
-    price: raw.price,
-    origin: raw.origin,
+    price: price,
+    origin: 'Various',
     region: undefined,
-    grower: raw.brand,
-    description: raw.description,
+    grower: brand.brand,
+    description: raw.short_desc,
     effects: {
-      primary: isGrinder ? ['Preparation'] : ['Smoking'],
+      primary: productType === 'Accessories' ? ['Preparation'] : ['Smoking'],
       secondary: [],
       duration: []
     },
-    flavor: raw.brand,
-    pairing: raw.material,
-    images: raw.images.map(img => {
-      if (img.includes('DSCF2195') || img.includes('DSCF2204') || img.includes('DSCF2218') || 
-          img.includes('DSCF2231') || img.includes('DSCF2239') || img.includes('DSCF2251') ||
-          img.includes('DSCF2263') || img.includes('DSCF2273') || img.includes('DSCF2276') || 
-          img.includes('DSCF2288')) {
-        return img.includes('300') ? `/hash_images_300/${img}` : `/hash_images_800/${img}`;
+    flavor: raw.flavor || raw.product_name,
+    pairing: raw.details_desc,
+    images: raw.images.map(dscfNumber => {
+      // Rolling papers images are DSCF2391-2692
+      const imageNumber = parseInt(dscfNumber.replace('DSCF', ''));
+      
+      if (imageNumber >= 2391 && imageNumber <= 2692) {
+        return [`${dscfNumber}X300.jpg`, `${dscfNumber}X800.jpg`];
       }
-      if (img.includes('DSCF2037') || img.includes('DSCF2041') || img.includes('DSCF2050') ||
-          img.includes('DSCF2057') || img.includes('DSCF2067') || img.includes('DSCF2069') ||
-          img.includes('DSCF2075') || img.includes('DSCF2079') || img.includes('DSCF2089') ||
-          img.includes('DSCF2096') || img.includes('DSCF2099') || img.includes('DSCF2111') ||
-          img.includes('DSCF2116') || img.includes('DSCF2123') || img.includes('DSCF2125') ||
-          img.includes('DSCF2137') || img.includes('DSCF2148') || img.includes('DSCF2164') ||
-          img.includes('DSCF2170') || img.includes('DSCF2176') || img.includes('DSCF2179') ||
-          img.includes('DSCF2188')) {
-        return img.includes('300') ? `/mushroom_images_300/${img}` : `/mushroom_images_800/${img}`;
-      }
-      return `/papers_images/${img}`;
-    }),
+      
+      // Fallback
+      return [`${dscfNumber}X300.jpg`, `${dscfNumber}X800.jpg`];
+    }).flat().filter((_, index) => index % 2 === 0).map(img => `/papers_images_300/${img}`),
     videoUrl: undefined,
     awards: [],
-    sku: raw.sku,
+    sku: sku,
     inStock: true,
     featured: false,
-    rarity: isGrinder ? 'Limited' : raw.price > 10 ? 'Limited' : 'Common'
+    rarity: price > 10 ? 'Limited' : 'Common'
   };
 };
 
-export const rollingPapers: CannabisProduct[] = (papersData as RawPaperProduct[]).map(transformPaperProduct);
+const data = papersData as any;
+export const rollingPapers: CannabisProduct[] = (data.catalog as RawPaperBrand[])
+  .flatMap((brand, brandIndex) => 
+    brand.products.map((product, productIndex) => 
+      transformPaperProduct(product, brand, brandIndex * 100 + productIndex)
+    )
+  );

@@ -2,7 +2,7 @@ export interface CannabisProduct {
   id: string;
   name: string;
   brand: string;
-  type: 'Indica' | 'Sativa' | 'Hybrid' | 'CBD' | 'Concentrate' | 'Edible' | 'Pre-Roll';
+  type: 'Indica' | 'Sativa' | 'Hybrid' | 'CBD' | 'Concentrate' | 'Edible' | 'Pre-Roll' | 'Accessories';
   thcContent?: number;
   cbdContent?: number;
   price: number;

@@ -1,374 +1,447 @@
-[
-  {
-    "name": "Backwoods Sweet Aromatic",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Natural tobacco leaf cigar wraps with a sweet aromatic flavor. Perfect for a slow, smooth burn.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-SWEET-001",
-    "images": ["DSCF2195X300.jpg", "DSCF2195X800.jpg"]
-  },
-  {
-    "name": "Backwoods Honey Berry",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Sweet honey and berry flavored tobacco leaf wraps for a unique smoking experience.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-HONEY-002",
-    "images": ["DSCF2204X300.jpg", "DSCF2204X800.jpg"]
-  },
-  {
-    "name": "Backwoods Russian Cream",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Creamy, smooth tobacco leaf wraps with a hint of vanilla and caramel.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-RUSSIAN-003",
-    "images": ["DSCF2218X300.jpg", "DSCF2218X800.jpg"]
-  },
-  {
-    "name": "Backwoods Wild Rum",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Bold rum-flavored tobacco leaf wraps for a Caribbean-inspired session.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-RUM-004",
-    "images": ["DSCF2231X300.jpg", "DSCF2231X800.jpg"]
-  },
-  {
-    "name": "Backwoods Honey Bourbon",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Premium tobacco leaf with honey bourbon infusion for a sophisticated taste.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-BOURBON-005",
-    "images": ["DSCF2239X300.jpg", "DSCF2239X800.jpg"]
-  },
-  {
-    "name": "Backwoods Original",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Classic tobacco leaf wraps with authentic rustic flavor.",
-    "price": 14.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-ORIG-006",
-    "images": ["DSCF2251X300.jpg", "DSCF2251X800.jpg"]
-  },
-  {
-    "name": "Backwoods Dark Stout",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Rich, dark tobacco leaf with stout beer undertones.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-STOUT-007",
-    "images": ["DSCF2263X300.jpg", "DSCF2263X800.jpg"]
-  },
-  {
-    "name": "Backwoods Dark Leaf",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Bold dark tobacco leaf for experienced smokers.",
-    "price": 14.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-DARK-008",
-    "images": ["DSCF2273X300.jpg", "DSCF2273X800.jpg"]
-  },
-  {
-    "name": "Backwoods Banana",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Sweet banana-flavored tobacco leaf wraps.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-BANANA-009",
-    "images": ["DSCF2276X300.jpg", "DSCF2276X800.jpg"]
-  },
-  {
-    "name": "Backwoods Blue",
-    "brand": "Backwoods",
-    "origin": "USA",
-    "description": "Smooth blueberry-infused tobacco leaf wraps.",
-    "price": 15.00,
-    "pack_count": "5 cigars",
-    "material": "Tobacco Leaf",
-    "size": "King Size",
-    "sku": "BWD-BLUE-010",
-    "images": ["DSCF2288X300.jpg", "DSCF2288X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Mango Tango",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Natural toasted hemp wraps with tropical mango flavor. 100% tobacco-free.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-MANGO-011",
-    "images": ["DSCF2037X300.jpg", "DSCF2037X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Grape Gone Wild",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Sweet purple grape flavored hemp wraps with a slow burn.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-GRAPE-012",
-    "images": ["DSCF2041X300.jpg", "DSCF2041X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Strawberry Fields",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Fresh strawberry flavored natural hemp wraps.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-STRAW-013",
-    "images": ["DSCF2050X300.jpg", "DSCF2050X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Blueberry Hill",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Blueberry flavored hemp wraps with natural toasted hemp.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-BLUE-014",
-    "images": ["DSCF2057X300.jpg", "DSCF2057X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Tropical Passion",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Exotic tropical fruit blend hemp wraps.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-TROP-015",
-    "images": ["DSCF2067X300.jpg", "DSCF2067X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Black N Blueberry",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Rich blackberry and blueberry flavored hemp wraps.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-BLACK-016",
-    "images": ["DSCF2069X300.jpg", "DSCF2069X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Watermelon Wave",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Sweet watermelon flavored natural hemp wraps.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-WATER-017",
-    "images": ["DSCF2075X300.jpg", "DSCF2075X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Purple Wave",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Purple grape and berry blend hemp wraps.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-PURPLE-018",
-    "images": ["DSCF2079X300.jpg", "DSCF2079X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Original",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Natural toasted hemp wraps without added flavoring.",
-    "price": 3.00,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-ORIG-019",
-    "images": ["DSCF2089X300.jpg", "DSCF2089X800.jpg"]
-  },
-  {
-    "name": "Juicy Hemp Wraps Green Swirl",
-    "brand": "Juicy Hemp Wraps",
-    "origin": "USA",
-    "description": "Natural hemp flavor with a hint of mint.",
-    "price": 3.50,
-    "pack_count": "2 wraps",
-    "material": "Hemp",
-    "size": "King Size",
-    "sku": "JHW-GREEN-020",
-    "images": ["DSCF2096X300.jpg", "DSCF2096X800.jpg"]
-  },
-  {
-    "name": "Juicy Jay's Strawberry Rolling Papers",
-    "brand": "Juicy Jay's",
-    "origin": "Spain",
-    "description": "1¼ size flavored rolling papers with sweet strawberry taste.",
-    "price": 2.50,
-    "pack_count": "32 leaves",
-    "material": "Rice Paper",
-    "size": "1¼",
-    "sku": "JJ-STRAW-021",
-    "images": ["DSCF2099X300.jpg", "DSCF2099X800.jpg"]
-  },
-  {
-    "name": "Juicy Jay's Grape Rolling Papers",
-    "brand": "Juicy Jay's",
-    "origin": "Spain",
-    "description": "Grape flavored 1¼ rolling papers with triple-dip flavor system.",
-    "price": 2.50,
-    "pack_count": "32 leaves",
-    "material": "Rice Paper",
-    "size": "1¼",
-    "sku": "JJ-GRAPE-022",
-    "images": ["DSCF2111X300.jpg", "DSCF2111X800.jpg"]
-  },
-  {
-    "name": "Juicy Jay's Cherry Rolling Papers",
-    "brand": "Juicy Jay's",
-    "origin": "Spain",
-    "description": "Sweet cherry flavored rolling papers.",
-    "price": 2.50,
-    "pack_count": "32 leaves",
-    "material": "Rice Paper",
-    "size": "1¼",
-    "sku": "JJ-CHERRY-023",
-    "images": ["DSCF2116X300.jpg", "DSCF2116X800.jpg"]
-  },
-  {
-    "name": "Juicy Jay's Blueberry Rolling Papers",
-    "brand": "Juicy Jay's",
-    "origin": "Spain",
-    "description": "Blueberry flavored rice papers with slow burn.",
-    "price": 2.50,
-    "pack_count": "32 leaves",
-    "material": "Rice Paper",
-    "size": "1¼",
-    "sku": "JJ-BLUE-024",
-    "images": ["DSCF2123X300.jpg", "DSCF2123X800.jpg"]
-  },
-  {
-    "name": "Juicy Jay's Watermelon Rolling Papers",
-    "brand": "Juicy Jay's",
-    "origin": "Spain",
-    "description": "Refreshing watermelon flavored rolling papers.",
-    "price": 2.50,
-    "pack_count": "32 leaves",
-    "material": "Rice Paper",
-    "size": "1¼",
-    "sku": "JJ-WATER-025",
-    "images": ["DSCF2125X300.jpg", "DSCF2125X800.jpg"]
-  },
-  {
-    "name": "Juicy Jay's Vanilla Rolling Papers",
-    "brand": "Juicy Jay's",
-    "origin": "Spain",
-    "description": "Smooth vanilla flavored rice papers.",
-    "price": 2.50,
-    "pack_count": "32 leaves",
-    "material": "Rice Paper",
-    "size": "1¼",
-    "sku": "JJ-VAN-026",
-    "images": ["DSCF2137X300.jpg", "DSCF2137X800.jpg"]
-  },
-  {
-    "name": "OCB Premium Rolling Papers",
-    "brand": "OCB",
-    "origin": "France",
-    "description": "Premium organic rice papers with ultra-thin design.",
-    "price": 2.00,
-    "pack_count": "50 leaves",
-    "material": "Rice Paper",
-    "size": "King Size Slim",
-    "sku": "OCB-PREM-027",
-    "images": ["DSCF2148X300.jpg", "DSCF2148X800.jpg"]
-  },
-  {
-    "name": "OCB Organic Hemp Papers",
-    "brand": "OCB",
-    "origin": "France",
-    "description": "100% organic hemp rolling papers, unbleached and natural.",
-    "price": 2.25,
-    "pack_count": "50 leaves",
-    "material": "Hemp",
-    "size": "King Size Slim",
-    "sku": "OCB-HEMP-028",
-    "images": ["DSCF2164X300.jpg", "DSCF2164X800.jpg"]
-  },
-  {
-    "name": "Bambú Classic Rolling Papers",
-    "brand": "Bambú",
-    "origin": "Spain",
-    "description": "Classic cigarette papers made from bamboo pulp.",
-    "price": 1.50,
-    "pack_count": "100 leaves",
-    "material": "Bamboo Pulp",
-    "size": "1¼",
-    "sku": "BAM-CLAS-029",
-    "images": ["DSCF2170X300.jpg", "DSCF2170X800.jpg"]
-  },
-  {
-    "name": "Bambú Organic Papers",
-    "brand": "Bambú",
-    "origin": "Spain",
-    "description": "Organic bamboo rolling papers, unbleached.",
-    "price": 1.75,
-    "pack_count": "100 leaves",
-    "material": "Bamboo Pulp",
-    "size": "1¼",
-    "sku": "BAM-ORG-030",
-    "images": ["DSCF2176X300.jpg", "DSCF2176X800.jpg"]
-  },
-  {
-    "name": "Blaze 4-Piece Herb Grinder",
-    "brand": "Blaze",
-    "origin": "USA",
-    "description": "Premium aluminum 4-piece grinder with pollen catcher and diamond-shaped teeth.",
-    "price": 25.00,
-    "pack_count": "1 unit",
-    "material": "Aluminum",
-    "size": "2.5 inches",
-    "sku": "BLZ-GRIND-031",
-    "images": ["DSCF2179X300.jpg", "DSCF2179X800.jpg"]
+{
+  "catalog": [
+    {
+      "brand": "Backwoods",
+      "default_price": "15 $ / pack (all flavors)",
+      "products": [
+        {
+          "product_name": "Backwoods Vanilla",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Vanilla",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Classic vanilla-flavored cigarillos with natural leaf wrapper.",
+          "details_desc": "Smooth, sweet aromatic profile; traditional rustic roll.",
+          "images": ["DSCF2391", "DSCF2395"]
+        },
+        {
+          "product_name": "Backwoods Smoked Caramel",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Smoked Caramel",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Caramel-forward aroma with toasted sweetness.",
+          "details_desc": "Balanced sweetness and smoke; slow burn.",
+          "images": ["DSCF2400", "DSCF2407"]
+        },
+        {
+          "product_name": "Backwoods Chocolate",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Chocolate",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Chocolate-scented Backwoods 5-pack.",
+          "details_desc": "Cocoa aroma; includes standard and limited-edition packaging.",
+          "images": ["DSCF2412", "DSCF2438", "DSCF2442"]
+        },
+        {
+          "product_name": "Backwoods (variant – verify)",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "To confirm",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Backwoods 5-pack (variant to confirm).",
+          "details_desc": "Packaging shows circular color mark; confirm final flavor name.",
+          "images": ["DSCF2419", "DSCF2421"]
+        },
+        {
+          "product_name": "Backwoods Tical",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Tical",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Special edition Tical-branded Backwoods.",
+          "details_desc": "Bold, earthy-sweet profile with signature natural leaf wrap.",
+          "images": ["DSCF2426", "DSCF2430"]
+        },
+        {
+          "product_name": "Backwoods Black Russian",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Black Russian",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Coffee-and-cream inspired aroma.",
+          "details_desc": "Rich, sweet profile reminiscent of the cocktail.",
+          "images": ["DSCF2455"]
+        },
+        {
+          "product_name": "Backwoods Dark Stout",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Dark Stout",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Roasty stout-inspired notes.",
+          "details_desc": "Dark, malty aromatic profile; steady burn.",
+          "images": ["DSCF2463"]
+        },
+        {
+          "product_name": "Backwoods Dark Leaf",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Dark Leaf",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Backwoods in a darker leaf wrapper.",
+          "details_desc": "Bolder tobacco character from darker wrapper leaves.",
+          "images": ["DSCF2469"]
+        },
+        {
+          "product_name": "Backwoods Grape",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Grape",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Fruity grape aroma with sweet finish.",
+          "details_desc": "Classic flavored Backwoods.",
+          "images": ["DSCF2474"]
+        },
+        {
+          "product_name": "Backwoods Wild Rum",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Wild Rum",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Rum-scented profile with warm sweetness.",
+          "details_desc": "Smooth burn with aromatic rum notes.",
+          "images": ["DSCF2480"]
+        },
+        {
+          "product_name": "Backwoods Honey Berry",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Honey Berry",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Honey sweetness with berry aroma.",
+          "details_desc": "Balanced fruity-sweet profile.",
+          "images": ["DSCF2487"]
+        },
+        {
+          "product_name": "Backwoods Honey Bourbon",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Honey Bourbon",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Honeyed sweetness with bourbon-inspired aroma.",
+          "details_desc": "Warm, smooth aromatic blend; slow burn.",
+          "images": ["DSCF2492"]
+        },
+        {
+          "product_name": "Backwoods Dark Berry",
+          "type": "Authentic Cigars",
+          "pack_count": "5 cigars",
+          "flavor": "Dark Berry",
+          "material": "All-natural leaf wrapper",
+          "short_desc": "Bold berry aroma with sweet finish.",
+          "details_desc": "Richer fruit notes than standard berry.",
+          "images": ["DSCF2499"]
+        }
+      ]
+    },
+    {
+      "brand": "Juicy Hemp Wraps",
+      "default_price": "4 $ / pack (2 wraps)",
+      "products": [
+        {
+          "product_name": "Juicy Hemp Wraps Coconut Cream",
+          "type": "Hemp Wraps (some Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Coconut Cream",
+          "material": "Natural hemp",
+          "short_desc": "Creamy coconut flavor; slow-burning hemp wraps.",
+          "details_desc": "Some packs labeled Terp Enhanced; resealable zip pack.",
+          "images": ["DSCF2501", "DSCF2504"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Cherry Pie",
+          "type": "Hemp Wraps (Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Cherry Pie",
+          "material": "Natural hemp",
+          "short_desc": "Rich cherry pie sweetness with terpene infusion.",
+          "details_desc": "Slow, even burn; resealable packaging.",
+          "images": ["DSCF2507", "DSCF2512"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Strawberry Sherbet",
+          "type": "Hemp Wraps (Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Strawberry Sherbet",
+          "material": "Natural hemp",
+          "short_desc": "Bright strawberry sherbet flavor.",
+          "details_desc": "Smooth pull; consistent burn.",
+          "images": ["DSCF2515", "DSCF2519"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Grapes Gone Wild",
+          "type": "Hemp Wraps",
+          "pack_count": "2 wraps",
+          "flavor": "Grape",
+          "material": "Natural hemp",
+          "short_desc": "Bold grape aroma in natural hemp wraps.",
+          "details_desc": "Shown across multiple packaging variations.",
+          "images": ["DSCF2521", "DSCF2525", "DSCF2555", "DSCF2560"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps (Yellow variant – verify)",
+          "type": "Hemp Wraps (Pure Hemp)",
+          "pack_count": "2 wraps",
+          "flavor": "Mango/Papaya (to verify)",
+          "material": "Natural hemp",
+          "short_desc": "Yellow-pack flavor; confirm final name.",
+          "details_desc": "Pure Hemp series; likely tropical profile.",
+          "images": ["DSCF2529", "DSCF2533"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Tropical Passion",
+          "type": "Hemp Wraps (Pure Hemp)",
+          "pack_count": "2 wraps",
+          "flavor": "Tropical Passion",
+          "material": "Natural hemp",
+          "short_desc": "Tropical fruit blend flavor.",
+          "details_desc": "Even burn; resealable package.",
+          "images": ["DSCF2535", "DSCF2538"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Pineapple Shake",
+          "type": "Hemp Wraps (Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Pineapple Shake",
+          "material": "Natural hemp",
+          "short_desc": "Sweet pineapple shake notes.",
+          "details_desc": "Terpene-enhanced aroma; two pack shots.",
+          "images": ["DSCF2540", "DSCF2545"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Grape Soda",
+          "type": "Hemp Wraps (Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Grape Soda",
+          "material": "Natural hemp",
+          "short_desc": "Fizzy grape-soda inspired flavor.",
+          "details_desc": "Vivid purple packaging; consistent roll.",
+          "images": ["DSCF2547", "DSCF2552"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Purple Gelato",
+          "type": "Hemp Wraps (Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Purple Gelato",
+          "material": "Natural hemp",
+          "short_desc": "Dessert-inspired gelato aroma.",
+          "details_desc": "Terpene enhanced; sweet finish.",
+          "images": ["DSCF2563", "DSCF2568"]
+        },
+        {
+          "product_name": "Juicy Hemp Wraps Blackberry Jam",
+          "type": "Hemp Wraps (Terp Enhanced)",
+          "pack_count": "2 wraps",
+          "flavor": "Blackberry Jam",
+          "material": "Natural hemp",
+          "short_desc": "Deep blackberry sweetness.",
+          "details_desc": "Purple/blue pack; slow, smooth burn.",
+          "images": ["DSCF2570", "DSCF2575"]
+        }
+      ]
+    },
+    {
+      "brand": "Juicy Jay's",
+      "default_price": "2.50 $ (1 1/4) / 3.50 $ (King Size)",
+      "products": [
+        {
+          "product_name": "Juicy Jay's Blackberry Brandy",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "1 1/4 (assumed)",
+          "flavor": "Blackberry Brandy",
+          "material": "Printed flavored paper",
+          "short_desc": "Flavored rolling papers with blackberry brandy aroma.",
+          "details_desc": "Signature printed papers; sweet, aromatic burn.",
+          "images": ["DSCF2613"]
+        },
+        {
+          "product_name": "Juicy Jay's Bubblegum",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "King Size Slim (assumed)",
+          "flavor": "Bubblegum",
+          "material": "Printed flavored paper",
+          "short_desc": "Bubblegum flavored rolling papers.",
+          "details_desc": "Vibrant pink-blue pack; smooth, sweet aroma.",
+          "images": ["DSCF2621"]
+        },
+        {
+          "product_name": "Juicy Jay's Pineapple",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "1 1/4",
+          "flavor": "Pineapple",
+          "material": "Printed flavored paper",
+          "short_desc": "Pineapple flavored rolling papers.",
+          "details_desc": "Yellow pack; sweet tropical notes.",
+          "images": ["DSCF2629"]
+        },
+        {
+          "product_name": "Juicy Jay's Coconut",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "1 1/4",
+          "flavor": "Coconut",
+          "material": "Printed flavored paper",
+          "short_desc": "Coconut flavored rolling papers.",
+          "details_desc": "White pack; smooth tropical aroma.",
+          "images": ["DSCF2633", "DSCF2674"]
+        },
+        {
+          "product_name": "Juicy Jay's Very Cherry",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "1 1/4",
+          "flavor": "Very Cherry",
+          "material": "Printed flavored paper",
+          "short_desc": "Cherry flavored rolling papers.",
+          "details_desc": "Red pack; sweet cherry aroma.",
+          "images": ["DSCF2653"]
+        },
+        {
+          "product_name": "Juicy Jay's Peaches & Cream",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "1 1/4",
+          "flavor": "Peaches & Cream",
+          "material": "Printed flavored paper",
+          "short_desc": "Peach and cream flavored rolling papers.",
+          "details_desc": "Orange pack; smooth dessert-style aroma.",
+          "images": ["DSCF2661"]
+        }
+      ]
+    },
+    {
+      "brand": "Bambú",
+      "products": [
+        {
+          "product_name": "Bambú Classic",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves (assumed)",
+          "size": "1 1/4",
+          "material": "Classic wood pulp blend",
+          "short_desc": "Iconic Bambú rolling papers in classic beige pack.",
+          "details_desc": "Smooth burn; vintage branding.",
+          "images": ["DSCF2639"]
+        },
+        {
+          "product_name": "Bambú Cherry",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves (assumed)",
+          "size": "1 1/4",
+          "flavor": "Cherry",
+          "material": "Flavored paper",
+          "short_desc": "Cherry flavored Bambú papers.",
+          "details_desc": "Bright red pack; light fruity aroma.",
+          "images": ["DSCF2648"]
+        }
+      ]
+    },
+    {
+      "brand": "OCB",
+      "default_price": "2.50 $ (1 1/4) / 3.50 $ (KS/Slim) / Tips 1.50 $",
+      "products": [
+        {
+          "product_name": "OCB Premium",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "1 1/4 (and Slim shown)",
+          "material": "Bleached/unbleached blends (brand line)",
+          "short_desc": "OCB Premium black series papers.",
+          "details_desc": "Photo shows multiple sizes including Slim; clean, even burn.",
+          "images": ["DSCF2681"]
+        },
+        {
+          "product_name": "OCB Slim Organic Hemp",
+          "type": "Rolling Papers",
+          "pack_count": "32 leaves",
+          "size": "Slim",
+          "material": "Organic hemp, unbleached",
+          "short_desc": "OCB Slim Organic Hemp papers.",
+          "details_desc": "Natural unbleached hemp fibers; slow, clean burn.",
+          "images": ["DSCF2692"]
+        }
+      ]
+    },
+    {
+      "brand": "Accessories",
+      "products": [
+        {
+          "product_name": "Blaze Grinder (Herb Grinder)",
+          "type": "Accessory",
+          "pack_count": "Single unit",
+          "short_desc": "Compact Blaze-branded herb grinder.",
+          "details_desc": "Shown in two shots; red cap packaging.",
+          "images": ["DSCF2451", "DSCF2553"]
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "nicotine_vapes": [
+      {"name": "Snoopy Smoke 15,000 puffs", "price": "30 $ each"},
+      {"name": "Cyber Pro 15,000 puffs", "price": "30 $ each"},
+      {"name": "TaijiZen 24,000 puffs", "price": "30 $ each"},
+      {"name": "Equator 30,000 puffs", "price": "35 $ each"},
+      {"name": "Runfree 25,000 puffs", "price": "35 $ each"},
+      {"name": "Geek Bar 25,000 puffs", "price": "45 $ each"}
+    ],
+    "prerolls": [
+      {"name": "Regular", "price": "5 $ each / 5 for 20 $"},
+      {"name": "Moonrockets", "price": "15 $ each"},
+      {"name": "Drizzle × Live Resin (10 pack)", "price": "40 $"},
+      {"name": "Drizzle AAAA × Live Resin (10 pack)", "price": "45 $"},
+      {"name": "Drizzle Rockets Diamond Distillate", "price": "1 for 25 $ / 2 for 40 $"}
+    ],
+    "duttpacks": [
+      {"name": "1 × 3.5 g", "price": "60 $"},
+      {"name": "2 × 3.5 g", "price": "100 $"}
+    ],
+    "magic_mushrooms": [
+      {"name": "Loose (per gram)", "price": "5 $ / g"},
+      {"name": "7 g", "price": "30 $"},
+      {"name": "14 g", "price": "50 $"},
+      {"name": "28 g", "price": "100 $"}
+    ],
+    "smurf_mush_chocolate_factory": [
+      {"name": "0.5 g", "price": "10 $ each or 2 for 17 $"},
+      {"name": "1 g", "price": "15 $ each or 2 for 25 $"}
+    ],
+    "shroom_gummies": [
+      {"name": "0.5 g", "price": "5 $ each"}
+    ],
+    "wax_pens": [
+      {"name": "All 1.1 g", "price": "1 for 30 $ / 2 for 50 $"},
+      {"name": "All 2 g", "price": "1 for 40 $ / 2 for 70 $"},
+      {"name": "Available Brands", "brands": ["GasGang", "Drizzle", "Drizzle Switch", "MajorLeague", "Goldstream", "PackMan", "Dope", "Pheonix", "Cookies × The Freak Brothers", "Vice Lady", "Hush"]}
+    ],
+    "honeypacks": [{"name": "Honeypacks", "price": "10 $ each"}],
+    "viagra_packs": [{"name": "Viagra (pack of 4)", "price": "30 $ each"}],
+    "ibhigh_extracts": [
+      {"name": "Live Resin / Caviar / Live Resin × Caviar (1 g)", "price": "30 $ or 2 g for 50 $"},
+      {"name": "Shatter (1 g)", "price": "20 $ or 2 g for 55 $"}
+    ],
+    "ganja_nation_extracts": [
+      {"name": "Shatter (1 g)", "price": "15 $ or 2 g for 25 $"},
+      {"name": "Crumble", "price": "15 $ / g"}
+    ],
+    "backwoods": [{"name": "All flavors", "price": "15 $ / pack"}],
+    "grabba_shakers": [{"name": "Grabba Shakers", "price": "20 $ each"}],
+    "nitrous_oxide": [
+      {"name": "Tank", "price": "200 $"},
+      {"name": "Balloon", "price": "5 $"}
+    ],
+    "papers_prices": [
+      {"name": "OCB 1 1/4", "price": "2.50 $"},
+      {"name": "OCB King Size / Slim", "price": "3.50 $"},
+      {"name": "OCB Tips", "price": "1.50 $"},
+      {"name": "Juicy 1 1/4", "price": "2.50 $"},
+      {"name": "Juicy King Size", "price": "3.50 $"},
+      {"name": "Juicy Hemp Wraps", "price": "4 $ each"},
+      {"name": "Cyclones Hemp Cones", "price": "5 $ each"}
+    ]
   }
-]
+}
