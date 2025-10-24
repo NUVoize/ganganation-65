@@ -5,7 +5,7 @@ const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' 
   const folder = type === 'mushroom' ? 'mushroom_images_300' : 
                  type === 'hash' ? 'hash_images_300' : 
                  type === 'edible' ? 'edible_images_300' : 
-                 type === 'wax' ? 'wax_images_300' :
+                 type === 'wax' ? 'oil_wax_images_300' :
                  'weed_images_300';
   if (Array.isArray(imageNumber)) {
     return imageNumber.map(num => `/${folder}/DSCF${num}X300.jpg`);
