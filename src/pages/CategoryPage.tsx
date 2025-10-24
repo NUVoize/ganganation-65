@@ -32,9 +32,9 @@ const categoryMap: Record<string, { title: string; types: string[]; description:
     description: 'Psilocybin mushroom products'
   },
   accessories: {
-    title: 'Accessories',
-    types: ['Accessory'],
-    description: 'Quality smoking accessories and paraphernalia'
+    title: 'Leafs & Papers',
+    types: ['Pre-Roll'],
+    description: 'Premium wraps, rolling papers, and smoking accessories'
   },
   vape: {
     title: 'Vape',

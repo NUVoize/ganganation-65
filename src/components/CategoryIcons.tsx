@@ -22,7 +22,7 @@ const categories = [
     color: 'from-purple-400 to-purple-600'
   },
   {
-    name: 'Accessories',
+    name: 'Leafs & Papers',
     path: '/products/accessories',
     icon: ShoppingBag,
     color: 'from-blue-400 to-blue-600'

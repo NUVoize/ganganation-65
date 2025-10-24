@@ -8,6 +8,7 @@ import { ShareModal } from './ShareModal';
 import { useState } from 'react';
 import { ImageZoom } from './ImageZoom';
 import { CountryFlag } from './CountryFlag';
+import { BrandBadge } from './BrandBadge';
 
 interface WhiskeyCardProps {
   whiskey: WhiskeyProduct;
@@ -23,6 +24,9 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
     e.stopPropagation();
     setIsShareModalOpen(true);
   };
+  
+  const isLeafsAndPapers = ['Backwoods', 'Juicy Hemp Wraps', 'Juicy Jay\'s', 'OCB', 'Bambú', 'Blaze'].includes(whiskey.brand);
+  
   const getRarityColor = (rarity: string) => {
     switch (rarity) {
       case 'Ultra Rare': return 'bg-gradient-amber text-primary-foreground';
@@ -61,7 +65,10 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
             </Badge>
           </div>
         )}
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-4 left-4 flex flex-col gap-2">
+          {isLeafsAndPapers && (
+            <BrandBadge brand={whiskey.brand} size="sm" />
+          )}
           <Badge className={getRarityColor(whiskey.rarity)}>{whiskey.rarity}</Badge>
         </div>
       </div>
@@ -70,7 +77,7 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
         <CardTitle className="font-serif text-lg text-smokey">{whiskey.name}</CardTitle>
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span>{whiskey.type}</span>
-          {whiskey.thcContent && <span>{whiskey.thcContent}% THC</span>}
+          {!isLeafsAndPapers && whiskey.thcContent && <span>{whiskey.thcContent}% THC</span>}
         </div>
       </CardHeader>
       
@@ -78,9 +85,9 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
         <div className="flex items-center justify-between mb-3">
           <div className="text-right">
             <span className="text-2xl font-bold text-primary">${whiskey.price}</span>
-            <span className="text-sm text-muted-foreground block">per gram</span>
+            {!isLeafsAndPapers && <span className="text-sm text-muted-foreground block">per gram</span>}
           </div>
-          <span className="text-sm text-muted-foreground">{whiskey.cbdContent || 0}% CBD</span>
+          {!isLeafsAndPapers && <span className="text-sm text-muted-foreground">{whiskey.cbdContent || 0}% CBD</span>}
         </div>
         
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
