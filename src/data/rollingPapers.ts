@@ -78,17 +78,7 @@ const transformPaperProduct = (
     },
     flavor: raw.flavor || raw.product_name,
     pairing: raw.details_desc,
-    images: raw.images.map(dscfNumber => {
-      // Rolling papers images are DSCF2391-2692
-      const imageNumber = parseInt(dscfNumber.replace('DSCF', ''));
-      
-      if (imageNumber >= 2391 && imageNumber <= 2692) {
-        return [`${dscfNumber}X300.jpg`, `${dscfNumber}X800.jpg`];
-      }
-      
-      // Fallback
-      return [`${dscfNumber}X300.jpg`, `${dscfNumber}X800.jpg`];
-    }).flat().filter((_, index) => index % 2 === 0).map(img => `/papers_images_300/${img}`),
+    images: raw.images.map(dscfNumber => `/papers_images_300/${dscfNumber}X300.jpg`),
     videoUrl: undefined,
     awards: [],
     sku: sku,

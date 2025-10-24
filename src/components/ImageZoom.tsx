@@ -33,6 +33,9 @@ export const ImageZoom: React.FC<ImageZoomProps> = ({
     if (imagePath.includes('edible_images_300')) {
       return imagePath.replace('/edible_images_300/', '/edible_images_800/').replace('X300.jpg', 'X800.jpg');
     }
+    if (imagePath.includes('papers_images_300')) {
+      return imagePath.replace('/papers_images_300/', '/papers_images_800/').replace('X300.jpg', 'X800.jpg');
+    }
     return imagePath.replace('/weed_images_300/', '/weed_images_800/').replace('X300.jpg', 'X800.jpg');
   };
 
