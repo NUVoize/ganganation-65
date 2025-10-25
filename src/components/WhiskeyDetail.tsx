@@ -102,11 +102,11 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                 </div>
               </div>
               
-              {/* Show tiered pricing only for flower products, not concentrates */}
-              {whiskey.type !== 'Concentrate' && (
+              {/* Show tiered pricing only for flower products, not concentrates or accessories/pre-rolls */}
+              {whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && (
                 <TieredPricing perGramPrice={whiskey.price} className="mt-4" />
               )}
-              {whiskey.type === 'Concentrate' && (
+              {(whiskey.type === 'Concentrate' || whiskey.type === 'Accessories' || whiskey.type === 'Pre-Roll') && (
                 <div className="mt-4 p-4 rounded-lg bg-secondary/50">
                   <div className="text-center">
                     <span className="text-sm text-muted-foreground">Price per item:</span>
