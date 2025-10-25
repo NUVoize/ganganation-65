@@ -129,8 +129,8 @@ const CategoryPage: React.FC = () => {
 
       <div className="container mx-auto px-4 pb-12">
         <div className="flex gap-8">
-          <aside className="hidden lg:block w-64 shrink-0">
-            <div className="sticky top-24">
+          <aside className="hidden lg:block w-80 flex-shrink-0">
+            <div className="sticky top-20">
               <FiltersSection
                 filters={filters}
                 onFiltersChange={setFilters}
@@ -140,8 +140,8 @@ const CategoryPage: React.FC = () => {
             </div>
           </aside>
 
-          <div className="flex-1">
-            <div className="flex items-center justify-between mb-6">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
               <h2 className="font-serif text-2xl text-natural">
                 Available Products
                 <span className="text-sm text-muted-foreground ml-2">
