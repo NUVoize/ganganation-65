@@ -14,7 +14,7 @@ export const promotionalBanners: PromotionalContent[] = [
   {
     id: 'promo-sunday',
     type: 'image',
-    src: '/banners/tiragedimanche_1.jpg',
+    src: '/banners/web_ganja_banner_2.4.jpg',
     alt: 'TikTok Live Sunday - Half Pound Special'
   },
   {
