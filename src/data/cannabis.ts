@@ -91,7 +91,7 @@ export const indicaStrains: CannabisProduct[] = [
     images: getImagePath(1722),
     sku: generateSKU('Tom Ford Pink', 3),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Ultra Rare'
   },
   {
@@ -154,7 +154,7 @@ export const indicaStrains: CannabisProduct[] = [
     images: getImagePath(1762),
     sku: generateSKU('Island Pink', 6),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -196,7 +196,7 @@ export const indicaStrains: CannabisProduct[] = [
     images: getImagePath(1922),
     sku: generateSKU('Louis XIII', 8),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Ultra Rare'
   },
   {
@@ -280,7 +280,7 @@ export const indicaStrains: CannabisProduct[] = [
     images: getImagePath(1719),
     sku: generateSKU('Slurricane', 12),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -325,7 +325,7 @@ export const sativaStrains: CannabisProduct[] = [
     images: getImagePath(1824),
     sku: generateSKU('Amnesia Haze', 14),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -475,7 +475,7 @@ export const hybridStrains: CannabisProduct[] = [
     images: getImagePath(2005),
     sku: generateSKU('Baccarat', 21),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -622,7 +622,7 @@ export const hybridStrains: CannabisProduct[] = [
     images: getImagePath(2018),
     sku: generateSKU('Gorilla Glue', 28),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -664,7 +664,7 @@ export const hybridStrains: CannabisProduct[] = [
     images: getImagePath([1977, 1985]),
     sku: generateSKU('Lilac Diesel', 30),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -685,7 +685,7 @@ export const hybridStrains: CannabisProduct[] = [
     images: getImagePath(1869),
     sku: generateSKU('Mimosa', 31),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -803,7 +803,7 @@ export const waxProducts: CannabisProduct[] = [
     images: getImagePath([2882, 2878, 2902, 2903], 'wax'),
     sku: generateSKU('Face Punch', 901),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -928,7 +928,7 @@ export const waxProducts: CannabisProduct[] = [
     images: getImagePath([2730, 2733, 2735], 'wax'),
     sku: generateSKU('Super Soaker', 906),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -1053,7 +1053,7 @@ export const waxProducts: CannabisProduct[] = [
     images: getImagePath([2775, 2778, 2784], 'wax'),
     sku: generateSKU('Cake Bomb', 911),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -1153,7 +1153,7 @@ export const waxProducts: CannabisProduct[] = [
     images: getImagePath([2871], 'wax'),
     sku: generateSKU('Rockstar', 915),
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   // Cannabis Syrups
@@ -1278,7 +1278,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2041, 'mushroom'),
     sku: 'SHROOM-WR-2041',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1324,7 +1324,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2057, 'mushroom'),
     sku: 'SHROOM-BM-2057',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1370,7 +1370,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2069, 'mushroom'),
     sku: 'SHROOM-JF-2069',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -1393,7 +1393,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2075, 'mushroom'),
     sku: 'SHROOM-TAT-2075',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Ultra Rare'
   },
   {
@@ -1485,7 +1485,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2099, 'mushroom'),
     sku: 'SHROOM-GT-2099',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Common'
   },
   {
@@ -1508,7 +1508,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2111, 'mushroom'),
     sku: 'SHROOM-MM-2111',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1531,7 +1531,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2116, 'mushroom'),
     sku: 'SHROOM-TNFD-2116',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1554,7 +1554,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2123, 'mushroom'),
     sku: 'SHROOM-GTFD-2123',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Common'
   },
   {
@@ -1600,7 +1600,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2137, 'mushroom'),
     sku: 'SHROOM-GEFD-2137',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -1715,7 +1715,7 @@ export const mushroomProducts: CannabisProduct[] = [
     images: getImagePath(2179, 'mushroom'),
     sku: 'SHROOM-MMFD-2179',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1765,7 +1765,7 @@ export const hashProducts: CannabisProduct[] = [
     images: getImagePath(2195, 'hash'),
     sku: 'HASH-ASH-2195',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1789,7 +1789,7 @@ export const hashProducts: CannabisProduct[] = [
     images: getImagePath(2204, 'hash'),
     sku: 'HASH-TG-2204',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -1813,7 +1813,7 @@ export const hashProducts: CannabisProduct[] = [
     images: getImagePath(2218, 'hash'),
     sku: 'HASH-00-2218',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -1861,7 +1861,7 @@ export const hashProducts: CannabisProduct[] = [
     images: getImagePath(2239, 'hash'),
     sku: 'HASH-TB-2239',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Ultra Rare'
   },
   {
@@ -1885,7 +1885,7 @@ export const hashProducts: CannabisProduct[] = [
     images: getImagePath(2251, 'hash'),
     sku: 'HASH-FNG-2251',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Rare'
   },
   {
@@ -2027,7 +2027,7 @@ export const edibleProducts: CannabisProduct[] = [
     images: getImagePath(2378, 'edible'),
     sku: 'EDIBLE-GEM-RED-2378',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -2050,7 +2050,7 @@ export const edibleProducts: CannabisProduct[] = [
     images: getImagePath(2384, 'edible'),
     sku: 'EDIBLE-FLR-TRIO-2384',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   },
   {
@@ -2119,7 +2119,7 @@ export const edibleProducts: CannabisProduct[] = [
     images: getImagePath(2330, 'edible'),
     sku: 'EDIBLE-LEAF-BLU-2330',
     inStock: true,
-    featured: true,
+    featured: false,
     rarity: 'Limited'
   }
 ];
