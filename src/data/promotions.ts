@@ -20,7 +20,7 @@ export const promotionalBanners: PromotionalContent[] = [
   {
     id: 'promo-monday',
     type: 'image',
-    src: '/banners/web_ganja_banner_3.3.jpg',
+    src: '/banners/web_ganja_banner_3.4.jpg',
     alt: 'Monday Night Kick Off - 20% Off 8PM to 12AM'
   },
   {
