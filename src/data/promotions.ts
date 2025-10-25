@@ -26,7 +26,7 @@ export const promotionalBanners: PromotionalContent[] = [
   {
     id: 'promo-wednesday',
     type: 'image',
-    src: '/banners/mercredi_4ieme_2.jpg',
+    src: '/banners/web_ganja_banner_1.4.jpg',
     alt: 'Wednesday 4-for-3 Special Deal'
   }
 ];
