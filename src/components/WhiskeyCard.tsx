@@ -85,9 +85,8 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
         <div className="flex items-center justify-between mb-3">
           <div className="text-right">
             <span className="text-2xl font-bold text-primary">${whiskey.price}</span>
-            {!isLeafsAndPapers && <span className="text-sm text-muted-foreground block">per gram</span>}
+            {!isLeafsAndPapers && whiskey.type !== 'Edible' && <span className="text-sm text-muted-foreground block">per gram</span>}
           </div>
-          {!isLeafsAndPapers && <span className="text-sm text-muted-foreground">{whiskey.cbdContent || 0}% CBD</span>}
         </div>
         
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">

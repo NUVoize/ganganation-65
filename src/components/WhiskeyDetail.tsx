@@ -93,20 +93,16 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                   </div>
                 )}
                 <div>
-                  <span className="text-sm text-muted-foreground">CBD:</span>
-                  <p className="font-medium">{whiskey.cbdContent || 0}%</p>
-                </div>
-                <div>
                   <span className="text-sm text-muted-foreground">Origin:</span>
                   <CountryFlag country={whiskey.origin} size={20} className="mt-1" />
                 </div>
               </div>
               
-              {/* Show tiered pricing only for flower products, not concentrates or accessories/pre-rolls */}
-              {whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && (
+              {/* Show tiered pricing only for flower products, not concentrates, accessories, pre-rolls, or edibles */}
+              {whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && whiskey.type !== 'Edible' && (
                 <TieredPricing perGramPrice={whiskey.price} className="mt-4" />
               )}
-              {(whiskey.type === 'Concentrate' || whiskey.type === 'Accessories' || whiskey.type === 'Pre-Roll') && (
+              {(whiskey.type === 'Concentrate' || whiskey.type === 'Accessories' || whiskey.type === 'Pre-Roll' || whiskey.type === 'Edible') && (
                 <div className="mt-4 p-4 rounded-lg bg-secondary/50">
                   <div className="text-center">
                     <span className="text-sm text-muted-foreground">Price per item:</span>
@@ -218,8 +214,8 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                       </div>
                     )}
                     <div>
-                      <span className="text-sm text-muted-foreground">CBD Content:</span>
-                      <p className="font-medium">{whiskey.cbdContent || 0}%</p>
+                      <span className="text-sm text-muted-foreground">SKU:</span>
+                      <p className="font-medium">{whiskey.sku}</p>
                     </div>
                   </div>
                 </div>

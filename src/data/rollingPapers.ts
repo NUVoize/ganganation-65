@@ -42,12 +42,8 @@ const generateSKU = (brand: string, productName: string, packCount: string): str
 };
 
 const getProductType = (type: string, brand: string): CannabisProduct['type'] => {
-  if (brand.toLowerCase().includes('blaze')) return 'Accessories';
-  if (type === 'Authentic Cigars') return 'Pre-Roll';
-  if (type === 'Hemp Wraps') return 'Pre-Roll';
-  if (type === 'Rolling Papers') return 'Pre-Roll';
-  if (type === 'Accessory') return 'Accessories';
-  return 'Pre-Roll';
+  // All rolling papers, wraps, and cigars are accessories for smoking, not pre-rolls
+  return 'Accessories';
 };
 
 const transformPaperProduct = (
