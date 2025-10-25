@@ -156,7 +156,7 @@ const Index = () => {
 
           <div className="max-w-7xl mx-auto px-4 pb-12">
             <div className="flex flex-col lg:flex-row gap-8">
-              <div className="hidden lg:block">
+              <div className="hidden lg:block w-80 flex-shrink-0">
                 <FiltersSection 
                   filters={filters}
                   onFiltersChange={setFilters}

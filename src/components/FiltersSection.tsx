@@ -16,7 +16,7 @@ export const FiltersSection: React.FC<FiltersSectionProps> = ({
   onToggleFilters
 }) => {
   return (
-    <div className="w-full">
+    <div className="w-80">
       <div className={`${showFilters ? 'block' : 'hidden'} lg:block`}>
         <SearchFiltersComponent filters={filters} onFiltersChange={onFiltersChange} />
       </div>

@@ -41,7 +41,7 @@ export const SearchFilters = ({ filters, onFiltersChange }: SearchFiltersProps) 
   };
 
   return (
-    <Card className="glass-card">
+    <Card className="glass-card max-w-sm">
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="font-serif text-natural">Refine Your Selection</CardTitle>
