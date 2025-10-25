@@ -103,8 +103,8 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       
-
-      <div className="relative">
+      <div className="pt-16">
+        <div className="relative">
         <HeroSection 
           quickSearch={quickSearch}
           onQuickSearchChange={setQuickSearch}
@@ -130,6 +130,7 @@ const Index = () => {
               </div>
             </SheetContent>
           </Sheet>
+        </div>
         </div>
       </div>
 
