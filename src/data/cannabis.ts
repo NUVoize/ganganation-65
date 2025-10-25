@@ -7,10 +7,11 @@ const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' 
                  type === 'edible' ? 'edible_images_300' : 
                  type === 'wax' ? 'oil_wax_images_300' :
                  'weed_images_300';
+  const suffix = type === 'wax' ? 'x300.jpg' : 'X300.jpg';
   if (Array.isArray(imageNumber)) {
-    return imageNumber.map(num => `/${folder}/DSCF${num}X300.jpg`);
+    return imageNumber.map(num => `/${folder}/DSCF${num}${suffix}`);
   }
-  return [`/${folder}/DSCF${imageNumber}X300.jpg`];
+  return [`/${folder}/DSCF${imageNumber}${suffix}`];
 };
 
 // Helper function to parse effects string into structured format
