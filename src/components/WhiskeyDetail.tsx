@@ -102,7 +102,18 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                 </div>
               </div>
               
-              <TieredPricing perGramPrice={whiskey.price} className="mt-4" />
+              {/* Show tiered pricing only for flower products, not concentrates */}
+              {whiskey.type !== 'Concentrate' && (
+                <TieredPricing perGramPrice={whiskey.price} className="mt-4" />
+              )}
+              {whiskey.type === 'Concentrate' && (
+                <div className="mt-4 p-4 rounded-lg bg-secondary/50">
+                  <div className="text-center">
+                    <span className="text-sm text-muted-foreground">Price per item:</span>
+                    <p className="text-2xl font-bold text-primary mt-1">${whiskey.price.toFixed(2)}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </CardHeader>
