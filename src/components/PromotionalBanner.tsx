@@ -52,7 +52,7 @@ export const PromotionalBanner: React.FC = () => {
   return (
     <div className="w-full mb-8">
       <div
-        className="relative max-w-7xl mx-auto"
+        className="relative max-w-7xl mx-auto border-4 border-yellow-400 rounded-lg overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
