@@ -20,8 +20,8 @@ export const promotionalBanners: PromotionalContent[] = [
   {
     id: 'promo-monday',
     type: 'image',
-    src: '/banners/lundi-20_2.jpg',
-    alt: 'Monday Prime Time - 20% Off'
+    src: '/banners/web_ganja_banner_3.2.jpg',
+    alt: 'Monday Night Kick Off - 20% Off 8PM to 12AM'
   },
   {
     id: 'promo-wednesday',
