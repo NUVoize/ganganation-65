@@ -116,7 +116,7 @@ const CategoryPage: React.FC = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="relative py-16 px-4">
+      <div className="relative pt-24 pb-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-impact text-4xl md:text-5xl text-deco mb-4 animate-fade-in tracking-wider">
             {categoryInfo.title}
