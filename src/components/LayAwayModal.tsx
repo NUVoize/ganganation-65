@@ -26,6 +26,7 @@ import { CannabisProduct } from "@/types/whiskey";
 import { sanitizeInput } from "@/utils/tastingValidation";
 import { Loader2, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { getBasePrice, getDisplayPrice } from "@/utils/pricing";
 
 const layAwaySchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100),
@@ -63,7 +64,7 @@ export const LayAwayModal = ({ isOpen, onClose, product }: LayAwayModalProps) =>
   });
 
   const calculatePrice = (grams: string) => {
-    const perGramPrice = product.price;
+    const perGramPrice = getBasePrice(product.price);
     const quantity = parseFloat(grams);
     let discount = 1;
     
@@ -133,7 +134,7 @@ export const LayAwayModal = ({ isOpen, onClose, product }: LayAwayModalProps) =>
           />
           <div>
             <h3 className="font-semibold">{product.name}</h3>
-            <p className="text-sm text-muted-foreground">${product.price}/gram</p>
+            <p className="text-sm text-muted-foreground">{getDisplayPrice(product.price)}/gram</p>
           </div>
         </div>
 

@@ -9,6 +9,7 @@ import { ImageZoom } from './ImageZoom';
 import { TieredPricing } from './TieredPricing';
 import { LayAwayModal } from './LayAwayModal';
 import { CountryFlag } from './CountryFlag';
+import { getBasePrice, getDisplayPrice, isTieredPrice } from '@/utils/pricing';
 
 interface WhiskeyDetailProps {
   whiskey: WhiskeyProduct;
@@ -98,15 +99,37 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                 </div>
               </div>
               
-              {/* Show tiered pricing only for flower products, not concentrates, accessories, pre-rolls, or edibles */}
-              {whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && whiskey.type !== 'Edible' && (
-                <TieredPricing perGramPrice={whiskey.price} className="mt-4" />
+              {/* Show tiered pricing for flower products and hash with tiered pricing */}
+              {!isTieredPrice(whiskey.price) && whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && whiskey.type !== 'Edible' && whiskey.type !== 'Hash' && (
+                <TieredPricing perGramPrice={getBasePrice(whiskey.price)} className="mt-4" />
+              )}
+              {isTieredPrice(whiskey.price) && whiskey.type === 'Hash' && (
+                <div className="mt-4 p-4 rounded-lg bg-secondary/50">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="text-center">
+                      <span className="text-xs text-muted-foreground">3.5g</span>
+                      <p className="text-lg font-bold text-primary">${whiskey.price['3.5g'].toFixed(2)}</p>
+                    </div>
+                    <div className="text-center">
+                      <span className="text-xs text-muted-foreground">7g</span>
+                      <p className="text-lg font-bold text-primary">${whiskey.price['7g'].toFixed(2)}</p>
+                    </div>
+                    <div className="text-center">
+                      <span className="text-xs text-muted-foreground">14g</span>
+                      <p className="text-lg font-bold text-primary">${whiskey.price['14g'].toFixed(2)}</p>
+                    </div>
+                    <div className="text-center">
+                      <span className="text-xs text-muted-foreground">Ounce</span>
+                      <p className="text-lg font-bold text-primary">${whiskey.price.ounce.toFixed(2)}</p>
+                    </div>
+                  </div>
+                </div>
               )}
               {(whiskey.type === 'Concentrate' || whiskey.type === 'Accessories' || whiskey.type === 'Pre-Roll' || whiskey.type === 'Edible') && (
                 <div className="mt-4 p-4 rounded-lg bg-secondary/50">
                   <div className="text-center">
                     <span className="text-sm text-muted-foreground">Price per item:</span>
-                    <p className="text-2xl font-bold text-primary mt-1">${whiskey.price.toFixed(2)}</p>
+                    <p className="text-2xl font-bold text-primary mt-1">{getDisplayPrice(whiskey.price)}</p>
                   </div>
                 </div>
               )}

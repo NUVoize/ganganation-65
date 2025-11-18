@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { ImageZoom } from './ImageZoom';
 import { CountryFlag } from './CountryFlag';
 import { BrandBadge } from './BrandBadge';
+import { getDisplayPrice, isTieredPrice } from '@/utils/pricing';
 
 interface WhiskeyCardProps {
   whiskey: WhiskeyProduct;
@@ -84,8 +85,8 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
       <CardContent className="pt-0">
         <div className="flex items-center justify-between mb-3">
           <div className="text-right">
-            <span className="text-2xl font-bold text-primary">${whiskey.price}</span>
-            {!isLeafsAndPapers && whiskey.type !== 'Edible' && <span className="text-sm text-muted-foreground block">per gram</span>}
+            <span className="text-2xl font-bold text-primary">{getDisplayPrice(whiskey.price)}</span>
+            {!isLeafsAndPapers && whiskey.type !== 'Edible' && !isTieredPrice(whiskey.price) && <span className="text-sm text-muted-foreground block">per gram</span>}
           </div>
         </div>
         

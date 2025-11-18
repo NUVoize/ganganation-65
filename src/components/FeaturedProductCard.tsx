@@ -3,6 +3,7 @@ import { WhiskeyProduct } from '../types/whiskey';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { ImageZoom } from './ImageZoom';
+import { getDisplayPrice } from '@/utils/pricing';
 
 interface FeaturedProductCardProps {
   product: WhiskeyProduct;
@@ -47,7 +48,7 @@ export const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({
             {product.name}
           </h3>
           <p className="text-2xl font-bold text-primary">
-            ${product.price}
+            {getDisplayPrice(product.price)}
           </p>
         </div>
       </div>
