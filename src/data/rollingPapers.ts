@@ -42,8 +42,8 @@ const generateSKU = (brand: string, productName: string, packCount: string): str
 };
 
 const getProductType = (type: string, brand: string): CannabisProduct['type'] => {
-  // All rolling papers, wraps, and cigars are accessories for smoking, not pre-rolls
-  return 'Accessories';
+  // All rolling papers, wraps, and cigars should be in the Pre-Roll category
+  return 'Pre-Roll';
 };
 
 const transformPaperProduct = (
@@ -68,7 +68,7 @@ const transformPaperProduct = (
     grower: brand.brand,
     description: raw.short_desc,
     effects: {
-      primary: productType === 'Accessories' ? ['Preparation'] : ['Smoking'],
+      primary: ['Smoking'],
       secondary: [],
       duration: []
     },
