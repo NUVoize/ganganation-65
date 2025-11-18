@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { SlidersHorizontal } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { getPriceForComparison } from '@/utils/pricing';
 
 const categoryMap: Record<string, { title: string; types: string[]; description: string }> = {
   weed: {
@@ -22,9 +23,19 @@ const categoryMap: Record<string, { title: string; types: string[]; description:
     description: 'Explore our premium cannabis flower strains'
   },
   concentrates: {
-    title: 'Hash, Oil, Wax & Edibles',
-    types: ['Concentrate', 'Edible'],
-    description: 'Premium concentrates and infused products'
+    title: 'Oil & Wax',
+    types: ['Concentrate'],
+    description: 'Premium concentrates and extracts'
+  },
+  hash: {
+    title: 'Hash',
+    types: ['Hash'],
+    description: 'Traditional and artisanal hashish products'
+  },
+  edibles: {
+    title: 'Edibles',
+    types: ['Edible'],
+    description: 'Cannabis-infused edible products'
   },
   shrooms: {
     title: 'Shrooms',
@@ -86,9 +97,10 @@ const CategoryPage: React.FC = () => {
     }
 
     if (filters.priceRange) {
-      products = products.filter(
-        p => p.price >= filters.priceRange![0] && p.price <= filters.priceRange![1]
-      );
+      products = products.filter(p => {
+        const price = getPriceForComparison(p.price);
+        return price >= filters.priceRange![0] && price <= filters.priceRange![1];
+      });
     }
 
     if (filters.thcRange) {

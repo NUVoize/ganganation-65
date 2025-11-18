@@ -13,6 +13,7 @@ import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../components/ui/sheet';
 import { SearchFilters as SearchFiltersComponent } from '../components/SearchFilters';
+import { getPriceForComparison } from '../utils/pricing';
 
 const Index = () => {
   const [selectedWhiskey, setSelectedWhiskey] = useState<WhiskeyProduct | null>(null);
@@ -73,7 +74,8 @@ const Index = () => {
 
       if (filters.priceRange) {
         const [min, max] = filters.priceRange;
-        if (whiskey.price < min || whiskey.price > max) return false;
+        const price = getPriceForComparison(whiskey.price);
+        if (price < min || price > max) return false;
       }
 
       if (filters.thcRange && whiskey.thcContent) {
