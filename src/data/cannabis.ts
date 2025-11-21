@@ -50,7 +50,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Bubba Kush', 1),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '1A'
   },
   {
     id: 'gods-gift',
@@ -71,7 +72,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Gods Gift', 2),
     inStock: true,
     featured: true,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'tom-ford-pink',
@@ -92,7 +94,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Tom Ford Pink', 3),
     inStock: true,
     featured: false,
-    rarity: 'Ultra Rare'
+    rarity: 'Ultra Rare',
+    qualityTier: '4A'
   },
   {
     id: 'violator-kush',
@@ -113,7 +116,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Violator Kush', 4),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '2A'
   },
   {
     id: 'pine-tar',
@@ -347,7 +351,8 @@ export const sativaStrains: CannabisProduct[] = [
     sku: generateSKU('Durban Poison', 15),
     inStock: true,
     featured: true,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'maui-wowie',
@@ -434,7 +439,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Blue Dream', 19),
     inStock: true,
     featured: true,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'bruce-banner',

@@ -9,6 +9,7 @@ import { ImageZoom } from './ImageZoom';
 import { TieredPricing } from './TieredPricing';
 import { LayAwayModal } from './LayAwayModal';
 import { CountryFlag } from './CountryFlag';
+import { QualityBadge } from './QualityBadge';
 import { getBasePrice, getDisplayPrice, isTieredPrice } from '@/utils/pricing';
 
 interface WhiskeyDetailProps {
@@ -67,7 +68,10 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
             
             {/* Basic Info */}
             <div className="md:w-2/3">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4 items-center">
+                {whiskey.qualityTier && (
+                  <QualityBadge tier={whiskey.qualityTier} size="md" />
+                )}
                 <Badge className={getRarityColor(whiskey.rarity)}>{whiskey.rarity}</Badge>
                 {whiskey.featured && (
                   <Badge className="bg-gradient-featured text-accent-foreground font-semibold animate-glow-pulse border border-accent/30">
