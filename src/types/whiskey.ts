@@ -24,6 +24,7 @@ export interface CannabisProduct {
   inStock: boolean;
   featured: boolean;
   rarity: 'Common' | 'Limited' | 'Rare' | 'Ultra Rare';
+  qualityTier?: '1A' | '2A' | '3A' | '4A';
 }
 
 // Compatibility export for existing components

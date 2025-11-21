@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { ImageZoom } from './ImageZoom';
 import { CountryFlag } from './CountryFlag';
 import { BrandBadge } from './BrandBadge';
+import { QualityBadge } from './QualityBadge';
 import { getDisplayPrice, isTieredPrice } from '@/utils/pricing';
 
 interface WhiskeyCardProps {
@@ -67,6 +68,9 @@ export const WhiskeyCard = ({ whiskey, onClick, onTastingClick }: WhiskeyCardPro
           </div>
         )}
         <div className="absolute top-4 left-4 flex flex-col gap-2">
+          {whiskey.qualityTier && (
+            <QualityBadge tier={whiskey.qualityTier} size="sm" />
+          )}
           {isLeafsAndPapers && (
             <BrandBadge brand={whiskey.brand} size="sm" />
           )}
