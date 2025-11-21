@@ -138,7 +138,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Pine Tar', 5),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '2A'
   },
   {
     id: 'island-pink',
@@ -159,7 +160,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Island Pink', 6),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'lindsay-og',
@@ -180,7 +182,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Lindsay OG', 7),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'louis-xiii',
@@ -201,7 +204,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Louis XIII', 8),
     inStock: true,
     featured: false,
-    rarity: 'Ultra Rare'
+    rarity: 'Ultra Rare',
+    qualityTier: '4A'
   },
   {
     id: 'pink-hill-trough',
@@ -222,7 +226,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Pink Hill', 9),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'pink-phoenix',
@@ -243,7 +248,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Pink Phoenix', 10),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'pink-venom',
@@ -264,7 +270,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Pink Venom', 11),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'slurricane',
@@ -285,7 +292,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Slurricane', 12),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'pink-panties',
@@ -306,7 +314,8 @@ export const indicaStrains: CannabisProduct[] = [
     sku: generateSKU('Pink Panties', 13),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '2A'
   }
 ];
 
@@ -330,7 +339,8 @@ export const sativaStrains: CannabisProduct[] = [
     sku: generateSKU('Amnesia Haze', 14),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'durban-poison',
@@ -373,7 +383,8 @@ export const sativaStrains: CannabisProduct[] = [
     sku: generateSKU('Maui Wowie', 16),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'green-goblin',
@@ -394,7 +405,8 @@ export const sativaStrains: CannabisProduct[] = [
     sku: generateSKU('Green Goblin', 17),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'joker',
@@ -415,7 +427,8 @@ export const sativaStrains: CannabisProduct[] = [
     sku: generateSKU('Joker', 18),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '1A'
   }
 ];
 
@@ -461,7 +474,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Bruce Banner', 20),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '4A'
   },
   {
     id: 'baccarat',
@@ -482,7 +496,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Baccarat', 21),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'candyland',
@@ -503,7 +518,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Candyland', 22),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'cherry-runtz',
@@ -524,7 +540,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Cherry Runtz', 23),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '2A'
   },
   {
     id: 'creamsicle',
@@ -545,7 +562,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Creamsicle', 24),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '1A'
   },
   {
     id: 'forbidden-muffin',
@@ -566,7 +584,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Forbidden Muffin', 25),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'ghost-bubba',
@@ -587,7 +606,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Ghost Bubba', 26),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '2A'
   },
   {
     id: 'godzilla',
@@ -608,7 +628,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Godzilla', 27),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'gorilla-glue',
@@ -629,7 +650,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Gorilla Glue', 28),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'granddaddy-og',
@@ -650,7 +672,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Granddaddy OG', 29),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'lilac-diesel',
@@ -671,7 +694,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Lilac Diesel', 30),
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'mimosa',
@@ -692,7 +716,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Mimosa', 31),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '3A'
   },
   {
     id: 'pineapple-express',
@@ -713,7 +738,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Pineapple Express', 32),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'purple-dream',
@@ -734,7 +760,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Purple Dream', 33),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '1A'
   },
   {
     id: 'purple-power-plate',
@@ -755,7 +782,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('Purple Power', 34),
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '2A'
   },
   {
     id: 'white-slushy',
@@ -776,7 +804,8 @@ export const hybridStrains: CannabisProduct[] = [
     sku: generateSKU('White Slushy', 35),
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   }
 ];
 
@@ -1777,7 +1806,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-ASH-2195',
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '1A'
   },
   {
     id: 'top-gun',
@@ -1806,7 +1836,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-TG-2204',
     inStock: true,
     featured: false,
-    rarity: 'Limited'
+    rarity: 'Limited',
+    qualityTier: '2A'
   },
   {
     id: 'zero-zero',
@@ -1835,7 +1866,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-00-2218',
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'toscana-moroccan',
@@ -1864,7 +1896,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-TOS-2231',
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   },
   {
     id: 'temple-ball',
@@ -1893,7 +1926,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-TB-2239',
     inStock: true,
     featured: false,
-    rarity: 'Ultra Rare'
+    rarity: 'Ultra Rare',
+    qualityTier: '4A'
   },
   {
     id: 'finger-hash',
@@ -1922,7 +1956,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-FNG-2251',
     inStock: true,
     featured: false,
-    rarity: 'Rare'
+    rarity: 'Rare',
+    qualityTier: '3A'
   },
   {
     id: 'bulldog-hash',
@@ -1951,7 +1986,8 @@ export const hashProducts: CannabisProduct[] = [
     sku: 'HASH-BDG-2276',
     inStock: true,
     featured: false,
-    rarity: 'Common'
+    rarity: 'Common',
+    qualityTier: '2A'
   }
 ];
 
