@@ -7,6 +7,8 @@ import { WhiskeyCard } from '@/components/WhiskeyCard';
 import { WhiskeyDetail } from '@/components/WhiskeyDetail';
 import { TastingNotesModal } from '@/components/TastingNotesModal';
 import { FiltersSection } from '@/components/FiltersSection';
+import { BrandGridView } from '@/components/BrandGridView';
+import { BrandFlavorList } from '@/components/BrandFlavorList';
 import { SearchFilters, CannabisProduct } from '@/types/whiskey';
 import { cannabisCollection } from '@/data';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
@@ -60,6 +62,7 @@ const CategoryPage: React.FC = () => {
   const [showTastingModal, setShowTastingModal] = useState(false);
   const [filters, setFilters] = useState<SearchFilters>({});
   const [showFilters, setShowFilters] = useState(false);
+  const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
 
   const handleToggleFilters = () => setShowFilters(!showFilters);
 
@@ -124,6 +127,12 @@ const CategoryPage: React.FC = () => {
     setFilters({});
   };
 
+  const isAccessoriesCategory = category === 'accessories';
+  const brandProducts = useMemo(() => {
+    if (!selectedBrand) return [];
+    return filteredProducts.filter(p => p.brand === selectedBrand);
+  }, [selectedBrand, filteredProducts]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -141,85 +150,109 @@ const CategoryPage: React.FC = () => {
 
       <div className="container mx-auto px-4 pb-12">
         <div className="flex gap-8">
-          <aside className="hidden lg:block w-80 flex-shrink-0">
-            <div className="sticky top-20">
-              <FiltersSection
-                filters={filters}
-                onFiltersChange={setFilters}
-                showFilters={true}
-                onToggleFilters={handleToggleFilters}
-              />
-            </div>
-          </aside>
+          {!isAccessoriesCategory && (
+            <aside className="hidden lg:block w-80 flex-shrink-0">
+              <div className="sticky top-20">
+                <FiltersSection
+                  filters={filters}
+                  onFiltersChange={setFilters}
+                  showFilters={true}
+                  onToggleFilters={handleToggleFilters}
+                />
+              </div>
+            </aside>
+          )}
 
           <div className="flex-1 min-w-0">
-            <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
-              <h2 className="font-serif text-2xl text-natural">
-                Available Products
-                <span className="text-sm text-muted-foreground ml-2">
-                  ({filteredProducts.length} items)
-                </span>
-              </h2>
-              
-              <div className="flex items-center gap-4">
-                <Sheet open={showFilters} onOpenChange={setShowFilters}>
-                  <SheetTrigger asChild>
-                    <Button variant="outline" size="sm" className="lg:hidden">
-                      <SlidersHorizontal className="w-4 h-4 mr-2" />
-                      Filters
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent side="left" className="w-80">
-                    <SheetHeader>
-                      <SheetTitle>Filter Products</SheetTitle>
-                    </SheetHeader>
-                    <div className="mt-6">
-                      <FiltersSection
-                        filters={filters}
-                        onFiltersChange={setFilters}
-                        showFilters={true}
-                        onToggleFilters={handleToggleFilters}
+            {!isAccessoriesCategory && (
+              <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
+                <h2 className="font-serif text-2xl text-natural">
+                  Available Products
+                  <span className="text-sm text-muted-foreground ml-2">
+                    ({filteredProducts.length} items)
+                  </span>
+                </h2>
+                
+                <div className="flex items-center gap-4">
+                  <Sheet open={showFilters} onOpenChange={setShowFilters}>
+                    <SheetTrigger asChild>
+                      <Button variant="outline" size="sm" className="lg:hidden">
+                        <SlidersHorizontal className="w-4 h-4 mr-2" />
+                        Filters
+                      </Button>
+                    </SheetTrigger>
+                    <SheetContent side="left" className="w-80">
+                      <SheetHeader>
+                        <SheetTitle>Filter Products</SheetTitle>
+                      </SheetHeader>
+                      <div className="mt-6">
+                        <FiltersSection
+                          filters={filters}
+                          onFiltersChange={setFilters}
+                          showFilters={true}
+                          onToggleFilters={handleToggleFilters}
+                        />
+                      </div>
+                    </SheetContent>
+                  </Sheet>
+
+                  <Badge variant="outline" className="text-xs">
+                    Premium Quality
+                  </Badge>
+                </div>
+              </div>
+            )}
+
+            {isAccessoriesCategory && !selectedBrand && (
+              <BrandGridView 
+                products={filteredProducts} 
+                onBrandSelect={setSelectedBrand}
+              />
+            )}
+
+            {isAccessoriesCategory && selectedBrand && (
+              <BrandFlavorList
+                brand={selectedBrand}
+                products={brandProducts}
+                onBack={() => setSelectedBrand(null)}
+                onProductSelect={setSelectedWhiskey}
+              />
+            )}
+
+            {!isAccessoriesCategory && (
+              <>
+                {filteredProducts.length === 0 ? (
+                  <Card className="glass-card text-center py-12">
+                    <CardContent>
+                      <h3 className="font-serif text-xl text-muted-foreground mb-2">No products found</h3>
+                      <p className="text-muted-foreground">
+                        Try adjusting your filters to discover more products.
+                      </p>
+                      <Button 
+                        variant="outline" 
+                        className="mt-4"
+                        onClick={handleClearFilters}
+                      >
+                        Clear All Filters
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    {filteredProducts.map(product => (
+                      <WhiskeyCard
+                        key={product.id}
+                        whiskey={product}
+                        onClick={setSelectedWhiskey}
+                        onTastingClick={(product) => {
+                          setSelectedWhiskey(product);
+                          setShowTastingModal(true);
+                        }}
                       />
-                    </div>
-                  </SheetContent>
-                </Sheet>
-
-                <Badge variant="outline" className="text-xs">
-                  Premium Quality
-                </Badge>
-              </div>
-            </div>
-
-            {filteredProducts.length === 0 ? (
-              <Card className="glass-card text-center py-12">
-                <CardContent>
-                  <h3 className="font-serif text-xl text-muted-foreground mb-2">No products found</h3>
-                  <p className="text-muted-foreground">
-                    Try adjusting your filters to discover more products.
-                  </p>
-                  <Button 
-                    variant="outline" 
-                    className="mt-4"
-                    onClick={handleClearFilters}
-                  >
-                    Clear All Filters
-                  </Button>
-                </CardContent>
-              </Card>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {filteredProducts.map(product => (
-                  <WhiskeyCard
-                    key={product.id}
-                    whiskey={product}
-                    onClick={setSelectedWhiskey}
-                    onTastingClick={(product) => {
-                      setSelectedWhiskey(product);
-                      setShowTastingModal(true);
-                    }}
-                  />
-                ))}
-              </div>
+                    ))}
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>
