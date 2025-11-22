@@ -129,7 +129,7 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                   </div>
                 </div>
               )}
-              {(whiskey.type === 'Concentrate' || whiskey.type === 'Accessories' || whiskey.type === 'Pre-Roll' || whiskey.type === 'Edible') && (
+              {(whiskey.type === 'Concentrate' || whiskey.type === 'Accessories' || whiskey.type === 'Pre-Roll' || whiskey.type === 'Edible' || whiskey.type === 'Vape') && (
                 <div className="mt-4 p-4 rounded-lg bg-secondary/50">
                   <div className="text-center">
                     <span className="text-sm text-muted-foreground">Price per item:</span>
