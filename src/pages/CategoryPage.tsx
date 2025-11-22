@@ -128,6 +128,9 @@ const CategoryPage: React.FC = () => {
   };
 
   const isAccessoriesCategory = category === 'accessories';
+  const isVapeCategory = category === 'vape';
+  const isBrandBasedCategory = isAccessoriesCategory || isVapeCategory;
+  
   const brandProducts = useMemo(() => {
     if (!selectedBrand) return [];
     return filteredProducts.filter(p => p.brand === selectedBrand);
@@ -150,7 +153,7 @@ const CategoryPage: React.FC = () => {
 
       <div className="container mx-auto px-4 pb-12">
         <div className="flex gap-8">
-          {!isAccessoriesCategory && (
+          {!isBrandBasedCategory && (
             <aside className="hidden lg:block w-80 flex-shrink-0">
               <div className="sticky top-20">
                 <FiltersSection
@@ -164,7 +167,7 @@ const CategoryPage: React.FC = () => {
           )}
 
           <div className="flex-1 min-w-0">
-            {!isAccessoriesCategory && (
+            {!isBrandBasedCategory && (
               <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
                 <h2 className="font-serif text-2xl text-natural">
                   Available Products
@@ -203,14 +206,14 @@ const CategoryPage: React.FC = () => {
               </div>
             )}
 
-            {isAccessoriesCategory && !selectedBrand && (
+            {isBrandBasedCategory && !selectedBrand && (
               <BrandGridView 
                 products={filteredProducts} 
                 onBrandSelect={setSelectedBrand}
               />
             )}
 
-            {isAccessoriesCategory && selectedBrand && (
+            {isBrandBasedCategory && selectedBrand && (
               <BrandFlavorList
                 brand={selectedBrand}
                 products={brandProducts}
@@ -219,7 +222,7 @@ const CategoryPage: React.FC = () => {
               />
             )}
 
-            {!isAccessoriesCategory && (
+            {!isBrandBasedCategory && (
               <>
                 {filteredProducts.length === 0 ? (
                   <Card className="glass-card text-center py-12">

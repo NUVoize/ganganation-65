@@ -2,9 +2,10 @@ export interface CannabisProduct {
   id: string;
   name: string;
   brand: string;
-  type: 'Indica' | 'Sativa' | 'Hybrid' | 'CBD' | 'Concentrate' | 'Hash' | 'Edible' | 'Pre-Roll' | 'Accessories';
+  type: 'Indica' | 'Sativa' | 'Hybrid' | 'CBD' | 'Concentrate' | 'Hash' | 'Edible' | 'Pre-Roll' | 'Accessories' | 'Vape';
   thcContent?: number;
   cbdContent?: number;
+  puffCount?: number;
   price: number | { '3.5g': number; '7g': number; '14g': number; 'ounce': number };
   origin: string;
   region?: string;
