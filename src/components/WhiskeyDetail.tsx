@@ -103,8 +103,17 @@ export const WhiskeyDetail = ({ whiskey, onClose }: WhiskeyDetailProps) => {
                 </div>
               </div>
               
+              {/* Show puff count for vape products */}
+              {whiskey.type === 'Vape' && whiskey.puffCount && (
+                <div className="mt-4 p-6 rounded-lg bg-secondary/50 border border-primary/20">
+                  <div className="text-center">
+                    <p className="text-4xl font-bold text-primary">{whiskey.puffCount.toLocaleString()} Puffs</p>
+                  </div>
+                </div>
+              )}
+              
               {/* Show tiered pricing for flower products and hash with tiered pricing */}
-              {!isTieredPrice(whiskey.price) && whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && whiskey.type !== 'Edible' && whiskey.type !== 'Hash' && (
+              {!isTieredPrice(whiskey.price) && whiskey.type !== 'Concentrate' && whiskey.type !== 'Accessories' && whiskey.type !== 'Pre-Roll' && whiskey.type !== 'Edible' && whiskey.type !== 'Hash' && whiskey.type !== 'Vape' && (
                 <TieredPricing perGramPrice={getBasePrice(whiskey.price)} className="mt-4" />
               )}
               {isTieredPrice(whiskey.price) && whiskey.type === 'Hash' && (
