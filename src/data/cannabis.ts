@@ -1,13 +1,14 @@
 import { CannabisProduct } from '../types/whiskey';
 
 // Helper function to convert image number to path
-const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' | 'edible' | 'wax' = 'weed'): string[] => {
+const getImagePath = (imageNumber: number | number[], type: 'weed' | 'mushroom' | 'hash' | 'edible' | 'wax' | 'vape' = 'weed'): string[] => {
   const folder = type === 'mushroom' ? 'mushroom_images_300' : 
                  type === 'hash' ? 'hash_images_300' : 
                  type === 'edible' ? 'edible_images_300' : 
                  type === 'wax' ? 'oil_wax_images_300' :
+                 type === 'vape' ? 'vape_images' :
                  'weed_images_300';
-  const suffix = type === 'wax' ? 'x300.jpg' : 'X300.jpg';
+  const suffix = type === 'wax' ? 'x300.jpg' : type === 'vape' ? '.png' : 'X300.jpg';
   if (Array.isArray(imageNumber)) {
     return imageNumber.map(num => `/${folder}/DSCF${num}${suffix}`);
   }
@@ -2198,5 +2199,733 @@ export const edibleProducts: CannabisProduct[] = [
     inStock: true,
     featured: false,
     rarity: 'Limited'
+  }
+];
+
+// Vape Products (Nicotine Vapes)
+export const vapeProducts: CannabisProduct[] = [
+  // Snoopy Smoke - 15,000 puffs, $30 each
+  {
+    id: 'snoopy-smoke-blue-razz',
+    name: 'Snoopy Smoke - Blue Razz Ice',
+    brand: 'Snoopy Smoke',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Snoopy Smoke',
+    description: '15,000 puffs of refreshing blue raspberry ice flavor. Premium nicotine vape with smooth delivery.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Cool sensation'],
+      secondary: ['Quick satisfaction', 'Clean taste'],
+      duration: ['Instant']
+    },
+    flavor: 'Blue raspberry with cooling menthol',
+    pairing: 'Perfect for all-day vaping',
+    images: ['/vape_images/snoopy-smoke.png'],
+    sku: 'VAPE-SNO-BLU',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'snoopy-smoke-strawberry',
+    name: 'Snoopy Smoke - Strawberry Banana',
+    brand: 'Snoopy Smoke',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Snoopy Smoke',
+    description: '15,000 puffs of sweet strawberry banana blend. Smooth fruit fusion.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Sweet notes'],
+      secondary: ['Fruity satisfaction', 'Balanced flavor'],
+      duration: ['Instant']
+    },
+    flavor: 'Strawberry and banana blend',
+    pairing: 'Great for sweet flavor lovers',
+    images: ['/vape_images/snoopy-smoke.png'],
+    sku: 'VAPE-SNO-STR',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'snoopy-smoke-watermelon',
+    name: 'Snoopy Smoke - Watermelon Ice',
+    brand: 'Snoopy Smoke',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Snoopy Smoke',
+    description: '15,000 puffs of juicy watermelon with icy finish.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Refreshing'],
+      secondary: ['Cool exhale', 'Crisp taste'],
+      duration: ['Instant']
+    },
+    flavor: 'Fresh watermelon with menthol',
+    pairing: 'Refreshing choice for warm days',
+    images: ['/vape_images/snoopy-smoke.png'],
+    sku: 'VAPE-SNO-WAT',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'snoopy-smoke-mango',
+    name: 'Snoopy Smoke - Mango Peach',
+    brand: 'Snoopy Smoke',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Snoopy Smoke',
+    description: '15,000 puffs of tropical mango peach fusion.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Tropical notes'],
+      secondary: ['Exotic taste', 'Sweet finish'],
+      duration: ['Instant']
+    },
+    flavor: 'Mango and peach tropical blend',
+    pairing: 'Tropical escape in every puff',
+    images: ['/vape_images/snoopy-smoke.png'],
+    sku: 'VAPE-SNO-MAN',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'snoopy-smoke-mint',
+    name: 'Snoopy Smoke - Cool Mint',
+    brand: 'Snoopy Smoke',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Snoopy Smoke',
+    description: '15,000 puffs of pure cool mint refreshment.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Cool blast'],
+      secondary: ['Clean palate', 'Fresh breath'],
+      duration: ['Instant']
+    },
+    flavor: 'Pure cool mint',
+    pairing: 'Classic minty freshness',
+    images: ['/vape_images/snoopy-smoke.png'],
+    sku: 'VAPE-SNO-MIN',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+
+  // Cyber Pro - 15,000 puffs, $30 each
+  {
+    id: 'cyber-pro-lush-ice',
+    name: 'Cyber Pro - Lush Ice',
+    brand: 'Cyber Pro',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Cyber Pro',
+    description: '15,000 puffs of watermelon lush ice. Tech-forward vaping experience.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Icy blast'],
+      secondary: ['Clean vapor', 'Consistent draw'],
+      duration: ['Instant']
+    },
+    flavor: 'Watermelon with extreme menthol',
+    pairing: 'Maximum cooling sensation',
+    images: ['/vape_images/cyber-pro.png'],
+    sku: 'VAPE-CYB-LUS',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'cyber-pro-grape',
+    name: 'Cyber Pro - Purple Grape',
+    brand: 'Cyber Pro',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Cyber Pro',
+    description: '15,000 puffs of rich purple grape flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Bold taste'],
+      secondary: ['Grape sweetness', 'Satisfying vapor'],
+      duration: ['Instant']
+    },
+    flavor: 'Rich purple grape',
+    pairing: 'Bold grape flavor fans',
+    images: ['/vape_images/cyber-pro.png'],
+    sku: 'VAPE-CYB-GRA',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'cyber-pro-rainbow',
+    name: 'Cyber Pro - Rainbow Burst',
+    brand: 'Cyber Pro',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Cyber Pro',
+    description: '15,000 puffs of mixed fruit candy flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Candy notes'],
+      secondary: ['Fruity mix', 'Sweet vapor'],
+      duration: ['Instant']
+    },
+    flavor: 'Mixed fruit candy explosion',
+    pairing: 'For candy flavor enthusiasts',
+    images: ['/vape_images/cyber-pro.png'],
+    sku: 'VAPE-CYB-RAI',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'cyber-pro-apple',
+    name: 'Cyber Pro - Green Apple',
+    brand: 'Cyber Pro',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Cyber Pro',
+    description: '15,000 puffs of crisp green apple flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Crisp taste'],
+      secondary: ['Tart apple', 'Clean finish'],
+      duration: ['Instant']
+    },
+    flavor: 'Crisp green apple',
+    pairing: 'Tart and refreshing',
+    images: ['/vape_images/cyber-pro.png'],
+    sku: 'VAPE-CYB-APP',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'cyber-pro-pineapple',
+    name: 'Cyber Pro - Pineapple Coconut',
+    brand: 'Cyber Pro',
+    type: 'Vape',
+    puffCount: 15000,
+    price: 30,
+    origin: 'Various',
+    grower: 'Cyber Pro',
+    description: '15,000 puffs of tropical pineapple coconut.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Tropical blend'],
+      secondary: ['Island vibes', 'Creamy notes'],
+      duration: ['Instant']
+    },
+    flavor: 'Pineapple and coconut paradise',
+    pairing: 'Tropical vacation flavor',
+    images: ['/vape_images/cyber-pro.png'],
+    sku: 'VAPE-CYB-PIN',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+
+  // TaijiZen - 24,000 puffs, $30 each
+  {
+    id: 'taijizen-dragon-fruit',
+    name: 'TaijiZen - Dragon Fruit',
+    brand: 'TaijiZen',
+    type: 'Vape',
+    puffCount: 24000,
+    price: 30,
+    origin: 'Various',
+    grower: 'TaijiZen',
+    description: '24,000 puffs of exotic dragon fruit. Extended performance with zen-like smoothness.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Balanced'],
+      secondary: ['Exotic taste', 'Long-lasting'],
+      duration: ['Instant']
+    },
+    flavor: 'Exotic dragon fruit',
+    pairing: 'Long-lasting exotic experience',
+    images: ['/vape_images/taijizen.png'],
+    sku: 'VAPE-TAI-DRA',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'taijizen-lychee',
+    name: 'TaijiZen - Lychee Ice',
+    brand: 'TaijiZen',
+    type: 'Vape',
+    puffCount: 24000,
+    price: 30,
+    origin: 'Various',
+    grower: 'TaijiZen',
+    description: '24,000 puffs of sweet lychee with cooling finish.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Refreshing'],
+      secondary: ['Sweet lychee', 'Icy cool'],
+      duration: ['Instant']
+    },
+    flavor: 'Sweet lychee with menthol',
+    pairing: 'Asian-inspired refreshment',
+    images: ['/vape_images/taijizen.png'],
+    sku: 'VAPE-TAI-LYC',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'taijizen-green-tea',
+    name: 'TaijiZen - Green Tea',
+    brand: 'TaijiZen',
+    type: 'Vape',
+    puffCount: 24000,
+    price: 30,
+    origin: 'Various',
+    grower: 'TaijiZen',
+    description: '24,000 puffs of authentic green tea flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Calming'],
+      secondary: ['Tea notes', 'Subtle sweetness'],
+      duration: ['Instant']
+    },
+    flavor: 'Authentic Japanese green tea',
+    pairing: 'Zen tea experience',
+    images: ['/vape_images/taijizen.png'],
+    sku: 'VAPE-TAI-TEA',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'taijizen-peach',
+    name: 'TaijiZen - White Peach',
+    brand: 'TaijiZen',
+    type: 'Vape',
+    puffCount: 24000,
+    price: 30,
+    origin: 'Various',
+    grower: 'TaijiZen',
+    description: '24,000 puffs of delicate white peach.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Delicate'],
+      secondary: ['Peach sweetness', 'Refined taste'],
+      duration: ['Instant']
+    },
+    flavor: 'Delicate white peach',
+    pairing: 'Sophisticated fruit flavor',
+    images: ['/vape_images/taijizen.png'],
+    sku: 'VAPE-TAI-PEA',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'taijizen-yuzu',
+    name: 'TaijiZen - Yuzu Citrus',
+    brand: 'TaijiZen',
+    type: 'Vape',
+    puffCount: 24000,
+    price: 30,
+    origin: 'Various',
+    grower: 'TaijiZen',
+    description: '24,000 puffs of zesty yuzu citrus.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Zesty'],
+      secondary: ['Citrus burst', 'Unique flavor'],
+      duration: ['Instant']
+    },
+    flavor: 'Japanese yuzu citrus',
+    pairing: 'Unique citrus experience',
+    images: ['/vape_images/taijizen.png'],
+    sku: 'VAPE-TAI-YUZ',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+
+  // Equator - 30,000 puffs, $35 each
+  {
+    id: 'equator-mango',
+    name: 'Equator - Mango Tango',
+    brand: 'Equator',
+    type: 'Vape',
+    puffCount: 30000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Equator',
+    description: '30,000 puffs of tropical mango paradise. Premium ultra-long-lasting performance.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Tropical'],
+      secondary: ['Rich mango', 'Ultra long-lasting'],
+      duration: ['Instant']
+    },
+    flavor: 'Rich tropical mango',
+    pairing: 'Premium tropical experience',
+    images: ['/vape_images/equator.png'],
+    sku: 'VAPE-EQU-MAN',
+    inStock: true,
+    featured: true,
+    rarity: 'Limited'
+  },
+  {
+    id: 'equator-passion',
+    name: 'Equator - Passion Fruit',
+    brand: 'Equator',
+    type: 'Vape',
+    puffCount: 30000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Equator',
+    description: '30,000 puffs of exotic passion fruit.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Exotic'],
+      secondary: ['Tangy fruit', 'Premium quality'],
+      duration: ['Instant']
+    },
+    flavor: 'Exotic passion fruit',
+    pairing: 'Tangy tropical delight',
+    images: ['/vape_images/equator.png'],
+    sku: 'VAPE-EQU-PAS',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'equator-coconut',
+    name: 'Equator - Coconut Cream',
+    brand: 'Equator',
+    type: 'Vape',
+    puffCount: 30000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Equator',
+    description: '30,000 puffs of creamy coconut flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Creamy'],
+      secondary: ['Coconut sweetness', 'Smooth vapor'],
+      duration: ['Instant']
+    },
+    flavor: 'Creamy coconut',
+    pairing: 'Smooth tropical cream',
+    images: ['/vape_images/equator.png'],
+    sku: 'VAPE-EQU-COC',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'equator-guava',
+    name: 'Equator - Pink Guava',
+    brand: 'Equator',
+    type: 'Vape',
+    puffCount: 30000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Equator',
+    description: '30,000 puffs of sweet pink guava.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Sweet'],
+      secondary: ['Guava richness', 'Tropical notes'],
+      duration: ['Instant']
+    },
+    flavor: 'Sweet pink guava',
+    pairing: 'Rich tropical sweetness',
+    images: ['/vape_images/equator.png'],
+    sku: 'VAPE-EQU-GUA',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+  {
+    id: 'equator-papaya',
+    name: 'Equator - Papaya Sunrise',
+    brand: 'Equator',
+    type: 'Vape',
+    puffCount: 30000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Equator',
+    description: '30,000 puffs of tropical papaya blend.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Sunny'],
+      secondary: ['Papaya sweetness', 'Morning fresh'],
+      duration: ['Instant']
+    },
+    flavor: 'Tropical papaya sunrise',
+    pairing: 'Start your day tropical',
+    images: ['/vape_images/equator.png'],
+    sku: 'VAPE-EQU-PAP',
+    inStock: true,
+    featured: false,
+    rarity: 'Limited'
+  },
+
+  // Runfree - 25,000 puffs, $35 each
+  {
+    id: 'runfree-berry',
+    name: 'Runfree - Triple Berry',
+    brand: 'Runfree',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Runfree',
+    description: '25,000 puffs of triple berry blend. Freedom to vape all day.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Berry burst'],
+      secondary: ['Mixed berries', 'All-day vape'],
+      duration: ['Instant']
+    },
+    flavor: 'Strawberry, blueberry, raspberry blend',
+    pairing: 'Berry lovers paradise',
+    images: ['/vape_images/runfree.png'],
+    sku: 'VAPE-RUN-BER',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'runfree-lemonade',
+    name: 'Runfree - Pink Lemonade',
+    brand: 'Runfree',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Runfree',
+    description: '25,000 puffs of refreshing pink lemonade.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Refreshing'],
+      secondary: ['Tart citrus', 'Sweet finish'],
+      duration: ['Instant']
+    },
+    flavor: 'Pink lemonade',
+    pairing: 'Summer refreshment',
+    images: ['/vape_images/runfree.png'],
+    sku: 'VAPE-RUN-LEM',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'runfree-cola',
+    name: 'Runfree - Cherry Cola',
+    brand: 'Runfree',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Runfree',
+    description: '25,000 puffs of classic cherry cola.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Nostalgic'],
+      secondary: ['Cola fizz', 'Cherry notes'],
+      duration: ['Instant']
+    },
+    flavor: 'Cherry cola',
+    pairing: 'Classic soda flavor',
+    images: ['/vape_images/runfree.png'],
+    sku: 'VAPE-RUN-COL',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'runfree-energy',
+    name: 'Runfree - Energy Drink',
+    brand: 'Runfree',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Runfree',
+    description: '25,000 puffs of energy drink flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Energizing'],
+      secondary: ['Citrus boost', 'Invigorating'],
+      duration: ['Instant']
+    },
+    flavor: 'Energy drink blend',
+    pairing: 'For the active lifestyle',
+    images: ['/vape_images/runfree.png'],
+    sku: 'VAPE-RUN-ENE',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+  {
+    id: 'runfree-candy',
+    name: 'Runfree - Sour Candy',
+    brand: 'Runfree',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 35,
+    origin: 'Various',
+    grower: 'Runfree',
+    description: '25,000 puffs of sour candy explosion.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Tangy'],
+      secondary: ['Sour kick', 'Sweet end'],
+      duration: ['Instant']
+    },
+    flavor: 'Sour candy mix',
+    pairing: 'For sour candy fans',
+    images: ['/vape_images/runfree.png'],
+    sku: 'VAPE-RUN-CAN',
+    inStock: true,
+    featured: false,
+    rarity: 'Common'
+  },
+
+  // Geek Bar - 25,000 puffs, $45 each (Premium)
+  {
+    id: 'geek-bar-blue-razz',
+    name: 'Geek Bar - Blue Razz Ice',
+    brand: 'Geek Bar',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 45,
+    origin: 'Various',
+    grower: 'Geek Bar',
+    description: '25,000 puffs of legendary blue razz ice. Premium quality with iconic flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Premium'],
+      secondary: ['Iconic flavor', 'Top quality'],
+      duration: ['Instant']
+    },
+    flavor: 'Blue raspberry with ice',
+    pairing: 'The classic premium choice',
+    images: ['/vape_images/geek-bar.png'],
+    sku: 'VAPE-GEE-BLU',
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'geek-bar-strawberry',
+    name: 'Geek Bar - Strawberry Kiwi',
+    brand: 'Geek Bar',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 45,
+    origin: 'Various',
+    grower: 'Geek Bar',
+    description: '25,000 puffs of strawberry kiwi perfection.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Premium'],
+      secondary: ['Perfect balance', 'Quality vapor'],
+      duration: ['Instant']
+    },
+    flavor: 'Strawberry and kiwi fusion',
+    pairing: 'Premium fruit blend',
+    images: ['/vape_images/geek-bar.png'],
+    sku: 'VAPE-GEE-STR',
+    inStock: true,
+    featured: true,
+    rarity: 'Rare'
+  },
+  {
+    id: 'geek-bar-peach',
+    name: 'Geek Bar - Peach Ice',
+    brand: 'Geek Bar',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 45,
+    origin: 'Various',
+    grower: 'Geek Bar',
+    description: '25,000 puffs of juicy peach with cooling ice.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Premium'],
+      secondary: ['Peach perfection', 'Icy fresh'],
+      duration: ['Instant']
+    },
+    flavor: 'Juicy peach with menthol',
+    pairing: 'Premium peach experience',
+    images: ['/vape_images/geek-bar.png'],
+    sku: 'VAPE-GEE-PEA',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'geek-bar-grape',
+    name: 'Geek Bar - Grape Burst',
+    brand: 'Geek Bar',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 45,
+    origin: 'Various',
+    grower: 'Geek Bar',
+    description: '25,000 puffs of bold grape flavor.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Premium'],
+      secondary: ['Rich grape', 'Authentic taste'],
+      duration: ['Instant']
+    },
+    flavor: 'Bold grape explosion',
+    pairing: 'Premium grape intensity',
+    images: ['/vape_images/geek-bar.png'],
+    sku: 'VAPE-GEE-GRA',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'geek-bar-mint',
+    name: 'Geek Bar - Triple Mint',
+    brand: 'Geek Bar',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 45,
+    origin: 'Various',
+    grower: 'Geek Bar',
+    description: '25,000 puffs of premium triple mint blend.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Premium'],
+      secondary: ['Ultra fresh', 'Clean vapor'],
+      duration: ['Instant']
+    },
+    flavor: 'Triple mint perfection',
+    pairing: 'Ultimate mint freshness',
+    images: ['/vape_images/geek-bar.png'],
+    sku: 'VAPE-GEE-MIN',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
+  },
+  {
+    id: 'geek-bar-pineapple',
+    name: 'Geek Bar - Pineapple Paradise',
+    brand: 'Geek Bar',
+    type: 'Vape',
+    puffCount: 25000,
+    price: 45,
+    origin: 'Various',
+    grower: 'Geek Bar',
+    description: '25,000 puffs of tropical pineapple bliss.',
+    effects: {
+      primary: ['Nicotine delivery', 'Smooth hit', 'Premium'],
+      secondary: ['Tropical escape', 'Superior quality'],
+      duration: ['Instant']
+    },
+    flavor: 'Tropical pineapple paradise',
+    pairing: 'Premium tropical journey',
+    images: ['/vape_images/geek-bar.png'],
+    sku: 'VAPE-GEE-PIN',
+    inStock: true,
+    featured: false,
+    rarity: 'Rare'
   }
 ];
